@@ -15,7 +15,7 @@
         {% if item.url %}
             {% assign tag_name = 'a' %}
         {% endif %}
-        <{{ tag_name }}{% if item.url %} href="{{ item.url }}"{% endif %}>{{ item.title }}</{{ tag_name }}>
+        <{{ tag_name }}{% if item.url %} href="{{ item.url }}"{% endif %}{% if item.class %} class="{{ item.class }}"{% endif %}>{{ item.title }}</{{ tag_name }}>
         {% if item.subnav %}
             {% include recursive_nav.html nav=item.subnav %}
         {% endif %}

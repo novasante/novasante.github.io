@@ -15,3 +15,6 @@ nav:
         url: /alex
       - title: Séverine Corthay
         url: /severine
+  - title: Contact
+    url: /contact
+    class: primary

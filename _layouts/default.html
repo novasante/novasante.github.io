@@ -7,6 +7,7 @@
   <meta
   name="description"
   content="{{ page.description }}">
+  {% if true %}
   <meta name="google-site-verification" content="5PxRsHKeUms052xxBQCRUK4wOP7dYZ8SJOVzMoMWlkM">
   <meta property="og:title" content="Sarah Dionne | Thérapie holistique">
   <meta property="og:description" content="Traitements en Médecine Traditionnelle Chinoise et Physiothérapie pédiatrique.">
@@ -22,7 +23,7 @@
   <meta name="msapplication-TileColor" content="#00aba9">
   <meta name="theme-color" content="rgb(0,37,64)">
   <link rel="manifest" href="manifest.json">
-
+  {% endif %}
   <link rel="stylesheet" media="screen" href="assets/css/style.css">
 
   <link rel="preconnect" media="all" href="//ik.imagekit.io">
@@ -109,10 +110,14 @@
           <use xlink:href="#logo_24dp"></use>
         </svg>
       </label>
-      <span class="title hide-on-top"><a href="#home">Sarah <span>Dionne</span></a></span>
+      <span class="title hide-on-top"><a href="#home">Nova <span>Santé Intégrée</span></a></span>
     </div>
     <div class="content">
-    {{ content }}
+      <div class="sections">
+        <section id="about" class="containered">
+          {{ content }}
+        </section>
+      </div>
     </div>
   </div>
 </div>

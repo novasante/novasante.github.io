@@ -2,6 +2,8 @@
 layout: default
 title: NOVA Santé Intégrée
 ---
+
+
 # novasante.ch
 
 +41 76 839 3008<br>
