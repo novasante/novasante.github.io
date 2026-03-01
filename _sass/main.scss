@@ -916,7 +916,7 @@ body {
           color: var(--font-color-inverted);
           display: inline-block;
           padding: 0;
-          min-width: #{calc(map-get($breakpoints, min)-var(--gutter))}px;
+          min-width: calc(#{map-get($breakpoints, min)}px - var(--gutter));
           @include grid-media-query(s) {
             min-width: 90vw;
           }
