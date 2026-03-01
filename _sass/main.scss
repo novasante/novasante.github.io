@@ -34,15 +34,11 @@ $containers: (
 
 /* SNCL SLIDER (disabled) */
 $slide-images: (
-  "sncl_1966.jpg",
-  "sncl_wakesurf.jpg",
-  "sncl_wakeboard.jpg",
-  "sncl_group.jpg",
-  "sncl_sunset.jpg"
+  "mountain-sunrise.jpg"
 );
 
 :root {
-  $img-path: "//ik.imagekit.io/sncl/tr:w-360,h-600,c-at_least,f-webp/header/";
+  $img-path: "//ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/";
   @for $i from 1 through length($slide-images) {
     $slide-image: nth($slide-images, $i);
     --slide-#{$i}: url("#{$img-path}#{$slide-image}");
@@ -58,7 +54,7 @@ $slide-images: (
 
   @include grid-media-query($name) {
     :root {
-      $img-path: "//ik.imagekit.io/sncl/tr:w-#{$slide-width},h-600,c-at_least,f-webp/header/";
+      $img-path: "//ik.imagekit.io/sarahdionne/tr:w-#{$slide-width},h-600,c-at_least,f-webp/nova/";
       @for $i from 1 through length($slide-images) {
         $slide-image: nth($slide-images, $i);
         --slide-#{$i}: url("#{$img-path}#{$slide-image}");
