@@ -664,7 +664,7 @@ body {
     border: 1px solid var(--borders);
     border-radius: 0.5em;
     background: var(--background);
-    box-shadow: hsl(0 0% 0% / 10%) 0 0 0.5em 0.25em;
+    box-shadow: rgba(0, 0, 0, 0.10) 0 0 0.5em 0.25em;
     &::backdrop {
       background: var(--overlay);
     }
