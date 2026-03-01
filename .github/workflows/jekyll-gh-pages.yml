@@ -31,7 +31,7 @@ jobs:
 
       - name: Compile SCSS -> CSS
         run: |
-          sass --no-source-map assets/css/style.src.scss assets/css/style.css
+          sass --no-source-map --load-path=_sass assets/css/style.src.scss assets/css/style.css
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
