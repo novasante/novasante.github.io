@@ -3,6 +3,8 @@ layout: default
 title: NOVA Santé Intégrée
 ---
 
+# Présentation
+
 NOVA Santé Intégrée est un espace thérapeutique dédié à la coordination et à la cohérence des parcours de soins.
 
 Notre mission est de favoriser la collaboration entre les approches contemporaines, traditionnelles et complémentaires afin d’améliorer la fluidité, la compréhension et l’efficacité des accompagnements proposés.
@@ -28,9 +30,8 @@ Nous croyons que lorsque les compétences se complètent et que le dialogue s’
 
 # Les thérapeutes actuellement au centre
 
----
 
-### Sarah Dionne  
+## Sarah Dionne  
 **Fondatrice du centre - Coordination des soins - Thérapie et accompagnement**
 
 📧 sarah.dionne@novasante.ch  
@@ -38,7 +39,7 @@ Nous croyons que lorsque les compétences se complètent et que le dialogue s’
 
 ---
 
-### Séverine Corthay  
+## Séverine Corthay  
 **Dramathérapeute e.f.**  
 
 📧 severine.corthay@novasante.ch  
@@ -46,7 +47,7 @@ Nous croyons que lorsque les compétences se complètent et que le dialogue s’
 
 ---
 
-### Alexandre Kaspar  
+## Alexandre Kaspar  
 **Physiothérapeute – Spécialisation pédiatrique**  
 
 📧 alexandre.kaspar@novasante.ch  
@@ -54,7 +55,7 @@ Nous croyons que lorsque les compétences se complètent et que le dialogue s’
 
 ---
 
-### Laura Carnello  
+## Laura Carnello  
 **Acupuncture & Tuina**  
 
 📧 laura.carnello@novasante.ch  
