@@ -78,14 +78,14 @@ $slide-images: (
     @if $next-num > length($slide-images) {
       $next-num: $next-num - length($slide-images);
     }
-    $duration: calc(100 / length($slide-images));
+    $duration: 100% / length($slide-images);
     $from: ($i - 1) * $duration;
-    $to: $i * $duration - 5;
+    $to: $i * $duration - 5%;
 
-    #{$from}% {
+    #{$from} {
       background-image: var(--slide-#{$slide-num});
     }
-    #{$to}% {
+    #{$to} {
       background-image: var(--slide-#{$slide-num}), var(--slide-#{$next-num});
     }
   }
