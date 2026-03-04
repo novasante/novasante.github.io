@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title | site.meta.title }}</title>
+  <title>{{ page.title | default: site.meta.title }}</title>
   <meta
   name="description"
-  content="{{ page.description | site.meta.description }}">
+  content="{{ page.description | default: site.meta.description }}">
   <meta name="google-site-verification" content="5PxRsHKeUms052xxBQCRUK4wOP7dYZ8SJOVzMoMWlkM">
-  <meta property="og:title" content="{{ page.title | site.meta.title }}">
-  <meta property="og:description" content="{{ page.description | site.meta.description }}">
+  <meta property="og:title" content="{{ page.title | default: site.meta.title }}">
+  <meta property="og:description" content="{{ page.description | default: site.meta.description }}">
   <meta property="og:image" content="//ik.imagekit.io/sarahdionne/sarah_dionne_business_card.png">
   <meta property="og:url" content="{{ site.url }}">
   <meta property="og:type" content="website">
