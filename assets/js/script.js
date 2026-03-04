@@ -64,7 +64,7 @@ const convertDate = (event) => {
   event.target.submit();
 };
 const trackEvent = (event, ...options) => {
-  //console.log(`Track event: ${event}`, ...options);
+  // console.log(`Track event: ${event}`, ...options);
   if (typeof mixpanel === "object") {
     mixpanel.track(event, ...options);
   }
@@ -280,7 +280,7 @@ const initColorSchemeToggler = () => {
     html.style.setProperty("color-scheme", newScheme);
   }
 
-  if (!prefersDark) {
+  if (!prefersDark && colorSchemeToggler) {
     colorSchemeToggler.checked = true;
   }
 
@@ -365,7 +365,7 @@ const locationHandler = () => {
   // get the route object from the routes object
   if (location === "form") {
     if(document.getElementById("banner")) {
-      document.getElementById("banner").style.display = "none";
+    document.getElementById("banner").style.display = "none";
     }
     
     const sections = document.querySelectorAll(".sections section");
@@ -380,11 +380,11 @@ const locationHandler = () => {
   } else {
     if (location === "form_sent") {
       if (document.getElementById("form_sent")) {
-        document.getElementById("form_sent").showModal();
-      }
+      document.getElementById("form_sent").showModal();
+    }
     }
     if(document.getElementById("banner")) {
-      document.getElementById("banner").style.display = "block";
+    document.getElementById("banner").style.display = "block";
     }
     const sections = document.querySelectorAll(".sections section");
     //console.log(sections);
@@ -405,6 +405,84 @@ const initRouting = () => {
   locationHandler();
 };
 
+const InitSections = () => {
+    const container = document.getElementsByClassName('sections')[0];
+    if (!container) {
+        console.warn("Container with class 'sections' not found. Cannot organize content into sections.");
+        return;
+    }
+
+    // Create a DocumentFragment to build the new structure efficiently
+    const fragment = document.createDocumentFragment();
+    let currentSectionDiv = null;
+    // This array will temporarily hold the children for the section currently being built.
+    // This allows us to process them (e.g., remove first/last HR) before appending to the DOM.
+    let sectionChildren = [];
+
+    // Get a static list of the container's children to iterate over.
+    // This is important because we will be moving/removing children,
+    // which would otherwise affect a live NodeList.
+    const childrenToProcess = Array.from(container.children);
+
+    /**
+     * Helper function to process the collected children for the current section.
+     * It checks for and removes HR elements if they are the first or last child
+     * within the section, then appends the remaining children to the section
+     * and adds the section to the fragment.
+     */
+    const processCurrentSection = () => {
+        if (currentSectionDiv && sectionChildren.length > 0) {
+            // Check and remove HR if it's the first child of the section
+            if (sectionChildren.length > 0 && sectionChildren[0].tagName === 'HR') {
+                sectionChildren.shift(); // Remove the first element
+            }
+            // Check and remove HR if it's the last child of the section
+            if (sectionChildren.length > 0 && sectionChildren[sectionChildren.length - 1].tagName === 'HR') {
+                sectionChildren.pop(); // Remove the last element
+            }
+
+            // Append the remaining children to the currentSectionDiv
+            sectionChildren.forEach(child => {
+                currentSectionDiv.appendChild(child);
+            });
+            fragment.appendChild(currentSectionDiv);
+        }
+    };
+
+    childrenToProcess.forEach(child => {
+        if (child.tagName === 'H1') {
+            // If an H1 is encountered, it marks the start of a new logical section.
+            // First, process the previous section if one was being built
+            processCurrentSection();
+
+            // Start a new section
+            currentSectionDiv = document.createElement('section');
+            currentSectionDiv.classList.add('containered'); // Add a class for styling these new sections
+            sectionChildren = []; // Reset children array for the new section
+            sectionChildren.push(child); // Add the H1 as the first child of the new section
+        } else {
+            // If it's not an H1
+            if (!currentSectionDiv) {
+                // If no H1 has been encountered yet, create the first section implicitly.
+                currentSectionDiv = document.createElement('section');
+                currentSectionDiv.classList.add('containered');
+                sectionChildren = []; // Ensure it's empty for the new section
+            }
+            // Add the current child element to the current section's temporary list.
+            sectionChildren.push(child);
+        }
+    });
+
+    // After the loop, process the very last section that was being built
+    processCurrentSection();
+
+    // After processing all children, clear the original container's content
+    // and then append the new, structured content from the fragment.
+    container.innerHTML = '';
+    container.appendChild(fragment);
+};
+
+
 const init = () => {
   initFirstScrollListener();
   initObserveElements();
@@ -419,150 +497,7 @@ const init = () => {
   initForm();
   initRouting();
   initMaps();
+  initSections();
 };
 
 document.addEventListener("DOMContentLoaded", init);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-function enhanceSarahInnerSection(innerHtml) {
-  const doc = new DOMParser().parseFromString(`<div id="root">${innerHtml}</div>`, "text/html");
-  const root = doc.getElementById("root");
-
-  // Title
-  const h2 = root.querySelector("h2");
-  const title = (h2?.textContent || "Sarah Dionne").trim();
-
-  // Collect nodes in original order, but:
-  // - unwrap <p><img/></p> into <img/>
-  // - normalize straight quotes in French apostrophes only (’ -> ') to match target
-  const collected = [];
-  for (const node of Array.from(root.childNodes)) {
-    if (node.nodeType !== Node.ELEMENT_NODE) continue;
-
-    const el = /** @type {HTMLElement} */ (node);
-
-    if (el.tagName === "H2") continue;
-
-    if (el.tagName === "P") {
-      const onlyImg = el.children.length === 1 && el.firstElementChild?.tagName === "IMG";
-      if (onlyImg) {
-        collected.push(el.firstElementChild.cloneNode(true));
-      } else {
-        // Clone paragraph and normalize apostrophes to match target (’ -> ')
-        const p = el.cloneNode(true);
-        p.innerHTML = p.innerHTML.replace(/’/g, "'");
-        collected.push(p);
-      }
-      continue;
-    }
-
-    if (el.tagName === "IMG") {
-      collected.push(el.cloneNode(true));
-    }
-  }
-
-  // Expecting 2 images in this content: first and second
-  const imgs = collected.filter((n) => n.nodeType === Node.ELEMENT_NODE && n.tagName === "IMG");
-  const paras = collected.filter((n) => n.nodeType === Node.ELEMENT_NODE && n.tagName === "P");
-
-  const img1 = /** @type {HTMLImageElement | undefined} */ (imgs[0]);
-  const img2 = /** @type {HTMLImageElement | undefined} */ (imgs[1]);
-
-  // Helper to "enhance" an image to match the target attributes/classes
-  function enhanceImg(img, { right = false, width, height } = {}) {
-    if (!img) return null;
-
-    const src = img.getAttribute("src") || "";
-    const enhanced = img.cloneNode(true);
-
-    // Set classes
-    enhanced.className = ""; // reset
-    enhanced.classList.add("observable");
-    if (right) enhanced.classList.add("right");
-
-    // Convert src to low-res placeholder if it matches the expected pattern
-    // (keeps original if it doesn't match)
-    const lowSrc = src.replace(/tr:w-\d+,/i, "tr:w-30,");
-    //enhanced.setAttribute("src", lowSrc);
-
-    // Set lazy srcset to the original "hi-res" src
-    enhanced.setAttribute("data-srcset", src);
-
-    // Set sizing (as in target)
-    if (width) enhanced.setAttribute("width", String(width));
-    if (height) enhanced.setAttribute("height", String(height));
-
-    return enhanced;
-  }
-
-  const out = doc.implementation.createHTMLDocument("");
-  const fragRoot = out.createElement("div");
-
-  // <h2 class="text-center uppercase">...</h2>
-  const outH2 = out.createElement("h2");
-  outH2.className = "text-center uppercase";
-  outH2.textContent = title;
-  fragRoot.appendChild(outH2);
-
-  // <div class="row"><div class="col col--text-around-img">...</div></div>
-  const row = out.createElement("div");
-  row.className = "row";
-  const col = out.createElement("div");
-  col.className = "col col--text-around-img";
-
-  // Build exact order to match target:
-  // img1, p1, p2, p3, img2(right), p4, p5
-  const outImg1 = enhanceImg(img1, { right: false, width: 264, height: 363 });
-  if (outImg1) col.appendChild(outImg1);
-
-  for (let i = 0; i < paras.length; i++) {
-    if (i === 3) {
-      const outImg2 = enhanceImg(img2, { right: true, width: 264, height: 264 });
-      if (outImg2) col.appendChild(outImg2);
-    }
-    // Clone paragraph into the output doc
-    const p = out.createElement("p");
-    p.innerHTML = paras[i].innerHTML; // already normalized ’ -> '
-    col.appendChild(p);
-  }
-
-  row.appendChild(col);
-  fragRoot.appendChild(row);
-
-  return fragRoot.innerHTML.trim();
-}
-
-
-
-function runEnhancement() {
-  const section = document.querySelector("#about");
-  if (!section) return;
-
-  section.innerHTML = enhanceSarahInnerSection(section.innerHTML);
-}
-
-/*
-if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", runEnhancement);
-} else {
-  runEnhancement();
-}
-*/

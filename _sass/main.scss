@@ -13,7 +13,8 @@ $containers: (
   "xs": auto,
   "s": auto,
   "m": auto,
-  "l": 864px, // calc(960px - 96px),
+  "l": 864px,
+  // calc(960px - 96px),
   "xl": 1024px,
   "xxl": 1200px
 );
@@ -33,9 +34,7 @@ $containers: (
 }
 
 /* SNCL SLIDER (disabled) */
-$slide-images: (
-  "mountain-sunrise.jpg"
-);
+$slide-images: ("mountain-sunrise.jpg");
 
 :root {
   $img-path: "//ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/";
@@ -388,6 +387,10 @@ body {
       font-weight: 600;
     }
   }
+  svg.banner-logo.icon {
+    width: 360px;
+    height: 360px;
+  }
 
   a {
     text-decoration: none;
@@ -397,11 +400,15 @@ body {
     }
   }
   hr {
-    width: 50%;
+    width: 25%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 24px;
-    margin-bottom: 24px;
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid var(--borders);
+    margin: 1em 0;
+    padding: 0;
   }
   ul.prices {
     li {
@@ -660,7 +667,7 @@ body {
     border: 1px solid var(--borders);
     border-radius: 0.5em;
     background: var(--background);
-    box-shadow: rgba(0, 0, 0, 0.10) 0 0 0.5em 0.25em;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 0 0.5em 0.25em;
     &::backdrop {
       background: var(--overlay);
     }
