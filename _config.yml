@@ -1,7 +1,7 @@
 sass:
   sass_dir: _sass
   style: compressed
-meta:
+_meta:
   title: "NOVA Santé Intégrée | Espace Thérapeutique & Coordination de Soins à Paudex"
   description: "Découvrez NOVA Santé Intégrée, un espace thérapeutique à Paudex. Nous coordonnons vos parcours de soins en favorisant la collaboration entre approches contemporaines, traditionnelles et complémentaires pour des accompagnements personnalisés et efficaces."
 defaults:
@@ -11,3 +11,5 @@ defaults:
       type: "pages"
     values:
       layout: default
+      title: "NOVA Santé Intégrée | Espace Thérapeutique & Coordination de Soins à Paudex"
+      description: "Découvrez NOVA Santé Intégrée, un espace thérapeutique à Paudex. Nous coordonnons vos parcours de soins en favorisant la collaboration entre approches contemporaines, traditionnelles et complémentaires pour des accompagnements personnalisés et efficaces."
