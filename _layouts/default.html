@@ -9,20 +9,20 @@
   content="{{ page.description }}">
   {% if true %}
   <meta name="google-site-verification" content="5PxRsHKeUms052xxBQCRUK4wOP7dYZ8SJOVzMoMWlkM">
-  <meta property="og:title" content="NOVA | Santé Intégrée">
-  <meta property="og:description" content="Traitements en Médecine Traditionnelle Chinoise et Physiothérapie pédiatrique.">
-  <meta property="og:image" content="//ik.imagekit.io/sarahdionne/fo-auto,f-webp/sarah_dionne_business_card.png">
-  <meta property="og:url" content="https://novasante.ch">
+  <meta property="og:title" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.description }}">
+  <meta property="og:image" content="//ik.imagekit.io/sarahdionne/sarah_dionne_business_card.png">
+  <meta property="og:url" content="{{ site.url }}">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
-  <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
-  <link rel="mask-icon" href="assets/icons/safari-pinned-tab.svg" color="#00aba9">
+  <link rel="icon" type="image/svg+xml" href="{{ 'assets/icons/favicon.svg' | relative_url }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/icons/apple-touch-icon.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/icons/favicon-32x32.png' | relative_url }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ 'assets/icons/favicon-16x16.png' | relative_url }}">
+  <link rel="mask-icon" href="{{ 'assets/icons/safari-pinned-tab.svg' | relative_url }}" color="#00aba9">
   <meta name="msapplication-TileColor" content="#00aba9">
   <meta name="theme-color" content="rgb(0,37,64)">
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
   {% endif %}
   <link rel="stylesheet" media="screen" href="{{ '/assets/css/style.css' | relative_url }}">
 
@@ -44,7 +44,6 @@
     mixpanel.init('150cacbd77edcf1cc9db8704ea688e08'); 
     mixpanel.track('Page viewed');
   </script>
-
 </head>
 <body>
 <svg width="0" height="0" class="hidden">
@@ -113,40 +112,7 @@
       <span class="title hide-on-top"><a href="#home">Nova <span>Santé Intégrée</span></a></span>
     </div>
     <div class="content">
-      <div id="banner" class="slider full-height">
-        <div class="inner uppercase">
-          <header class="bordered">
-            <h1 class="uppercase"><a href="#about">Nova <span>Santé Intégrée</span></a></h1>
-          </header>
-          <p>Espace thérapeutique</p>
-          <p class="small">Thérapies individuelles · Ateliers de groupe · Séminaires</p>
-          <footer>
-            <ul>
-              <li>
-                <a class="icon contact_tel" href="javascript:document.getElementById('phone-contact').showModal()" title="Contact by phone">
-                  <svg class="icon">
-                    <use xlink:href="#call_24dp"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a class="icon contact_mailto" href="mailto:sarah.dionne@novasante.ch" title="Contact by email">
-                  <svg class="icon">
-                    <use xlink:href="#email_24dp"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a class="icon contact_onedoc" href="//www.onedoc.ch/fr/acupunctrice/paudex/pcsix/sarah-dionne" title="Take an appointment">
-                  <svg class="icon">
-                    <use xlink:href="#calendar_clock_24dp"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
-          </footer>
-        </div>
-      </div>
+      {% include homepage_banner.html %}
       <div class="sections">
         {{ content }}
       </div>
@@ -164,6 +130,6 @@
     navigator.serviceWorker.register('sw.js');
   };
 </script>
-<script src="assets/js/script.js"></script>
+<script src="{{ '/assets/js/script.js' | relative_url }}"></script>
 </body>
 </html>
