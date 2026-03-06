@@ -1,6 +1,6 @@
 ## Les thérapeutes actuellement au centre
 
-{% assign practitioners = site.practitioners | sort: "order", "title" %}
+{% assign practitioners = site.practitioners | sort: "order", "last" %}
 
 <div class="row">
 {% for p in practitioners %}
