@@ -4,7 +4,7 @@
 
 
 {% for p in practitioners %}
-  {% assign index_mod = forloop.index0 | modulo 2 %}
+  {% assign index_mod = forloop.index0 | modulo: 2 %}
   {% if index_mod == 0 %}<div class="row">{% endif %}
     <div class="col m--u-1/2">
         <h3>{{ p.title }}</h3>
