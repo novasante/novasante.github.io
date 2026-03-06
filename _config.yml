@@ -5,6 +5,9 @@ collections:
   practitioners:
     output: true
     permalink: /:name/
+contact:
+  email: sarah.dionne@novasante.ch
+  phone: 
 defaults:
   - scope:
       path: ""

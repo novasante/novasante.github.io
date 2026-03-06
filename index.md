@@ -31,13 +31,4 @@ Nous croyons que lorsque les compétences se complètent et que le dialogue s’
 
 ---
 
-## Contact
-
-+41 76 839 30 08  
-<sarah.dionne@novasante.ch>
-
----
-
-NOVA - SANTÉ INTÉGRÉE  
-Rte du Simplon 16, 1094 Paudex  
-[NOVASANTE.CH](HTTP://NOVASANTE.CH)
+{% include contact.html %}
