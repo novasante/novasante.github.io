@@ -1,13 +1,16 @@
-sass:
-  sass_dir: _sass
-  style: compressed
+title: NOVA
+baseline: Santé Intégrée
+address: Rte du Simplon 16, 1094 Paudex
+contact:
+  email: sarah.dionne@novasante.ch
+  phone: +41 76 839 30 08
 collections:
   practitioners:
     output: true
     permalink: /:name/
-contact:
-  email: sarah.dionne@novasante.ch
-  phone: 
+sass:
+  sass_dir: _sass
+  style: compressed
 defaults:
   - scope:
       path: ""
