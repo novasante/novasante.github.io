@@ -242,7 +242,7 @@ $slide-images: ("mountain-sunrise.jpg");
       }
     }
 
-    &.col {
+    &.col--text-around-img 
       padding: 0;
       p {
         padding: calc(var(--gutter) / 2);
