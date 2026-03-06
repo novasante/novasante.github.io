@@ -1,10 +1,11 @@
 ## Les thérapeutes actuellement au centre
 
 {% assign ordered = site.practitioners | where_exp: "p", "p.order" | sort: "order" %}
-{% assign alpha = site.practitioners | where_exp: "p", "p.order == blank" | sort: "title" %}
+{% assign unordered = site.practitioners | where_exp: "p", "p.order == blank" | sort: "title" %}
+{% assign practitioners = ordered | concat: unordered %}
 
 <div class="row">
-{% for p in ordered | concat: alpha %}
+{% for p in practitioners %}
     <div class="col m--u-1/2">
         <h3>{{ p.title }}</h3>
         <p><strong>{{ p.function }}</strong></p>
