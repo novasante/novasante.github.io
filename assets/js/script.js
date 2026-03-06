@@ -418,6 +418,7 @@ const initRouting = () => {
  * - Wraps each section with .row > .col (for your grid system).
  * - If a section starts with an H2 with an id, copies that id to the <section>
  *   AND removes the id from the H2 to avoid duplicate anchors.
+ * - Adds `.right` to every even image inside each section.
  */
 const initSections = ({
   containerSelector = ".sections",
@@ -425,7 +426,7 @@ const initSections = ({
   delimiterSelector = "hr.section-break",
   headingSelectorFallback = "H2",
   rowClass = "row",
-  colClass = "col",
+  colClass = "col"
 } = {}) => {
   const container = document.querySelector(containerSelector);
   if (!container) return;
@@ -475,10 +476,25 @@ const initSections = ({
     }
   };
 
+  const decorateImages = (parentEl) => {
+    const images = parentEl.querySelectorAll("img");
+
+    images.forEach((img, index) => {
+      // remove first so reruns stay clean
+      img.classList.remove("right");
+
+      // add .right to every even image: 2nd, 4th, 6th...
+      if ((index + 1) % 2 === 0) {
+        img.classList.add("right");
+      }
+    });
+  };
+
   const finalizeSection = () => {
     if (!section || !col) return;
 
     trimLeadingTrailingHR(col);
+    decorateImages(col);
 
     // Remove empty sections
     if (!col.children.length) {
@@ -516,6 +532,7 @@ const initSections = ({
 };
 
 const init = () => {
+  initSections();
   initFirstScrollListener();
   initObserveElements();
   initTogglerListener();
@@ -526,7 +543,6 @@ const init = () => {
   initNavPosition();
   initCloseSubNav();
   initParallax();
-  initSections();
   initForm();
   initRouting();
   initMaps();
