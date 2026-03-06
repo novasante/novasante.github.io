@@ -225,8 +225,24 @@ $slide-images: ("mountain-sunrise.jpg");
     left: auto;
     right: auto;
     width: 100%;
+    
+    img {
+      width: 100%;
+      max-width: calc(100vw - var(--gutter));
+        height: auto;
+        border-radius: 10px;
 
-    &.col--text-around-img {
+        @include grid-media-query(xs) {
+          max-width: calc((100vw / 2) - var(--gutter));
+        }
+        @include grid-media-query(s) {
+          &:not(.large) {
+            max-width: calc((100vw / 3) - var(--gutter));
+          }
+        }
+    }
+
+    &.col {
       padding: 0;
       p {
         padding: calc(var(--gutter) / 2);
@@ -243,25 +259,15 @@ $slide-images: ("mountain-sunrise.jpg");
             transform: scale(1.05);
           }
         }
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        max-width: calc(100% - var(--gutter));
         margin: 0 calc(var(--gutter) / 2);
         @include grid-media-query(xs) {
           margin: calc(var(--gutter) / 2) var(--gutter) calc(var(--gutter) / 2)
             calc(var(--gutter) / 2);
-          max-width: calc((100% / 2) - var(--gutter));
           float: left;
           &.right {
             float: right;
             margin: calc(var(--gutter) / 2) calc(var(--gutter) / 2)
               calc(var(--gutter) / 2) var(--gutter);
-          }
-        }
-        @include grid-media-query(s) {
-          &:not(.large) {
-            max-width: calc((100% / 3) - var(--gutter));
           }
         }
       }
@@ -309,7 +315,7 @@ html {
 html {
   font-family: sans-serif;
   &.fontLoaded {
-    font-family: Lato, sans-serif;
+    font-family: Raleway, sans-serif;
   }
 }
 html,
@@ -318,11 +324,13 @@ body {
   padding: 0;
   min-width: #{map-get($breakpoints, min)}px;
   font-size: var(--font-size-mobile);
+
   @include grid-media-query(s) {
     font-size: var(--font-size);
   }
   font-weight: 300;
-  letter-spacing: 0.025em;
+  line-height: 1.7;
+  letter-spacing: 0.1em;
   scroll-behavior: smooth;
   //background: var(--background);
   color: var(--font-color);
