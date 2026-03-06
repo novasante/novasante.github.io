@@ -1,8 +1,11 @@
 ---
 title: NOVA Santé Intégrée
 ---
+{% assign sarah = site.practitioner | where:"email", site.contact.email %}
 
 ## Présentation
+
+![{{ sarah.title }} | {{ sarah.function }} - ]({{ sarah.image }})
 
 NOVA Santé Intégrée est un espace thérapeutique dédié à la coordination et à la cohérence des parcours de soins.
 

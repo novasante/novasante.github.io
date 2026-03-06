@@ -225,12 +225,36 @@ $slide-images: ("mountain-sunrise.jpg");
     left: auto;
     right: auto;
     width: 100%;
-
+    hr {
+      clear: both;
+    }
     img {
+      &.observable {
+        filter: blur(5px);
+      }
+
+      &.visible {
+        filter: none;
+        transition: transform 0.2s;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
       width: 100%;
       max-width: calc(100vw - var(--gutter));
       height: auto;
       border-radius: 10px;
+
+      margin: 0 0 calc(var(--gutter) / 2) 0;
+      @include grid-media-query(xs) {
+        margin: 0 var(--gutter) calc(var(--gutter) / 2) 0;
+        float: left;
+        &.right {
+          float: right;
+          margin: calc(var(--gutter) / 2) calc(var(--gutter) / 2)
+            calc(var(--gutter) / 2) var(--gutter);
+        }
+      }
 
       @include grid-media-query(xs) {
         max-width: calc((100vw / 2) - var(--gutter));
@@ -238,39 +262,6 @@ $slide-images: ("mountain-sunrise.jpg");
       @include grid-media-query(s) {
         &:not(.large) {
           max-width: calc((100vw / 3) - var(--gutter));
-        }
-      }
-    }
-
-    &.col--text-around-img {
-      padding: 0;
-      p {
-        padding: calc(var(--gutter) / 2);
-        &:first-of-type {
-          margin-top: 0;
-        }
-      }
-      img {
-        &.observable {
-          filter: blur(5px);
-        }
-        &.visible {
-          filter: none;
-          transition: transform 0.2s;
-          &:hover {
-            transform: scale(1.05);
-          }
-        }
-        margin: 0 calc(var(--gutter) / 2);
-        @include grid-media-query(xs) {
-          margin: calc(var(--gutter) / 2) var(--gutter) calc(var(--gutter) / 2)
-            calc(var(--gutter) / 2);
-          float: left;
-          &.right {
-            float: right;
-            margin: calc(var(--gutter) / 2) calc(var(--gutter) / 2)
-              calc(var(--gutter) / 2) var(--gutter);
-          }
         }
       }
     }
@@ -1320,7 +1311,7 @@ body {
         padding-left: 0px;
         font-weight: 900;
         height: 56px;
-        vertical-align: middle;
+        // vertical-align: middle;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
