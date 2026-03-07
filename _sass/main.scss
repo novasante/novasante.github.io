@@ -316,6 +316,7 @@ body {
   padding: 0;
   min-width: #{map-get($breakpoints, min)}px;
   font-size: var(--font-size-mobile);
+  word-wrap: break-word;
 
   @include grid-media-query(s) {
     font-size: var(--font-size);

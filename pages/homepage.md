@@ -12,9 +12,7 @@ Nous croyons qu’un parcours de soin gagne en qualité lorsque les professionne
 
 ➡️ Découvrir les thérapeutes du centre
 
-
-<hr class="section-break">
-
+---
 
 ## Une vision globale de la santé
 
@@ -26,8 +24,7 @@ Chez **NOVA Santé Intégrée**, nous favorisons une lecture plus large de chaqu
 
 Notre démarche repose sur l’écoute, la collaboration et la complémentarité des approches thérapeutiques.
 
-<hr class="section-break">
-
+---
 
 ## Des accompagnements adaptés à chaque parcours
 
@@ -54,8 +51,7 @@ Cette coordination peut soutenir des parcours qui demandent plusieurs regards ou
 
 Le centre a aussi vocation à accueillir des ateliers, des séminaires et des espaces d’échange autour de la santé, du soin et du mieux-être.
 
-<hr class="section-break">
-
+---
 
 ## Pour qui ?
 
@@ -72,7 +68,7 @@ Nous accompagnons notamment :
 
 Chaque accompagnement est pensé de manière individualisée, avec une attention particulière aux besoins concrets de la personne.
 
-<hr class="section-break">
+---
 
 ## Une équipe aux approches complémentaires
 
