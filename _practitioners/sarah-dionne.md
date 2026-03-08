@@ -4,19 +4,98 @@ title: Sarah Dionne
 function: Fondatrice du centre - Coordination des soins - Thérapie et accompagnement
 email: sarah.dionne@novasante.ch
 phone: +41 76 839 30 08
+booking: //www.onedoc.ch/fr/acupunctrice/paudex/pcsix/sarah-dionne
 image: //ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/profile/sarah_dionne_profile.jpg
 ---
 
+
+Physiothérapie pédiatrique · Acupuncture · Médecine chinoise
+
+J’accompagne les nourrissons, les enfants et les adultes dans une approche globale du soin, mêlant physiothérapie et médecine traditionnelle chinoise.
+
+Mon objectif est de proposer un accompagnement adapté à chaque personne, en prenant en compte son histoire, son rythme et ses besoins spécifiques.
+
 ![Sarah Dionne](//ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/profile/sarah_dionne_profile_bis.jpg)
 
-De nationalité Canadienne et Suisse, j'ai reçu mon diplôme de l'Université Laval au Québec (Canada), en 2010. J'ai travaillé principalement en Suisse, au CHUV, depuis l'obtention de mon diplôme. D'abord une année en neuro-réhabilitation adulte, puis cinq ans aux soins intensifs de pédiatrie/néonatalogie et finalement six ans comme physiothérapeute cadre au sein du Département femme-mère-enfant.
+---
 
-J'ai pu durant ces années, voir toutes les facettes de la physiothérapie pédiatrique et bien comprendre le parcours et le cheminement des familles qui traversent des épreuves de tous genres.
+## Mon parcours
 
-Etant une grande fan de voyage, j'ai pu aller à la rencontre de nouvelles cultures et cela m'a conduit vers une autre approche de la médecine. Je me suis d'abord formée en Reiki en 2016, puis en acupuncture/moxibustion et massage tuina à l'Europe Shanghai College à Genève de 2017 à 2020. Avec les enfants ou pour les patients ayant une phobie des aiguilles, j'utilise un stylo d'acupuncture (Laser). En 2022, je compléterai ma formation avec le Shonishin, une méthode de traitement sans douleur idéale pour les enfants.
+De nationalité canadienne et suisse, j’ai obtenu mon diplôme de physiothérapeute à l’Université Laval au Québec en 2010.
+
+Depuis l’obtention de mon diplôme, j’ai principalement exercé en Suisse, notamment au **CHUV**, où j’ai travaillé dans différents services.
+
+Mon parcours m’a amenée à travailler successivement :
+
+- en **neuro-réhabilitation adulte**
+- aux **soins intensifs de pédiatrie et de néonatalogie**
+- comme **physiothérapeute cadre au Département femme-mère-enfant**
+
+Ces expériences m’ont permis de découvrir les différentes facettes de la physiothérapie pédiatrique et d’accompagner des familles dans des situations très variées.
+
+---
+
+## Mon approche
+
+Au fil de mon parcours, j’ai développé un intérêt pour des approches complémentaires du soin.
+
+Passionnée de voyage et de découverte, j’ai été amenée à explorer différentes visions de la médecine.
+
+Je me suis notamment formée à :
+
+- **Reiki (2016)**
+- **Acupuncture et moxibustion**
+- **Massage Tuina**
+
+Ces formations ont été suivies à l’**Europe Shanghai College à Genève** entre 2017 et 2020.
+
+Lorsque cela est nécessaire, j’utilise également un **stylo d’acupuncture laser**, particulièrement adapté pour les enfants ou les personnes ayant une appréhension des aiguilles.
+
+En 2022, j’ai complété ma formation avec le **Shonishin**, une méthode japonaise d’acupuncture sans aiguilles spécialement destinée aux enfants.
 
 ![Sarah Dionne bis](//ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/profile/sarah_dionne_profile.jpg)
 
-Maman de deux enfants (2019 et 2021) et étant spécialisée en soins de développement du nouveau-né et à la petite enfance, j'accompagne aussi volontiers les familles pour les aider à répondre à leurs questionnements tant au niveau du développement moteur de leur enfant, du “handling”, du positionnement et du sommeil, entre autres. Je mélange et j'adapte mon approche et la méthode de traitement (physiothérapie, acupuncture, reiki et éducation thérapeutique) selon les besoins du patient, qu'il soit un bébé ou un jeune adulte.
+---
 
-Les divers domaines où j'exerce comme physiothérapeute et dans lesquels je suis formée sont le respiratoire (en aigu ou chronique), le traitement cicatriciel, la neuroréhabilitation et les thérapies neurodéveloppementales, l'orthopédie, les maladies rares, la pelvi-périnéologie pédiatrique et de l'adolescente, la réathlétisation, les troubles fonctionnels et pathologie psychosomatiques, le suivi pré-partum.
+## Pour qui ?
+
+J’accompagne notamment :
+
+- les **nourrissons**
+- les **enfants**
+- les **adolescents**
+- les **adultes**
+- les **familles ayant des questions autour du développement de l’enfant**
+
+En tant que maman de deux enfants (2019 et 2021) et spécialiste du développement du nourrisson et de la petite enfance, j’accompagne également les parents dans leurs questionnements autour :
+
+- du développement moteur
+- du positionnement
+- du sommeil
+- du portage et du "handling"
+
+---
+
+## Domaines d’accompagnement
+
+Les domaines dans lesquels j’exerce et suis formée incluent notamment :
+
+- physiothérapie pédiatrique
+- troubles respiratoires (aigus ou chroniques)
+- traitement cicatriciel
+- neuroréhabilitation
+- thérapies neurodéveloppementales
+- orthopédie
+- maladies rares
+- pelvi-périnéologie pédiatrique et adolescente
+- réathlétisation
+- troubles fonctionnels
+- pathologies psychosomatiques
+- suivi pré-partum
+
+Mon approche consiste à adapter les outils thérapeutiques selon la situation :
+
+- physiothérapie
+- acupuncture
+- reiki
+- éducation thérapeutique

@@ -3,13 +3,14 @@ layout: default
 banner: name
 ---
 
-<h2>{{ page.title }}</h2>
+{{ content}}
+
+---
+
+<h2 id="contact">Prendre contact avec {{ page.title }}</h2>
 <p><strong>{{ page.function }}</strong></p>
-<p>📧 <a href="mailto:{{ p.email }}">{{ page.email }}</a><br>
+<p>📧 <a href="mailto:{{ page.email }}">{{ page.email }}</a><br>
 📞 {{ page.phone }}
-{% if page.instagram %}<br>Instagram : <a href="https://www.instagram.com/{{ p.instagram }}">@{{ page.instagram }}</a>{% endif %}
+{% if page.instagram %}<br>Instagram : <a href="https://www.instagram.com/{{ page.instagram }}">@{{ page.instagram }}</a>{% endif %}
 </p>
-
-<hr/>
-
-{{ content }}
+{% if page.booking %}<p><a class="button primary" href="{{ page.booking }}">Prendre rendez-vous</a></p>{% endif %}
