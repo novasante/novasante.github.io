@@ -14,3 +14,8 @@ site.defaults: {{ site.defaults | debug }}
 page: {{ page | debug }}
 page.defaults: {{ page.defaults | debug }}
 ```
+
+<h1>Collections</h1>
+```
+site.practitioners: {{ site.practitioners | debug }}
+```

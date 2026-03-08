@@ -421,6 +421,13 @@ body {
     &:hover {
       color: var(--font-color-hover);
     }
+    &.contact_mailto {
+      text-decoration: none;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: inline-block;
+    }
   }
   hr {
     width: 25%;

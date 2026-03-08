@@ -72,8 +72,7 @@ layout: default
 </div>
 {% endif %}
 
-
-{% assign practitioners = site.practitioners | sort: "order" %}
+{% assign practitioners = site.practitioners | sort: "order", "last" %}
 {% assign urls = practitioners | map: "name" %}
 {% assign idx = nil %}
 
@@ -82,6 +81,8 @@ layout: default
     {% assign idx = forloop.index0 %}
   {% endif %}
 {% endfor %}
+
+{{ practitioners }}
 
 {% if idx != nil %}
   {% assign prevIndex = idx | minus: 1 %}
