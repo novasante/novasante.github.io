@@ -8,14 +8,15 @@ booking: //www.onedoc.ch/fr/acupunctrice/paudex/pcsix/sarah-dionne
 image: //ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/profile/sarah_dionne_profile.jpg
 ---
 
+![Sarah Dionne](//ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/profile/sarah_dionne_profile_bis.jpg)
+
+## Spécialité
 
 Physiothérapie pédiatrique · Acupuncture · Médecine chinoise
 
 J’accompagne les nourrissons, les enfants et les adultes dans une approche globale du soin, mêlant physiothérapie et médecine traditionnelle chinoise.
 
 Mon objectif est de proposer un accompagnement adapté à chaque personne, en prenant en compte son histoire, son rythme et ses besoins spécifiques.
-
-![Sarah Dionne](//ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/profile/sarah_dionne_profile_bis.jpg)
 
 ---
 
@@ -35,6 +36,8 @@ Ces expériences m’ont permis de découvrir les différentes facettes de la ph
 
 ---
 
+![Sarah Dionne bis](//ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/profile/sarah_dionne_profile.jpg)
+
 ## Mon approche
 
 Au fil de mon parcours, j’ai développé un intérêt pour des approches complémentaires du soin.
@@ -52,8 +55,6 @@ Ces formations ont été suivies à l’**Europe Shanghai College à Genève** e
 Lorsque cela est nécessaire, j’utilise également un **stylo d’acupuncture laser**, particulièrement adapté pour les enfants ou les personnes ayant une appréhension des aiguilles.
 
 En 2022, j’ai complété ma formation avec le **Shonishin**, une méthode japonaise d’acupuncture sans aiguilles spécialement destinée aux enfants.
-
-![Sarah Dionne bis](//ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/profile/sarah_dionne_profile.jpg)
 
 ---
 
