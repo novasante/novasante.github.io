@@ -6,11 +6,10 @@ layout: default
 
 ---
 
-<h2 id="contact">Prendre contact avec {{ page.title }}</h2>
+<h2 id="contact">Contacter {{ page.title }}</h2>
 <p><strong>{{ page.function }}</strong>
 {% if page.instagram %}<br>Instagram : <a href="https://www.instagram.com/{{ page.instagram }}">@{{ page.instagram }}</a>{% endif %}
 </p>
-{% if page.booking %}<p class="text-center"><br><a class="button primary" href="{{ page.booking }}">Prendre rendez-vous</a></p>{% endif %}
 <div class="row">
   <div class="col m--u-1/2 phone">
     <div class="row">
@@ -50,3 +49,57 @@ layout: default
     </div>
   </div>
 </div>
+{% if page.urls.vcf %}
+<div class="row">
+  <div class="col text-center">
+    <a href="{{ page.urls.vcf }}" class="button primary contact_download_vCard">
+      <svg class="icon">
+        <use xlink:href="#download_24dp"></use>
+      </svg> Enregistrer le contact
+    </a>
+  </div>
+</div>
+{% endif %}
+{% if page.urls.booking %}
+<div class="row">
+  <div class="col text-center">
+    <a href="{{ page.urls.booking }}" class="button secondary">
+      <svg class="icon">
+        <use xlink:href="#calendar_clock_24dp"></use>
+      </svg> Prendre rendez-vous
+    </a>
+  </div>
+</div>
+{% endif %}
+
+
+{% assign practitioners = site.practitioners | sort: "order" %}
+{% assign urls = practitioners | map: "name" %}
+{% assign idx = nil %}
+
+{% for u in urls %}
+  {% if u == page.url %}
+    {% assign idx = forloop.index0 %}
+  {% endif %}
+{% endfor %}
+
+{% if idx != nil %}
+  {% assign prevIndex = idx | minus: 1 %}
+  {% assign nextIndex = idx | plus: 1 %}
+
+  <div class="row practitioners-nav">
+    <div class="col">
+      <div class="practitioners-nav__inner">
+        {% if prevIndex >= 0 %}
+          {% assign prev = practitioners[prevIndex] %}
+          <a class="practitioners-nav__link" href="{{ prev.url }}">← {{ prev.name }}</a>
+        {% endif %}
+
+        {% if nextIndex < practitioners.size %}
+          {% assign next = practitioners[nextIndex] %}
+          <a class="practitioners-nav__link" href="{{ next.url }}">{{ next.name }} →</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+{% endif %}
