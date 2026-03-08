@@ -9,6 +9,17 @@
         </header>
     </div>
 </div>
+{% elseif page.banner == name %}
+<div id="banner" class="slider full-height">
+    <div class="inner no-filter">
+        <header class="non-bordered">
+            <p class="headline">{{ page.title }}</p>
+            <p>
+                <a href="#contact" class="button primary">Prendre rendez-vous</a>
+            </p>
+        </header>
+    </div>
+</div>
 {% else %}
 <div id="banner" class="slider full-height text-center">
     <div class="inner uppercase">
