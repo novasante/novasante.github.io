@@ -598,6 +598,9 @@ body {
       display: none;
     }
   }
+  img {
+    max-width: 100vw;
+  }
   svg {
     title {
       display: none;
@@ -1206,7 +1209,7 @@ body {
 }
 
 /* Mobile menu and header */
-@include grid-media-query(m, down) {
+@include grid-media-query(l, down) {
   .container {
     /* Mobile top header */
     // on top of page stays not fixed
@@ -1447,7 +1450,7 @@ body {
 }
 
 /* Desktop menu */
-@include grid-media-query(m) {
+@include grid-media-query(l) {
   .container {
     // ON TOP OF PAGE Stays not fixed
     &.banner-intersecting {
