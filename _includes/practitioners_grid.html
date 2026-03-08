@@ -7,7 +7,7 @@
   {% assign index_mod = forloop.index0 | modulo: 2 %}
   {% if index_mod == 0 %}<div class="row">{% endif %}
     <div class="col m--u-1/2">
-        <h3>{{ p.title }}</h3>
+        <h3><a href="{{ p.url }}">{{ p.title }}</a></h3>
         <p><strong>{{ p.function }}</strong></p>
         <p>📧 <a href="mailto:{{ p.email }}">{{ p.email }}</a><br>
         📞 {{ p.phone }}

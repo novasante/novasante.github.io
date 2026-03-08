@@ -73,7 +73,7 @@ layout: default
 {% endif %}
 
 {% assign practitioners = site.practitioners | sort: "order", "last" %}
-{% assign urls = practitioners | map: "name" %}
+{% assign urls = practitioners | map: url %}
 {% assign idx = nil %}
 
 {% for u in urls %}
