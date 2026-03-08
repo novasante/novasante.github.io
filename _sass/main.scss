@@ -158,10 +158,10 @@ $slide-images: ("mountain-sunrise.jpg");
   --primary-btn-bg: var(--green);
   --nav-bg: transparent;
 
-  --font-size: 18px;
-  --font-size-mobile: calc(var(--font-size) * 0.9);
+  --font-size-desktop: 18px;
+  --font-size-mobile: calc(var(--font-size-desktop) * 0.9);
   --header-border-width: 2px;
-  --h1-font-size: 2.5em;
+  --h1-font-size: 3em;
 
   --gutter: 24px;
 }
@@ -191,6 +191,13 @@ $slide-images: ("mountain-sunrise.jpg");
         width: calc(#{$i} * 100% / #{$grid-column});
       }
     }
+  }
+}
+
+:root {
+  --font-size: var(--font-size-mobile);
+  @include grid-media-query(s) {
+    --font-size: var(--font-size-desktop);
   }
 }
 
@@ -228,7 +235,7 @@ $slide-images: ("mountain-sunrise.jpg");
     hr {
       clear: both;
     }
-    p:has(img) {
+    p + p:has(img) {
       clear: both;
       padding-top: calc(var(--gutter) * 2);
     }
@@ -327,12 +334,8 @@ body {
   margin: 0;
   padding: 0;
   min-width: #{map-get($breakpoints, min)}px;
-  font-size: var(--font-size-mobile);
+  font-size: var(--font-size);
   word-wrap: break-word;
-
-  @include grid-media-query(s) {
-    font-size: var(--font-size);
-  }
   font-weight: 300;
   line-height: 1.4;
   letter-spacing: 0.1em;
@@ -910,7 +913,6 @@ body {
         position: relative;
         overflow: hidden;
         margin: 0;
-        text-align: center;
         color: var(--font-color-inverted);
         cursor: default;
         padding: 0;
@@ -918,7 +920,6 @@ body {
         @include grid-media-query(l) {
           min-height: 70vh;
         }
-        text-align: center;
         background-attachment: scroll, scroll;
         background-color: var(--purple-lighter);
         background-position: bottom;
@@ -930,7 +931,9 @@ body {
 
         .inner {
           z-index: 2;
-          filter: drop-shadow(0px 0px 5px var(--deep-blue));
+          &:not(.no-filter) {
+            filter: drop-shadow(0px 0px 5px var(--deep-blue));
+          }
           margin: auto;
           position: absolute;
           top: 50%;
@@ -946,8 +949,6 @@ body {
           @include grid-media-query(m) {
             padding-top: 72px;
           }
-
-          text-align: center;
           vertical-align: middle;
 
           header {
@@ -966,6 +967,19 @@ body {
                 border-bottom: solid var(--header-border-width);
                 border-top: solid var(--header-border-width);
               }
+            }
+            .headline {
+              font-size: var(--h1-font-size);
+              @include grid-media-query(l) {
+                font-size: 4em;
+              }
+              font-weight: bold;
+              color: var(--light-85);
+              text-align: left;
+            }
+            a.button.primary {
+              filter: none;
+              margin-top: calc(var(--gutter) * 2);
             }
             h1 {
               font-size: var(--h1-font-size);

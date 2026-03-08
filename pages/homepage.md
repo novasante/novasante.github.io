@@ -1,5 +1,6 @@
 ---
 permalink: /v2/
+is_v2: true
 ---
 
 ## Un centre de santé intégratif à Paudex {#presentation}
