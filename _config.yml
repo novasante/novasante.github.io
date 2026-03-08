@@ -15,7 +15,7 @@ sass:
 defaults:
   - scope:
       path: ""
-      type: "pages"
+      type: pages
     values:
       layout: default
       title: "NOVA Santé Intégrée | Espace Thérapeutique & Coordination de Soins à Paudex"

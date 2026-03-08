@@ -28,7 +28,7 @@ Nous croyons que lorsque les compétences se complètent et que le dialogue s’
 
 ---
 
-{% include practitioners.html %}
+{% include practitioners_grid.html %}
 
 ---
 

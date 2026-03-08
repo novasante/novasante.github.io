@@ -82,7 +82,7 @@ offrir un cadre de soin respectueux, attentif et ouvert à la complémentarité.
 
 ---
 
-{% include practitioners.html %}
+{% include practitioners_grid.html %}
 
 ---
 
