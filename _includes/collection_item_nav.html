@@ -1,0 +1,30 @@
+{% assign collection_name = page.collection %}
+{% if collection_name %}
+  {% assign items = site[collection_name] %}
+
+  {% assign current_index = nil %}
+  {% for item in items %}
+    {% if item.url == page.url %}
+      {% assign current_index = forloop.index0 %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+
+  {% if current_index != nil %}
+    {% assign prev_index = current_index | minus: 1 %}
+    {% assign next_index = current_index | plus: 1 %}
+
+    <nav class="collection-nav">
+      {% if prev_index >= 0 %}
+        {% assign prev_item = items[prev_index] %}
+        <a class="collection-nav__prev" href="{{ prev_item.url }}">← {{ prev_item.title }}</a>
+      {% endif %}
+
+      {% if next_index < items.size %}
+        {% assign next_item = items[next_index] %}
+        <a class="collection-nav__next" href="{{ next_item.url }}">{{ next_item.title }} →</a>
+      {% endif %}
+    </nav>
+  {% endif %}
+{% endif %}
+
