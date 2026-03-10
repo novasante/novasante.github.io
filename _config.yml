@@ -2,6 +2,10 @@ title: NOVA
 baseline: Santé Intégrée
 address: Rte du Simplon 16, 1094 Paudex
 practitioners_url: "#practitioners"
+headline: La santé se construit ensemble.
+cta:
+  text: Contactez-nous
+  url: "#contact"
 contact:
   email: sarah.dionne@novasante.ch
   phone: +41 76 839 30 08
@@ -10,7 +14,7 @@ collections:
   practitioners:
     output: true
     permalink: /:name/
-    sort_by: order
+    sort_by: order, last
 sass:
   sass_dir: _sass
   style: compressed

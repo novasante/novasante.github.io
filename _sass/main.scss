@@ -242,6 +242,7 @@ $slide-images: ("mountain-sunrise.jpg");
     p:has(img) + h3 {
       // padding-top: calc(var(--gutter) * 2);
     }
+    ul { overflow: auto; }
     img {
       &.observable {
         filter: blur(5px);
