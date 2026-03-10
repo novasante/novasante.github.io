@@ -72,33 +72,8 @@ layout: default
 </div>
 {% endif %}
 
-{% assign practitioners = site.practitioners | sort: "order", "last" %}
-{% assign urls = practitioners | map: url %}
-{% assign idx = nil %}
+---
 
-{% for u in urls %}
-  {% if u == page.url %}
-    {% assign idx = forloop.index0 %}
-  {% endif %}
-{% endfor %}
+## Les autres thérapeutes
 
-{% if idx != nil %}
-  {% assign prevIndex = idx | minus: 1 %}
-  {% assign nextIndex = idx | plus: 1 %}
-
-  <div class="row practitioners-nav">
-    <div class="col">
-      <div class="practitioners-nav__inner">
-        {% if prevIndex >= 0 %}
-          {% assign prev = practitioners[prevIndex] %}
-          <a class="practitioners-nav__link" href="{{ prev.url }}">← {{ prev.name }}</a>
-        {% endif %}
-
-        {% if nextIndex < practitioners.size %}
-          {% assign next = practitioners[nextIndex] %}
-          <a class="practitioners-nav__link" href="{{ next.url }}">{{ next.name }} →</a>
-        {% endif %}
-      </div>
-    </div>
-  </div>
-{% endif %}
+{% include collection_item_nav.html %}

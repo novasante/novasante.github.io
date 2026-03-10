@@ -5,10 +5,12 @@ practitioners_url: "#practitioners"
 contact:
   email: sarah.dionne@novasante.ch
   phone: +41 76 839 30 08
+collections_dir: my_collections
 collections:
   practitioners:
     output: true
     permalink: /:name/
+    sort_by: order
 sass:
   sass_dir: _sass
   style: compressed
