@@ -2,25 +2,63 @@
 <ul>
   {% for item in include.nav %}
     {% assign classnames = nil %}
-    {% if item.subnav %}
-        {% assign classnames = "submenu" %}
+    {% assign generated_subnav = nil %}
+
+    {% if item.collection %}
+      {% assign collection_name = item.collection %}
+      {% assign collection_items = site[collection_name] %}
+
+      {% if collection_items %}
+        {% assign generated_subnav = collection_items | sort: "order", "last" %}
+      {% endif %}
     {% endif %}
+
+    {% if item.subnav or generated_subnav %}
+      {% assign classnames = "submenu" %}
+    {% endif %}
+
+    {% assign is_current = false %}
     {% if page.url == item.url %}
-        {% if classnames %}
-            {% assign classnames = classnames | append: ", current" %}
-        {% else %}
-            {% assign classnames = "current" %}
-        {% endif %}
+      {% assign is_current = true %}
     {% endif %}
+{% comment %}
+    {% if generated_subnav %}
+      {% for entry in generated_subnav %}
+        {% if page.url == entry.url %}
+          {% assign is_current = true %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+{% endcomment %}
+    {% if is_current %}
+      {% if classnames %}
+        {% assign classnames = classnames | append: ", current" %}
+      {% else %}
+        {% assign classnames = "current" %}
+      {% endif %}
+    {% endif %}
+
     <li{% if classnames %} class="{{ classnames | split: ', ' | join: ' ' }}"{% endif %}>
-        {% assign tag_name = 'span' %}
-        {% if item.url %}
-            {% assign tag_name = 'a' %}
-        {% endif %}
-        <{{ tag_name }}{% if item.url %} href="{{ item.url }}"{% endif %}{% if item.class %} class="{{ item.class }}"{% endif %}>{{ item.title }}</{{ tag_name }}>
-        {% if item.subnav %}
-            {% include recursive_nav.html nav=item.subnav %}
-        {% endif %}
+      {% assign tag_name = 'span' %}
+      {% if item.url %}
+        {% assign tag_name = 'a' %}
+      {% endif %}
+
+      <{{ tag_name }}{% if item.url %} href="{{ item.url }}"{% endif %}{% if item.class %} class="{{ item.class }}"{% endif %}>
+        {{ item.title }}
+      </{{ tag_name }}>
+
+      {% if item.subnav %}
+        {% include recursive_nav.html nav=item.subnav %}
+      {% elsif generated_subnav %}
+        <ul>
+          {% for entry in generated_subnav %}
+            <li{% if page.url == entry.url %} class="current"{% endif %}>
+              <a href="{{ entry.url }}">{{ entry.title }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
     </li>
   {% endfor %}
 </ul>
