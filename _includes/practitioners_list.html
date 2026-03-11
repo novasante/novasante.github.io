@@ -1,0 +1,10 @@
+{% assign practitioners = site.practitioners | sort: "order", "last" %}
+{% assign others = practitioners | where_exp: "p", "p.url != page.url" %}
+
+<ul>
+{% for p in others %}
+	<li><strong><a href="{{ p.url }}">{{ p.title }}</a></strong>
+		{% if show_function %}<br>{{ p.function }}{% endif %}
+	</li>
+{% endfor %}
+</ul>
