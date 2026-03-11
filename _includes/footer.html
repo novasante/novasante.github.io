@@ -1,0 +1,56 @@
+<footer class="site-footer">
+  <div class="row hidden">
+    <div class="col m--u-1/2 l--u-1/4">
+      <h3>NOVA Santé Intégrée</h3>
+      <p class="small">
+        La santé se construit ensemble.
+      </p>
+      <p>
+        Route du Simplon 16<br>
+        1094 Paudex
+      </p>
+    </div>
+
+    <div class="col m--u-1/2 l--u-1/4">
+      <h3>Le centre</h3>
+      <ul class="unstyled">
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/#presentation">Présentation</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="col m--u-1/2 l--u-1/4">
+      <h3>Thérapeutes</h3>
+      {% include practitioners_list.html %}
+    </div>
+
+    <div class="col m--u-1/2 l--u-1/4">
+      <h3>Contact</h3>
+      <ul class="unstyled">
+        <li><a href="mailto:sarah.dionne@novasante.ch">sarah.dionne@novasante.ch</a></li>
+        <li><a href="tel:+41768393008">+41 76 839 30 08</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="row site-footer__logos hidden">
+    <div class="col">
+      <p class="small">
+        Certains accompagnements proposés au centre peuvent être reconnus selon les accréditations des thérapeutes.
+      </p>
+
+      <div class="site-footer__logos-list">
+        <img src="/assets/images/logos/asca.svg" alt="Logo ASCA" class="site-footer__logo">
+        <img src="/assets/images/logos/rme.svg" alt="Logo RME" class="site-footer__logo">
+      </div>
+    </div>
+  </div>
+
+  <div class="site-footer__bottom">
+    <p><svg class="logo icon color-scheme-toggler">
+	    <use xlink:href="#logo_24dp"></use>
+	  </svg><small>&copy; {{ site.time | date: '%Y' }} {{ site.title }} {{ site.baseline }} · <a href="{{ site.github.repository_url }}">GitHub</a></small>
+	</p>
+  </div>
+</footer>
