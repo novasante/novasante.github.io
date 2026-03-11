@@ -7,9 +7,9 @@ layout: default
 {% if page_content == "" %}
 
 <h2 id="presentation">Présentation</h2>
-<p>
-<img src="https://placehold.co/600x400?text=Portrait" alt="{{ page.title }}">
-</p>
+{% if page.urls.image %}
+<p><img src="{{ page.urls.image }}" alt="{{ page.title }}"></p>
+{% endif %}
 <p><strong>{{ page.function }}</strong></p>
 <p>
 {{ page.title }} reçoit au sein de <strong>NOVA Santé Intégrée</strong> à Paudex.
@@ -35,7 +35,7 @@ Sa présentation détaillée sera bientôt disponible.
   <div class="col m--u-1/2 phone">
     <div class="row">
       <div class="col u-1/4 text-center">
-        <a title="Par téléphone" class="button-icon">
+        <a href="javascript:document.getElementById('phone-contact').showModal()" title="Par téléphone" class="button-icon">
           <svg class="icon">
             <use xlink:href="#call_24dp"></use>
           </svg>
@@ -44,7 +44,7 @@ Sa présentation détaillée sera bientôt disponible.
       <div class="col u-3/4">
         <p>Par téléphone:</p>
         <p>
-          <strong>{{ page.phone }}</strong><br>
+          <a href="javascript:document.getElementById('phone-contact').showModal()" title="Par téléphone" class="contact_tel"><strong>{{ page.phone }}</strong></a>
         </p>
       </div>
     </div>

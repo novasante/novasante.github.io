@@ -5,16 +5,16 @@
 {% include icons.html %}
 <dialog id="phone-contact" onClick="this.close()">
   <form method="dialog" onClick="event.stopPropagation()">
-    <p>Nous contacter par:</p>
+    <p>Prendre contact:</p>
     <ul class="buttons_list">
       <li>
-        <a class="button" href="sms:+41768393008" title="sms:+41768393008">
+        <a class="button" href="sms:{{ page.phone | remove: ' ' }}" title="sms:{{ page.phone | remove: ' ' }}">
           <svg class="icon">
             <use xlink:href="#forum_24dp"></use>
           </svg> SMS</a>
       </li>
       <li>
-        <a class="button" href="//wa.me/41768393008" title="Whatsapp">
+        <a class="button" href="//wa.me/{{ page.phone | remove: ' ' | remove: '+' }}" title="Whatsapp">
           <svg class="icon">
             <use xlink:href="#whatsapp_24dp"></use>
           </svg> WhatsApp</a>
