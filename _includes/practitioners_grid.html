@@ -1,8 +1,9 @@
 ## Les thérapeutes actuellement au centre {#practitioners}
 
 {% assign practitioners = site.practitioners | sort: "order", "last" %}
+{% assign others = practitioners | where_exp: "p", "p.url != page.url" %}
 
-{% for p in practitioners %}
+{% for p in others %}
   {% assign index_mod = forloop.index0 | modulo: 2 %}
   {% if index_mod == 0 %}<div class="row">{% endif %}
     <div class="col m--u-1/2">

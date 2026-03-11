@@ -242,7 +242,9 @@ $slide-images: ("mountain-sunrise.jpg");
     p:has(img) + h3 {
       // padding-top: calc(var(--gutter) * 2);
     }
-    ul { overflow: auto; }
+    ul {
+      overflow: auto;
+    }
     img {
       &.observable {
         filter: blur(5px);
@@ -327,7 +329,7 @@ html {
 html {
   font-family: sans-serif;
   &.fontLoaded {
-    font-family: Raleway, sans-serif;
+    font-family: "Raleway", sans-serif;
   }
 }
 html,
@@ -339,7 +341,7 @@ body {
   word-wrap: break-word;
   font-weight: 300;
   line-height: 1.4;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.05em;
   scroll-behavior: smooth;
   //background: var(--background);
   color: var(--font-color);
@@ -408,7 +410,7 @@ body {
       font-weight: 600;
     }
     strong {
-      font-weight: 600;
+      font-weight: 500;
     }
   }
   svg.banner-logo.icon {
@@ -597,6 +599,9 @@ body {
   }
   .hidden {
     display: none !important;
+  }
+  .margin-top {
+    margin-top: var(--gutter);
   }
   .display-inline {
     display: inline;
@@ -993,7 +998,7 @@ body {
               @include grid-media-query(l) {
                 font-size: 4.5em;
               }
-              font-weight: bold;
+              font-weight: 500;
               color: var(--light-85);
               text-align: left;
             }
@@ -1040,7 +1045,7 @@ body {
           }
           p {
             font-weight: 500;
-            letter-spacing: 0.1em;
+            //letter-spacing: 0.1em;
             margin: 0;
             &.small {
               font-size: 0.8em;

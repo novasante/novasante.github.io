@@ -1,15 +1,4 @@
-{% if page.is_v2 %}
-<div id="banner" class="slider full-height">
-    <div class="inner no-filter">
-        <header class="non-bordered">
-            <p class="headline">{{ site.headline }}</p>
-            <p>
-                <a href="{{ site.cta.url }}" class="button primary">{{ site.cta.text }}</a>
-            </p>
-        </header>
-    </div>
-</div>
-{% elsif page.collection == "practitioners" %}
+{% if page.collection == "practitioners" %}
 <div id="banner" class="slider">
     <div class="inner no-filter">
         <header class="non-bordered">
@@ -21,38 +10,14 @@
     </div>
 </div>
 {% else %}
-<div id="banner" class="slider full-height text-center">
-    <div class="inner uppercase">
-        <header class="bordered">
-            <h1>NOVA <span>Santé Intégrée</span></h1>
+<div id="banner" class="slider full-height">
+    <div class="inner no-filter">
+        <header class="non-bordered">
+            <p class="headline">{{ site.headline }}</p>
+            <p>
+                <a href="{{ site.cta.url }}" class="button primary">{{ site.cta.text }}</a>
+            </p>
         </header>
-        <p>Espace thérapeutique</p>
-        <p class="small">Thérapies individuelles · Ateliers de groupe · Séminaires</p>
-        <footer>
-            <ul>
-                <li>
-                <a class="icon contact_tel" href="javascript:document.getElementById('phone-contact').showModal()" title="Contact by phone">
-                    <svg class="icon">
-                    <use xlink:href="#call_24dp"></use>
-                    </svg>
-                </a>
-                </li>
-                <li>
-                <a class="icon contact_mailto" href="mailto:sarah.dionne@novasante.ch" title="Contact by email">
-                    <svg class="icon">
-                    <use xlink:href="#email_24dp"></use>
-                    </svg>
-                </a>
-                </li>
-                <li>
-                <a class="icon contact_onedoc" href="//www.onedoc.ch/fr/acupunctrice/paudex/pcsix/sarah-dionne" title="Take an appointment">
-                    <svg class="icon">
-                    <use xlink:href="#calendar_clock_24dp"></use>
-                    </svg>
-                </a>
-                </li>
-            </ul>
-        </footer>
     </div>
 </div>
 {% endif %}
