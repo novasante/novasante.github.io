@@ -1,5 +1,5 @@
 nav:
-  - title: Home
+  - title: Accueil
     url: '/'
   - title: Thérapeutes
     collection: practitioners

@@ -7,7 +7,7 @@ cta:
   text: Contactez-nous
   url: "#contact"
 contact:
-  email: sarah.dionne@novasante.ch
+  email: contact@novasante.ch
   phone: +41 76 839 30 08
 collections_dir: my_collections
 collections:

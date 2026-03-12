@@ -594,6 +594,15 @@ body {
   .text-center {
     text-align: center;
   }
+  .small {
+    font-size: 0.8em;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .text-left {
+    text-align: left;
+  }
   .uppercase {
     text-transform: uppercase;
   }
@@ -1200,7 +1209,25 @@ body {
       }
     }
     footer {
-      text-align: center;
+      &.site-footer {
+        text-align: inherit;
+        background-color: var(--purple-lighter);
+        &, & * { color: var(--font-color-inverted); }
+        p {
+          height: inherit;
+        }
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          li + li {
+            margin-top: 0.5rem;
+          }
+        }
+      }
+      div.col > h3 {
+        margin-top: calc(2 * var(--gutter));
+      }
       padding: calc(var(--gutter) / 2);
       p {
         height: 24px;
@@ -1216,6 +1243,16 @@ body {
         width: 24px;
         color: var(--font-color);
         margin-right: 12px;
+        &.logo {
+          width: 120px;
+          height: 120px;
+          &.logo_full {
+            max-width: 100%;
+            width: 360px;
+            height: 360px;
+            margin: 0;
+          }
+        }
       }
     }
   }
