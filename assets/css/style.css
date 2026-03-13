@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/* SNCL SLIDER (disabled) */
+/* BANNER SLIDER */
 :root {
   --slide-1: url("//ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/mountain-sunrise.jpg");
 }
@@ -247,6 +247,22 @@
   width: calc(3 * 100% / 4);
 }
 
+.col.u-1\/5 {
+  width: calc(1 * 100% / 5);
+}
+
+.col.u-2\/5 {
+  width: calc(2 * 100% / 5);
+}
+
+.col.u-3\/5 {
+  width: calc(3 * 100% / 5);
+}
+
+.col.u-4\/5 {
+  width: calc(4 * 100% / 5);
+}
+
 @media only screen and (min-width: 300px) {
   .col.min--u-1\/2 {
     width: calc(1 * 100% / 2);
@@ -270,6 +286,22 @@
 
   .col.min--u-3\/4 {
     width: calc(3 * 100% / 4);
+  }
+
+  .col.min--u-1\/5 {
+    width: calc(1 * 100% / 5);
+  }
+
+  .col.min--u-2\/5 {
+    width: calc(2 * 100% / 5);
+  }
+
+  .col.min--u-3\/5 {
+    width: calc(3 * 100% / 5);
+  }
+
+  .col.min--u-4\/5 {
+    width: calc(4 * 100% / 5);
   }
 
   .inline-min {
@@ -309,6 +341,22 @@
     width: calc(3 * 100% / 4);
   }
 
+  .col.xs--u-1\/5 {
+    width: calc(1 * 100% / 5);
+  }
+
+  .col.xs--u-2\/5 {
+    width: calc(2 * 100% / 5);
+  }
+
+  .col.xs--u-3\/5 {
+    width: calc(3 * 100% / 5);
+  }
+
+  .col.xs--u-4\/5 {
+    width: calc(4 * 100% / 5);
+  }
+
   .inline-xs {
     display: inline !important;
   }
@@ -344,6 +392,22 @@
 
   .col.s--u-3\/4 {
     width: calc(3 * 100% / 4);
+  }
+
+  .col.s--u-1\/5 {
+    width: calc(1 * 100% / 5);
+  }
+
+  .col.s--u-2\/5 {
+    width: calc(2 * 100% / 5);
+  }
+
+  .col.s--u-3\/5 {
+    width: calc(3 * 100% / 5);
+  }
+
+  .col.s--u-4\/5 {
+    width: calc(4 * 100% / 5);
   }
 
   .inline-s {
@@ -383,6 +447,22 @@
     width: calc(3 * 100% / 4);
   }
 
+  .col.m--u-1\/5 {
+    width: calc(1 * 100% / 5);
+  }
+
+  .col.m--u-2\/5 {
+    width: calc(2 * 100% / 5);
+  }
+
+  .col.m--u-3\/5 {
+    width: calc(3 * 100% / 5);
+  }
+
+  .col.m--u-4\/5 {
+    width: calc(4 * 100% / 5);
+  }
+
   .inline-m {
     display: inline !important;
   }
@@ -418,6 +498,22 @@
 
   .col.l--u-3\/4 {
     width: calc(3 * 100% / 4);
+  }
+
+  .col.l--u-1\/5 {
+    width: calc(1 * 100% / 5);
+  }
+
+  .col.l--u-2\/5 {
+    width: calc(2 * 100% / 5);
+  }
+
+  .col.l--u-3\/5 {
+    width: calc(3 * 100% / 5);
+  }
+
+  .col.l--u-4\/5 {
+    width: calc(4 * 100% / 5);
   }
 
   .inline-l {
@@ -457,6 +553,22 @@
     width: calc(3 * 100% / 4);
   }
 
+  .col.xl--u-1\/5 {
+    width: calc(1 * 100% / 5);
+  }
+
+  .col.xl--u-2\/5 {
+    width: calc(2 * 100% / 5);
+  }
+
+  .col.xl--u-3\/5 {
+    width: calc(3 * 100% / 5);
+  }
+
+  .col.xl--u-4\/5 {
+    width: calc(4 * 100% / 5);
+  }
+
   .inline-xl {
     display: inline !important;
   }
@@ -492,6 +604,22 @@
 
   .col.xxl--u-3\/4 {
     width: calc(3 * 100% / 4);
+  }
+
+  .col.xxl--u-1\/5 {
+    width: calc(1 * 100% / 5);
+  }
+
+  .col.xxl--u-2\/5 {
+    width: calc(2 * 100% / 5);
+  }
+
+  .col.xxl--u-3\/5 {
+    width: calc(3 * 100% / 5);
+  }
+
+  .col.xxl--u-4\/5 {
+    width: calc(4 * 100% / 5);
   }
 
   .inline-xxl {
@@ -936,23 +1064,11 @@ body div.map-iframe {
   background-position: center;
   cursor: pointer;
 }
-body div.map-iframe.map--bulle {
-  background-image: url("https://ik.imagekit.io/sarahdionne/tr:w-30,fo-auto,f-webp/maps/Bulle.png");
-}
-body div.map-iframe.map--bulle.visible {
-  background-image: url("https://ik.imagekit.io/sarahdionne/tr:w-720,fo-auto,f-webp/maps/Bulle.png");
-}
 body div.map-iframe.map--paudex {
   background-image: url("https://ik.imagekit.io/sarahdionne/tr:w-30,fo-auto,f-webp/maps/Paudex.png");
 }
 body div.map-iframe.map--paudex.visible {
   background-image: url("https://ik.imagekit.io/sarahdionne/tr:w-720,fo-auto,f-webp/maps/Paudex.png");
-}
-body div.map-iframe.map--sncl {
-  background-image: url("//ik.imagekit.io/sncl/tr:w-32,fo-auto,f-webp/content/SNCL_map.png");
-}
-body div.map-iframe.map--sncl.visible {
-  background-image: url("//ik.imagekit.io/sncl/tr:w-576,fo-auto,f-webp/content/SNCL_map.png");
 }
 body div.map-iframe iframe {
   height: 250px;
@@ -1146,6 +1262,7 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   display: inline-block;
   padding: 0;
   min-width: calc(300px - var(--gutter));
+  padding-top: 36px;
   vertical-align: middle;
 }
 .container .wrapper .content #banner .inner:not(.no-filter) {
@@ -1154,11 +1271,6 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
 @media only screen and (min-width: 300px) {
   .container .wrapper .content #banner .inner {
     min-width: 90vw;
-  }
-}
-@media only screen and (min-width: 748px) {
-  .container .wrapper .content #banner .inner {
-    padding-top: 72px;
   }
 }
 .container .wrapper .content #banner .inner header {
