@@ -2,7 +2,7 @@ $breakpoints: (
   "min": 300,
   "xs": 360,
   "s": 480,
-  "m": 768,
+  "m": 748,
   "l": 992,
   "xl": 1200,
   "xxl": 1440
@@ -19,12 +19,12 @@ $containers: (
   "xxl": 1200px
 );
 
-@mixin grid-media-query($breakpoint, $direction: up) {
+@mixin grid-media-query($breakpoint, $direction: up, $dimension: width) {
   @if map-has-key($breakpoints, $breakpoint) {
-    $limit: min-width;
+    $limit: min-#{$dimension};
     $value: map-get($breakpoints, $breakpoint);
     @if $direction == down {
-      $limit: max-width;
+      $limit: max-#{$dimension};
       $value: $value - 0.2;
     }
     @media only screen and (#{$limit}: #{$value}px) {
@@ -33,7 +33,7 @@ $containers: (
   }
 }
 
-/* SNCL SLIDER (disabled) */
+/* SNCL SLIDER */
 $slide-images: ("mountain-sunrise.jpg");
 
 :root {
@@ -934,7 +934,7 @@ body {
         width: 100%;
         max-width: 100%;
         max-height: 100vh;
-        min-height: 400px;
+        //min-height: 400px;
         position: relative;
         overflow: hidden;
         margin: 0;
@@ -980,9 +980,9 @@ body {
             position: relative;
             display: inline-block;
 
-            margin: calc(var(--gutter) * 3) 0;
+            //margin: calc(var(--gutter) * 3) 0;
             @include grid-media-query(s) {
-              margin-top: calc(var(--gutter) / 2);
+            //  margin-top: calc(var(--gutter) / 2);
             }
             padding: 3px 0;
             &.bordered {
@@ -994,18 +994,21 @@ body {
               }
             }
             .headline {
-              font-size: 2.5em;
-              @include grid-media-query(xs) {
-                font-size: 3em;
-              }
-              @include grid-media-query(s) {
-                font-size: 3.5em;
-              }
-              @include grid-media-query(m) {
-                font-size: 4em;
-              }
-              @include grid-media-query(l) {
-                font-size: 4.5em;
+              font-size: 2em;
+              @include grid-media-query(s, up, height) {
+                font-size: 2.5em;
+                @include grid-media-query(xs) {
+                  font-size: 3em;
+                }
+                @include grid-media-query(s) {
+                  font-size: 3.5em;
+                }
+                @include grid-media-query(m) {
+                  font-size: 4em;
+                }
+                @include grid-media-query(l) {
+                  font-size: 4.5em;
+                }
               }
               font-weight: 500;
               color: var(--light-85);
@@ -1212,7 +1215,10 @@ body {
       &.site-footer {
         text-align: inherit;
         background-color: var(--purple-lighter);
-        &, & * { color: var(--font-color-inverted); }
+        &,
+        & * {
+          color: var(--font-color-inverted);
+        }
         p {
           height: inherit;
         }

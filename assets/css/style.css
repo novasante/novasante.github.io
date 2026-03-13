@@ -16,10 +16,10 @@
 }
 @media only screen and (min-width: 480px) {
   :root {
-    --slide-1: url("//ik.imagekit.io/sarahdionne/tr:w-768,h-600,c-at_least,f-webp/nova/mountain-sunrise.jpg");
+    --slide-1: url("//ik.imagekit.io/sarahdionne/tr:w-748,h-600,c-at_least,f-webp/nova/mountain-sunrise.jpg");
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 748px) {
   :root {
     --slide-1: url("//ik.imagekit.io/sarahdionne/tr:w-992,h-600,c-at_least,f-webp/nova/mountain-sunrise.jpg");
   }
@@ -358,7 +358,7 @@
     display: none !important;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 748px) {
   .col.m--u-1\/2 {
     width: calc(1 * 100% / 2);
   }
@@ -704,7 +704,7 @@ body ul.images_list > li {
   display: flex;
   justify-content: center;
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 748px) {
   body ul.images_list > li {
     flex-basis: 25%;
   }
@@ -1029,7 +1029,6 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   width: 100%;
   max-width: 100%;
   max-height: 100vh;
-  min-height: 400px;
   position: relative;
   overflow: hidden;
   margin: 0;
@@ -1069,7 +1068,7 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   background-position: center;
   background-image: url("https://ik.imagekit.io/sarahdionne/tr:w-720,fo-auto,f-webp/hero/background.jpg");
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 748px) {
   .container .wrapper .content #banner.parallax .bg {
     background-image: url("https://ik.imagekit.io/sarahdionne/tr:w-1200,fo-auto,f-webp/hero/background.jpg");
   }
@@ -1077,7 +1076,7 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
 .container .wrapper .content #banner.parallax .mg {
   background-image: url("https://ik.imagekit.io/sarahdionne/tr:w-720,fo-auto,f-webp/hero/middleground.png");
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 748px) {
   .container .wrapper .content #banner.parallax .mg {
     background-image: url("https://ik.imagekit.io/sarahdionne/tr:w-1200,fo-auto,f-webp/hero/middleground.png");
   }
@@ -1085,7 +1084,7 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
 .container .wrapper .content #banner.parallax .fg {
   background-image: url("https://ik.imagekit.io/sarahdionne/tr:w-720,fo-auto,f-webp/hero/foreground.png");
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 748px) {
   .container .wrapper .content #banner.parallax .fg {
     background-image: url("https://ik.imagekit.io/sarahdionne/tr:w-1200,fo-auto,f-webp/hero/foreground.png");
   }
@@ -1157,7 +1156,7 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
     min-width: 90vw;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 748px) {
   .container .wrapper .content #banner .inner {
     padding-top: 72px;
   }
@@ -1165,13 +1164,7 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
 .container .wrapper .content #banner .inner header {
   position: relative;
   display: inline-block;
-  margin: calc(var(--gutter) * 3) 0;
   padding: 3px 0;
-}
-@media only screen and (min-width: 480px) {
-  .container .wrapper .content #banner .inner header {
-    margin-top: calc(var(--gutter) / 2);
-  }
 }
 .container .wrapper .content #banner .inner header.bordered {
   border-bottom: solid var(--header-border-width);
@@ -1182,27 +1175,32 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   border-top: solid var(--header-border-width);
 }
 .container .wrapper .content #banner .inner header .headline {
-  font-size: 2.5em;
+  font-size: 2em;
   font-weight: 500;
   color: var(--light-85);
   text-align: left;
 }
-@media only screen and (min-width: 360px) {
+@media only screen and (min-height: 480px) {
+  .container .wrapper .content #banner .inner header .headline {
+    font-size: 2.5em;
+  }
+}
+@media only screen and (min-height: 480px) and (min-width: 360px) {
   .container .wrapper .content #banner .inner header .headline {
     font-size: 3em;
   }
 }
-@media only screen and (min-width: 480px) {
+@media only screen and (min-height: 480px) and (min-width: 480px) {
   .container .wrapper .content #banner .inner header .headline {
     font-size: 3.5em;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-height: 480px) and (min-width: 748px) {
   .container .wrapper .content #banner .inner header .headline {
     font-size: 4em;
   }
 }
-@media only screen and (min-width: 992px) {
+@media only screen and (min-height: 480px) and (min-width: 992px) {
   .container .wrapper .content #banner .inner header .headline {
     font-size: 4.5em;
   }
@@ -1280,7 +1278,7 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
 .container .wrapper .content #banner .inner footer ul li a:hover svg.icon {
   color: var(--font-color-inverted-hover);
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 748px) {
   .container .wrapper .content #banner .inner footer ul li a {
     margin: calc(var(--gutter) / 2) var(--gutter);
     transition: background-color 0.3s ease-in-out, outline 0.3s ease-in-out;
@@ -1321,7 +1319,7 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
     max-width: auto;
   }
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 748px) {
   .container .wrapper .content .sections section {
     padding: calc(var(--gutter) * 2.5) var(--gutter) calc(var(--gutter) * 2) var(--gutter);
   }
