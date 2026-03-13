@@ -3,16 +3,46 @@
 {% assign practitioners = site.practitioners | sort: "order", "last" %}
 {% assign others = practitioners | where_exp: "p", "p.url != page.url" %}
 
-{% for p in others %}
+{% for p in practitioners %}
   {% assign index_mod = forloop.index0 | modulo: 2 %}
   {% if index_mod == 0 %}<div class="row">{% endif %}
     <div class="col m--u-1/2">
-        <h3><a href="{{ p.url }}">{{ p.title }}</a></h3>
-        <p><strong>{{ p.function }}</strong></p>
-        <p>📧 <a href="mailto:{{ p.email }}">{{ p.email }}</a><br>
-        📞 {{ p.phone }}
-        {% if p.instagram %}<br>Instagram : <a href="https://www.instagram.com/{{ p.instagram }}">@{{ p.instagram }}</a>{% endif %}
-        </p>
+      <article class="card">
+          <a class="card__link" href="{{ p.url }}" aria-label="Voir le profil de {{ p.title }}"></a>
+          <div class="card__media">
+            <img src="{{ p.urls.image }}" alt="{{ p.title }}">
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">
+              <a href="{{ p.url }}">{{ p.title }}</a>
+            </h3>
+
+            {% if p.function %}
+            <p class="card__role">{{ p.function }}</p>
+            {% endif %}
+
+            <ul class="card__meta">
+              {% if p.email %}
+              <li class="email">
+                <a href="mailto:{{ p.email }}">{{ p.email }}</a>
+              </li>
+              {% endif %}
+
+              {% if p.phone %}
+              <li class="phone">
+                <a href="tel:{{ p.phone | replace: ' ', '' }}">{{ p.phone }}</a>
+              </li>
+              {% endif %}
+
+              {% if p.instagram %}
+              <li class="instagram">
+                <a href="https://www.instagram.com/{{ p.instagram }}">@{{ p.instagram }}</a>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+        
+      </article>
     </div>
   {% if index_mod != 0 or forloop.last %}</div>{% endif %}
 {% endfor %}

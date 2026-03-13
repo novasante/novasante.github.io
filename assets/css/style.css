@@ -51,8 +51,8 @@
   }
 }
 /* ================
-   COLORS AND SIZES
-   ================ */
+     COLORS AND SIZES
+     ================ */
 :root {
   --dark-rgb: 28, 32, 33;
   --dark: rgb(var(--dark-rgb));
@@ -127,8 +127,8 @@
 }
 
 /* =====================
-   GRID & RESPONSIVENESS
-   ===================== */
+     GRID & RESPONSIVENESS
+     ===================== */
 :root {
   --font-size: var(--font-size-mobile);
 }
@@ -635,8 +635,8 @@
   }
 }
 /* ============
-   PAGE STYLING
-   ============ */
+     PAGE STYLING
+     ============ */
 html {
   box-sizing: border-box;
   color-scheme: light dark;
@@ -659,8 +659,9 @@ html body.black-banner:before {
 html {
   font-family: sans-serif;
 }
-html.fontLoaded {
+html.fontLoaded, html.fontLoaded button {
   font-family: "Raleway", sans-serif;
+  font-size: 1em;
 }
 
 html,
@@ -672,7 +673,7 @@ body {
   word-wrap: break-word;
   font-weight: 300;
   line-height: 1.4;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.025em;
   scroll-behavior: smooth;
   color: var(--font-color);
 }
@@ -1983,4 +1984,114 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   .container .wrapper .mobile-navbar {
     display: none;
   }
+}
+.row .col .card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  transition: background-color 0.2s ease;
+}
+.row .col .card:hover .card__body, .row .col .card:focus-within .card__body {
+  background-color: var(--background-odd);
+}
+.row .col .card__link {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  text-indent: -9999px;
+  overflow: hidden;
+  display: block;
+}
+.row .col .card__media, .row .col .card__body, .row .col .card__actions {
+  position: relative;
+  pointer-events: none;
+}
+.row .col .card__media {
+  display: none;
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.row .col .card__media img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin: 0;
+  float: none;
+  pointer-events: none;
+}
+.row .col .card__body {
+  padding: 1.25rem 1.25rem 0.75rem;
+  transition: background-color 0.2s ease;
+}
+.row .col .card__title {
+  margin: 0 0 0.4rem;
+  font-size: 1.1em;
+  line-height: 1.2;
+}
+.row .col .card__title a {
+  position: relative;
+  z-index: 20;
+  pointer-events: auto;
+  color: inherit;
+  text-decoration: none;
+}
+.row .col .card__role {
+  margin: 0 0 1rem;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+.row .col .card__meta {
+  font-size: 0.95em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.row .col .card__meta li {
+  margin: 0.4rem 0;
+  line-height: 1.4;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.row .col .card__meta li::before {
+  display: inline-block;
+}
+.row .col .card__meta li.email::before {
+  content: "✉️";
+}
+.row .col .card__meta li.phone::before {
+  content: "📞";
+}
+.row .col .card__meta li.instagram::before {
+  content: "📸";
+}
+.row .col .card__meta li a {
+  position: relative;
+  z-index: 20;
+  pointer-events: auto;
+  text-decoration: none;
+}
+.row .col .card__meta li a:hover {
+  text-decoration: underline;
+}
+.row .col .card__actions {
+  margin-top: auto;
+  padding: 0.9rem 1.25rem 1.25rem;
+}
+.row .col .card__actions a,
+.row .col .card__actions .button {
+  position: relative;
+  z-index: 20;
+  pointer-events: auto;
 }
