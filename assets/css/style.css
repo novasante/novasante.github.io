@@ -56,7 +56,6 @@
 :root {
   --dark-rgb: 28, 32, 33;
   --dark: rgb(var(--dark-rgb));
-  --dark-95: rgba(var(--dark-rgb), 0.95);
   --dark-85: rgba(var(--dark-rgb), 0.85);
   --dark-75: rgba(var(--dark-rgb), 0.75);
   --dark-50: rgba(var(--dark-rgb), 0.5);
@@ -85,8 +84,8 @@
   --blue: rgb(var(--blue-rgb));
   --orange-rgb: 245, 173, 61;
   --orange: rgb(var(--orange-rgb));
-  --background-light: color-mix(in srgb, var(--light), #000 5%);
-  --background-dark: var(--dark-95);
+  --background-light: color-mix(in srgb, var(--light), var(--dark) 5%);
+  --background-dark: var(--dark);
   --borders-light: var(--dark-15);
   --borders-dark: var(--light-15);
   --font-color-inverted: var(--light-75);
@@ -101,6 +100,22 @@
     var(--light),
     color-mix(in srgb, var(--dark), var(--light) 5%)
   );
+  --background-card: light-dark(
+    color-mix(in srgb, var(--light), var(--dark) 3.5%),
+    color-mix(in srgb, var(--dark), var(--light) 3.5%)
+  );
+  --background-card__content: light-dark(
+    color-mix(in srgb, var(--light), var(--dark) 2%),
+    color-mix(in srgb, var(--dark), var(--light) 2%)
+  );
+  --background-card__content-hover: light-dark(
+    var(--light),
+    color-mix(in srgb, var(--dark), var(--light) 10%)
+  );
+  --background-card__actions-hover: light-dark(
+    color-mix(in srgb, var(--light), var(--dark) 25%),
+    color-mix(in srgb, var(--dark), var(--light) 25%)
+  );
   --borders: light-dark(var(--borders-light), var(--borders-dark));
   --shadow: light-dark(var(--dark-25), rgba(0, 0, 0, 0.5));
   --overlay: light-dark(var(--dark-25), var(--dark-50));
@@ -114,16 +129,6 @@
   --header-border-width: 2px;
   --h1-font-size: 3em;
   --gutter: 24px;
-}
-
-/* SNCL overrides */
-.sncl {
-  --logo-color: #f0451e;
-  --background-light: white;
-  --background: light-dark(var(--background-light), var(--background-dark));
-  --primary-btn-bg: var(--gradient);
-  --nav-bg: light-dark(var(--light-75), var(--dark-75));
-  --font-color-inverted: var(--light);
 }
 
 /* =====================
@@ -701,6 +706,7 @@ html.no-scroll body .mobile-navbar:after {
   height: 100%;
   background-color: var(--overlay);
   backdrop-filter: blur(2px);
+  z-index: 90;
 }
 
 /* Common styling */
@@ -987,7 +993,7 @@ body .toggle input[type=checkbox] {
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 10;
+  z-index: 110;
   width: 100%;
   height: 100%;
   cursor: pointer;
@@ -1655,7 +1661,7 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
     min-width: 300px;
     position: fixed;
     top: 0;
-    z-index: 1;
+    z-index: 100;
     background: var(--nav-bg);
     backdrop-filter: blur(15px) saturate(100%);
     box-shadow: 0 1px 2px 0 var(--shadow);
@@ -1740,7 +1746,7 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
     position: fixed;
     width: 100%;
     height: 100vh;
-    z-index: 2;
+    z-index: 110;
     cursor: pointer;
   }
   .container input#toggler:checked ~ .wrapper .toggler .navicon {
@@ -1806,7 +1812,7 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   }
   .container nav {
     display: block;
-    z-index: 1;
+    z-index: 100;
     position: fixed;
     top: 0;
     height: 56px;
@@ -1907,7 +1913,7 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
     opacity: 0;
     display: block;
     position: absolute;
-    z-index: 1;
+    z-index: 100;
     right: -24px;
     background-color: var(--background);
     margin: 12px 0 0 0;
@@ -1985,16 +1991,31 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
     display: none;
   }
 }
+/** START CARDS **/
 .row .col .card {
   position: relative;
+  text-align: center;
   display: flex;
   flex-direction: column;
   height: 100%;
   overflow: hidden;
+  background-color: var(--background-card);
+  border-radius: 12px;
+  transition: background-color 0.2s ease;
+  margin-bottom: var(--gutter);
+}
+.row .col .card:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 110px);
+  background-color: var(--background-card__content);
   transition: background-color 0.2s ease;
 }
-.row .col .card:hover .card__body, .row .col .card:focus-within .card__body {
-  background-color: var(--background-odd);
+.row .col .card:hover:before, .row .col .card:focus-within:before {
+  background-color: var(--background-card__content-hover);
 }
 .row .col .card__link {
   position: absolute;
@@ -2009,33 +2030,34 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   pointer-events: none;
 }
 .row .col .card__media {
-  display: none;
   width: 100%;
-  height: 220px;
+  height: 200px;
   overflow: hidden;
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
 .row .col .card__media img {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: 180px;
   max-width: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   object-fit: cover;
-  object-position: center;
+  object-position: center bottom;
   display: block;
-  margin: 0;
+  margin: 20px 0 0 0;
   float: none;
   pointer-events: none;
+  border-radius: 100%;
+  aspect-ratio: 1/1;
 }
 .row .col .card__body {
-  padding: 1.25rem 1.25rem 0.75rem;
+  padding: var(--gutter) calc(var(--gutter)) calc(var(--gutter) / 2);
   transition: background-color 0.2s ease;
 }
 .row .col .card__title {
-  margin: 0 0 0.4rem;
+  margin: 0 0 calc(var(--gutter) / 4);
   font-size: 1.1em;
   line-height: 1.2;
 }
@@ -2047,38 +2069,39 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   text-decoration: none;
 }
 .row .col .card__role {
-  margin: 0 0 1rem;
+  margin: 0 0 calc(var(--gutter) / 2);
   line-height: 1.5;
   opacity: 0.8;
+  font-size: 0.9em;
 }
 .row .col .card__meta {
-  font-size: 0.95em;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 .row .col .card__meta li {
-  margin: 0.4rem 0;
+  margin: calc(var(--gutter) / 4) 0;
   line-height: 1.4;
   display: flex;
   align-items: center;
-  gap: 0.35rem;
 }
-.row .col .card__meta li::before {
+.row .col .card__meta li a:before {
   display: inline-block;
+  margin-right: calc(var(--gutter) / 4);
 }
-.row .col .card__meta li.email::before {
+.row .col .card__meta li.email a:before {
   content: "✉️";
 }
-.row .col .card__meta li.phone::before {
+.row .col .card__meta li.phone a:before {
   content: "📞";
 }
-.row .col .card__meta li.instagram::before {
-  content: "📸";
+.row .col .card__meta li.instagram a:before {
+  content: "🅾";
 }
 .row .col .card__meta li a {
+  display: inline;
   position: relative;
-  z-index: 20;
+  z-index: 10;
   pointer-events: auto;
   text-decoration: none;
 }
@@ -2087,11 +2110,21 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
 }
 .row .col .card__actions {
   margin-top: auto;
-  padding: 0.9rem 1.25rem 1.25rem;
+  padding: calc(var(--gutter) / 2);
+  text-align: center;
 }
 .row .col .card__actions a,
 .row .col .card__actions .button {
   position: relative;
   z-index: 20;
   pointer-events: auto;
+  height: 100%;
+  width: max-content;
+  display: inline-block;
+  padding: calc(var(--gutter) / 4);
+  border-radius: 100%;
+}
+.row .col .card__actions a:hover,
+.row .col .card__actions .button:hover {
+  background-color: var(--background-card__actions-hover);
 }

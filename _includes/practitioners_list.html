@@ -2,8 +2,8 @@
 {% assign others = practitioners | where_exp: "p", "p.url != page.url" %}
 
 <ul>
-{% for p in others %}
-	<li><strong><a href="{{ p.url }}">{{ p.title }}</a></strong>
+{% for p in practitioners %}
+	<li><a href="{{ p.url }}">{{ p.title }}</a>
 		{% if show_function %}<br>{{ p.function }}{% endif %}
 	</li>
 {% endfor %}
