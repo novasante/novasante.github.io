@@ -33,5 +33,5 @@ defaults:
     values:
       layout: practitioner
       urls:
-        image: "https://placehold.co/600x400?text=Profile"
+        image: "//ik.imagekit.io/sarahdionne/nova/practitioners/empty_profile.png"
       
