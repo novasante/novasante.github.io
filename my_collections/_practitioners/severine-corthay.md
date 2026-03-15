@@ -4,7 +4,7 @@ function: Dramathérapeute e.f.
 email: severine.corthay@novasante.ch
 phone: +41 78 302 31 56
 urls:
-  image: //ik.imagekit.io/sarahdionne/nova/practitioners/severine-corthay.jpg
+  image: //ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/nova/practitioners/severine-corthay.jpg
 ---
 
 ## Présentation {#presentation}
