@@ -12,7 +12,7 @@ urls:
 
 ## Présentation {#presentation}
 
-**Physiothérapie pédiatrique** · **Acupuncture** · **Médecine chinoise**
+**Fondatrice du centre - Coordination des soins - Thérapie et accompagnement**
 
 ![Sarah Dionne](//ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/profile/sarah_dionne_profile_bis.jpg)
 
