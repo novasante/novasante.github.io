@@ -16,42 +16,46 @@
             <h3 class="card__title">
               <a href="{{ p.url }}">{{ p.title }}</a>
             </h3>
-
             {% if p.function %}
             <p class="card__role">{{ p.function }}</p>
             {% endif %}
-
-            
           </div>
           <div class="card__actions">
-            <a href="{{ p.url }}"><svg class="icon">
-            <title>Voir profil</title>
-            <use xlink:href="#profile_24dp"></use>
-          </svg></a>
-              {% if p.email %}
-                <a href="mailto:{{ p.email }}"><svg class="icon">
-            <title>Email</title>
-            <use xlink:href="#email_24dp"></use>
-          </svg></a>
+              {% if p.urls.booking %}
+                <a href="mailto:{{ p.urls.booking }}">
+                  <svg class="icon">
+                    <title>Prendre rendez-vous</title>
+                    <use xlink:href="#calendar_clock_24dp"></use>
+                  </svg>
+                </a>
               {% endif %}
-
+              {% if p.email %}
+                <a href="mailto:{{ p.email }}">
+                  <svg class="icon">
+                    <title>Email</title>
+                    <use xlink:href="#email_24dp"></use>
+                  </svg>
+                </a>
+              {% endif %}
               {% if p.phone %}
                 <a href="tel:{{ p.phone | replace: ' ', '' }}">
                   <svg class="icon">
-            <title>Téléphone, SMS ou Whatsapp</title>
-            <use xlink:href="#call_24dp"></use>
-          </svg>
+                    <title>Téléphone, SMS ou Whatsapp</title>
+                    <use xlink:href="#call_24dp"></use>
+                  </svg>
                 </a>
               {% endif %}
-
               {% if p.instagram %}
                 <a href="https://www.instagram.com/{{ p.instagram }}">
                   <svg class="icon">
-            <title>Instagram</title>
-            <use xlink:href="#instagram_24dp"></use>
-          </svg>
+                    <title>Instagram</title>
+                    <use xlink:href="#instagram_24dp"></use>
+                  </svg>
                 </a>
               {% endif %}
+          </div>
+          <div class="card__actions">
+            <a class="button" href="{{ p.url }}">Voir le profil</a>
           </div>
       </article>
     </div>

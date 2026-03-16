@@ -755,9 +755,15 @@ body {
     cursor: pointer;
 
     &.map--paudex {
-      background-image: url("https://ik.imagekit.io/sarahdionne/tr:w-30,fo-auto,f-webp/maps/Paudex.png");
+      background-image: url("//ik.imagekit.io/sarahdionne/tr:w-30,fo-auto,f-webp/maps/Paudex.png");
+      @media (prefers-color-scheme: dark) {
+        background-image: url("//ik.imagekit.io/sarahdionne/tr:w-30,fo-auto,f-webp/maps/paudex-dark.jpg");
+      }
       &.visible {
-        background-image: url("https://ik.imagekit.io/sarahdionne/tr:w-720,fo-auto,f-webp/maps/Paudex.png");
+        background-image: url("//ik.imagekit.io/sarahdionne/tr:w-720,fo-auto,f-webp/maps/Paudex.png");
+        @media (prefers-color-scheme: dark) {
+          background-image: url("//ik.imagekit.io/sarahdionne/tr:w-720,fo-auto,f-webp/maps/paudex-dark.jpg");
+        }
       }
     }
 
@@ -1857,7 +1863,7 @@ body {
   }
 
   &__body {
-    padding: var(--gutter) calc(var(--gutter)) calc(var(--gutter) / 2);
+    padding: var(--gutter) var(--gutter) calc(var(--gutter) / 2);
     transition: background-color 0.2s ease;
   }
 
@@ -1928,20 +1934,30 @@ body {
 
   &__actions {
     margin-top: auto;
-    padding: calc(var(--gutter) / 2);
+    padding: calc(var(--gutter) / 4) calc(var(--gutter));
     text-align: center;
-    a,
-    .button {
+    a.button {
       position: relative;
       z-index: 20;
       pointer-events: auto;
-      //background-color: red;
       height: 100%;
+      line-height: 1.2em;
       width: max-content;
       display: inline-block;
       padding: calc(var(--gutter) / 4);
-      border-radius: 100%;
-
+      svg.icon {
+        height: 18px;
+        width: 18px;
+      }
+      &.circular {
+        padding: calc(var(--gutter) / 4);
+        border-radius: 100%;
+        svg.icon {
+          height: 32px;
+          width: 32px;
+          margin-right: 0;
+        }
+      }
       &:hover {
         background-color: var(--background-card__actions-hover);
       }
