@@ -16,92 +16,108 @@ urls:
 
 ![Sarah Dionne](//ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/profile/sarah_dionne_profile_bis.jpg)
 
-J’accompagne les nourrissons, les enfants et les adultes dans une approche globale du soin, mêlant physiothérapie et médecine traditionnelle chinoise.
+Depuis plus de 15 ans, Sarah accompagne nourrissons, enfants, familles et adultes avec une approche de soin qui relie les connaissances cliniques de la médecine occidentale aux visions globales issues des médecines traditionnelles.
 
-Convaincue que la santé gagne à être abordée de manière plus large et collaborative, j’ai fondé **NOVA Santé Intégrée** afin de créer un lieu où différentes approches thérapeutiques peuvent dialoguer et se compléter.
+Son parcours l’a progressivement amenée à développer une lecture plus large de la santé, où le corps, les émotions, le mode de vie et l’environnement de la personne sont considérés comme des éléments interdépendants.
 
-Au sein du centre, je coordonne également les parcours de soins lorsque cela est pertinent, afin de favoriser une collaboration entre les différents thérapeutes et proposer un accompagnement cohérent et adapté à chaque personne.
-
----
-
-## Mon parcours
-
-De nationalité canadienne et suisse, j’ai obtenu mon diplôme de physiothérapeute à l’Université Laval au Québec en 2010.
-
-Depuis l’obtention de mon diplôme, j’ai principalement exercé en Suisse, notamment au **CHUV**, où j’ai travaillé dans différents services.
-
-Mon parcours m’a amenée à travailler successivement :
-
-- en **neuro-réhabilitation adulte**
-- aux **soins intensifs de pédiatrie et de néonatalogie**
-- comme **physiothérapeute cadre au Département femme-mère-enfant**
-
-Ces expériences m’ont permis de découvrir les différentes facettes de la physiothérapie pédiatrique et d’accompagner des familles dans des situations très variées.
+Cette vision est aujourd’hui au cœur de son travail au sein de **NOVA Santé Intégrée**, un centre qu’elle a fondé afin de favoriser la collaboration entre différentes approches thérapeutiques et offrir un accompagnement global et cohérent aux personnes qui consultent.
 
 ---
 
-## Mon approche
+## Parcours professionnel
 
-![Sarah Dionne bis](//ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/profile/sarah_dionne_profile.jpg)
+Pendant plus de 10 ans, elle a exercé au Centre Hospitalier Universitaire Vaudois (CHUV), principalement en **pédiatrie et en néonatologie**, où elle a accompagné des nourrissons, des enfants et leurs familles dans des situations médicales complexes.
 
-Au fil de mon parcours, j’ai développé un intérêt pour des approches complémentaires du soin.
+Au cours de ce parcours hospitalier, elle a notamment occupé le rôle de **physiothérapeute cadre** au sein du département femme-mère-enfant. Cette fonction l’a amenée à participer à la **gestion et au développement de projets cliniques**, ainsi qu’à la **formation et à l’accompagnement des équipes médicales et soignantes**. Cette expérience lui a permis de développer une vision clinique élargie et une solide pratique du **travail interdisciplinaire**.
 
-Passionnée de voyage et de découverte, j’ai été amenée à explorer différentes visions de la médecine et à me former à la **médecine traditionnelle chinoise**.
+En 2021, elle a développé sa pratique en tant que thérapeute indépendante à **Lausanne** et à **Bulle** (Fribourg), où elle a progressivement intégré la **médecine traditionnelle chinoise** à la physiothérapie pédiatrique.
 
-Je me suis notamment formée à :
-
-- **l’acupuncture et la moxibustion**
-- **le massage Tuina**
-
-Ces formations ont été suivies à l’**Europe Shanghai College à Genève** entre 2017 et 2020.
-
-Lorsque cela est nécessaire, j’utilise également un **stylo d’acupuncture laser**, particulièrement adapté pour les enfants ou les personnes ayant une appréhension des aiguilles.
-
-En 2022, j’ai complété ma formation avec le **Shonishin**, une méthode japonaise d’acupuncture sans aiguilles spécialement destinée aux enfants.
-
-Mon approche consiste à adapter les outils thérapeutiques à chaque situation, en combinant lorsque cela est pertinent physiothérapie et médecine chinoise.
+Cette double expérience — hospitalière et clinique — l’a amenée à constater l’importance d’une approche plus coordonnée et globale des soins. C’est dans cette perspective qu’elle a créé **NOVA Santé Intégrée**, un espace dédié à la collaboration entre professionnels et à l’accompagnement global des patients.
 
 ---
 
-## Pour qui ?
+## Une approche intégrative de la santé
 
-J’accompagne notamment :
+![Sarah Dionne](//ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/profile/sarah_dionne_profile.jpg)
 
-- les **nourrissons**
-- les **enfants**
-- les **adolescents**
-- les **adultes**
-- les **familles ayant des questions autour du développement de l’enfant**
+Sa pratique repose sur une **vision intégrative de la santé**.
 
-En tant que maman de deux enfants (2019 et 2021) et spécialiste du développement du nourrisson et de la petite enfance, j’accompagne également les parents dans leurs questionnements autour :
+Plutôt que de traiter uniquement les symptômes, l’accompagnement vise à comprendre les interactions entre le corps, les émotions, les habitudes de vie et le contexte global de la personne. Cette lecture systémique permet d’identifier les différents facteurs qui influencent l’équilibre de santé et d’accompagner les personnes vers des **changements rapides et  durables**.
 
-- du développement moteur
-- du positionnement
-- du sommeil
-- du portage et du *handling*
+Le travail consiste notamment à :
+
+- clarifier des situations complexes  
+- identifier les facteurs contribuant aux difficultés  
+- mettre en place des stratégies d’action adaptées  
+- soutenir les capacités d’adaptation et d’autorégulation du corps  
 
 ---
 
-## Domaines d’accompagnement
+## Domaines d’expertise
 
-Les domaines dans lesquels j’exerce et suis formée incluent notamment :
+Les domaines d’expertise incluent notamment :
 
-- physiothérapie pédiatrique
-- troubles respiratoires (aigus ou chroniques)
-- traitement cicatriciel
-- neuroréhabilitation
-- thérapies neurodéveloppementales
-- orthopédie
-- maladies rares
-- pelvi-périnéologie pédiatrique et adolescente
-- réathlétisation
-- troubles fonctionnels
-- pathologies psychosomatiques
-- suivi pré-partum
+- pédiatrie et développement de l’enfant  
+- néonatologie  
+- périnatalité  
+- santé mentale et régulation émotionnelle  
+- accompagnement des transitions de vie  
 
-Selon les besoins, j’adapte l’approche thérapeutique en combinant :
+Les accompagnements concernent notamment :
 
-- physiothérapie
-- acupuncture
-- médecine traditionnelle chinoise
-- éducation thérapeutique
+- les nourrissons  
+- les enfants de tout âge  
+- les parents et les familles  
+- les adultes  
+- les professionnels de la santé  
+
+Les problématiques fréquemment rencontrées incluent :
+
+- troubles du développement  
+- douleurs et troubles fonctionnels  
+- stress, anxiété et épuisement  
+- troubles digestifs et vesico-sphinctériens
+- fatigue chronique  
+- difficultés d’adaptation ou périodes de transition de vie  
+
+---
+
+## Une pratique thérapeutique intégrée
+
+L’une des forces reconnues de Sarah est sa capacité à **comprendre rapidement des situations complexes** et à proposer **des pistes d’action concrètes**. L’objectif est d’initier le mouvement et de permettre à la personne de **retrouver une dynamique de santé plus équilibrée**.
+
+L’accompagnement s’appuie sur :
+
+- une vision systémique  
+- une lecture clinique précise  
+- une capacité à structurer des plans d’action adaptés  
+- un soutien émotionnel dans les périodes de transition
+
+Les outils thérapeutiques sont combinés en fonction des besoins de la personne et de la situation. Le travail peut intégrer :
+
+- physiothérapie  
+- acupuncture  
+- Tuina  
+- Shonishin (acupuncture pédiatrique japonaise)  
+- Xiao Er Tuina  
+- Qi Gong médical  
+- accompagnement thérapeutique et coaching  
+- travail corporel et régulation du système nerveux  
+- psychoéducation et travail sur les habitudes de vie  
+
+Ainsi, les interventions sont choisies et intégrées de manière fine, notamment chez les **nourrissons et les enfants**, où les approches corporelles et énergétiques peuvent être particulièrement efficaces et bien tolérées.
+
+---
+
+## Modalités d’accompagnement
+
+Les consultations peuvent prendre différentes formes :
+
+- thérapie individuelle  
+- consultation de santé intégrative  
+- accompagnement et coaching thérapeutique  
+- ateliers de groupe  
+
+Chaque accompagnement est **unique et adapté aux besoins et au rythme de la personne**, dans une perspective de soutien progressif et durable.
+
+---
