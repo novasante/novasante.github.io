@@ -21,38 +21,46 @@
             {% endif %}
           </div>
           <div class="card__actions">
-              {% if p.urls.booking %}
-                <a class="button circular" href="mailto:{{ p.urls.booking }}">
-                  <svg class="icon">
-                    <title>Prendre rendez-vous</title>
-                    <use xlink:href="#calendar_clock_24dp"></use>
-                  </svg>
-                </a>
-              {% endif %}
-              {% if p.email %}
-                <a class="button circular" href="mailto:{{ p.email }}">
-                  <svg class="icon">
-                    <title>Email</title>
-                    <use xlink:href="#email_24dp"></use>
-                  </svg>
-                </a>
-              {% endif %}
-              {% if p.phone %}
-                <a class="button circular" href="tel:{{ p.phone | replace: ' ', '' }}">
-                  <svg class="icon">
-                    <title>Téléphone, SMS ou Whatsapp</title>
-                    <use xlink:href="#call_24dp"></use>
-                  </svg>
-                </a>
-              {% endif %}
-              {% if p.instagram %}
-                <a class="button circular" href="https://www.instagram.com/{{ p.instagram }}">
-                  <svg class="icon">
-                    <title>Instagram</title>
-                    <use xlink:href="#instagram_24dp"></use>
-                  </svg>
-                </a>
-              {% endif %}
+            <ul>
+                {% capture action_title %}Prendre rendez-vous avec {{ p.title }}{% endcapture %}
+                {% include card_action.html
+                  href=p.urls.booking
+                  title=action_title
+                  icon="calendar_clock_24dp"
+                  is_list_item=true
+                  display_trigger=p.urls.booking
+                %}
+
+                {% capture action_title %}Contacter {{ p.title }} par email à {{ p.email }}{% endcapture %}
+                {% capture action_link %}mailto:{{ p.email }}{% endcapture %}
+                {% include card_action.html
+                  href=action_link
+                  title=action_title
+                  icon="email_24dp"
+                  is_list_item=true
+                  display_trigger=p.email
+                %}
+
+                {% capture action_title %}Contacter {{ p.title }} par télépnone au {{ p.phone }}{% endcapture %}
+                {% capture action_link %}tel:{{ p.phone | replace: ' ', '' }}{% endcapture %}
+                {% include card_action.html
+                  href=action_link
+                  title=action_title
+                  icon="call_24dp"
+                  is_list_item=true
+                  display_trigger=p.phone
+                %}
+
+                {% capture action_title %}Voir le profil Instagram @{{ p.instagram }}{% endcapture %}
+                {% capture action_link %}//www.instagram.com/{{ p.instagram }}{% endcapture %}
+                {% include card_action.html
+                  href=action_link
+                  title=action_title
+                  icon="instagram_24dp"
+                  is_list_item=true
+                  display_trigger=p.instagram
+                %}
+            </ul>
           </div>
           <div class="card__actions">
             <a class="button" href="{{ p.url }}">Voir le profil</a>

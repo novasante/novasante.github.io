@@ -1933,6 +1933,13 @@ body {
   }
 
   &__actions {
+    ul,
+    ul li {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      display: inline;
+    }
     margin-top: auto;
     padding: calc(var(--gutter) / 4) calc(var(--gutter));
     text-align: center;
@@ -1961,6 +1968,7 @@ body {
       }
       &:hover {
         background-color: var(--background-card__actions-hover);
+        outline: none;
       }
     }
   }

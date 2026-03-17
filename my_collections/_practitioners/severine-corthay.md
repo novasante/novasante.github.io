@@ -1,6 +1,6 @@
 ---
 title: Séverine Corthay
-function: Dramathérapeute
+function: Dramathérapie
 email: severine.corthay@novasante.ch
 phone: +41 78 302 31 56
 urls:

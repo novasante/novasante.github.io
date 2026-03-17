@@ -2123,6 +2123,13 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   padding: calc(var(--gutter) / 4) calc(var(--gutter));
   text-align: center;
 }
+.row .col .card__actions ul,
+.row .col .card__actions ul li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: inline;
+}
 .row .col .card__actions a.button {
   position: relative;
   z-index: 20;
@@ -2149,4 +2156,5 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
 }
 .row .col .card__actions a.button:hover {
   background-color: var(--background-card__actions-hover);
+  outline: none;
 }
