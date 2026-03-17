@@ -34,7 +34,12 @@ $containers: (
 }
 
 /* BANNER SLIDER */
-$slide-images: ("mountain-sunrise.jpg");
+$slide-images: (
+  "content/slider/zen-garden-stone.png",
+  "content/slider/flying-dandelion-seed.png",
+  "content/slider/pebbles-by-the-lake.png",
+  "content/slider/lake-view-reflection-in-green-eye.png"
+);
 
 :root {
   $img-path: "//ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/";
