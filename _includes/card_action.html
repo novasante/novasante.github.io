@@ -1,0 +1,15 @@
+{% if include.display_trigger %}
+{% if include.is_list_item %}<li>{% endif %}
+<a
+  class="button circular"
+  href="{{ include.href }}"
+  title="{{ include.title }}"
+  aria-label="{{ include.title }}"
+>
+  <svg class="icon" aria-hidden="true" width="18px" height="18px">
+    <use xlink:href="#{{ include.icon }}"></use>
+  </svg>
+  <span class="hidden">{{ include.title }}</span>
+</a>
+{% if include.is_list_item %}</li>{% endif %}
+{% endif %}
