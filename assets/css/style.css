@@ -131,7 +131,7 @@
   --borders-light: var(--dark-15);
   --borders-dark: var(--light-15);
   --font-color-inverted: var(--light-75);
-  --font-color-inverted-hover: var(--light-85);
+  --font-color-inverted-hover: var(--light);
   --font-color: light-dark(var(--dark-75), var(--font-color-inverted));
   --font-color-hover: light-dark(
     var(--dark-85),
@@ -1569,6 +1569,15 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
 }
 .container .wrapper footer.site-footer p {
   height: inherit;
+}
+.container .wrapper footer.site-footer a svg.icon {
+  color: var(--font-color-inverted);
+}
+.container .wrapper footer.site-footer a:hover {
+  color: var(--font-color-inverted-hover);
+}
+.container .wrapper footer.site-footer a:hover svg.icon {
+  color: var(--font-color-inverted-hover);
 }
 .container .wrapper footer.site-footer ul {
   margin: 0;

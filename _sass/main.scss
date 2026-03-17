@@ -141,7 +141,7 @@ $slide-images: (
   --borders-light: var(--dark-15);
   --borders-dark: var(--light-15);
   --font-color-inverted: var(--light-75);
-  --font-color-inverted-hover: var(--light-85);
+  --font-color-inverted-hover: var(--light);
 
   --font-color: light-dark(var(--dark-75), var(--font-color-inverted));
   --font-color-hover: light-dark(
@@ -1240,6 +1240,17 @@ body {
         }
         p {
           height: inherit;
+        }
+        a {
+          svg.icon {
+            color: var(--font-color-inverted);
+          }
+          &:hover {
+            color: var(--font-color-inverted-hover);
+            svg.icon {
+              color: var(--font-color-inverted-hover);
+            }
+          }
         }
         ul {
           margin: 0;
