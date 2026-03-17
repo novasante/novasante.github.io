@@ -172,6 +172,12 @@ $slide-images: ("mountain-sunrise.jpg");
   --shadow: light-dark(var(--dark-25), rgba(0, 0, 0, 0.5));
   --overlay: light-dark(var(--dark-25), var(--dark-50));
   --gradient: linear-gradient(33deg, var(--green), var(--blue));
+  --gradient-smooth: linear-gradient(
+    114deg,
+    rgba(98, 145, 223, 1) 0%,
+    rgba(67, 172, 160, 1) 51%,
+    rgba(105, 200, 217, 1) 100%
+  );
 
   --icon-color: light-dark(var(--purple), var(--green));
   --icon-color-hover: light-dark(var(--purple-darker), var(--green-darker));
@@ -337,7 +343,8 @@ html {
 }
 html {
   font-family: sans-serif;
-  &.fontLoaded {
+  &.fontLoaded,
+  body.fontloaded {
     &,
     & button {
       font-family: "Raleway", sans-serif;
@@ -570,7 +577,7 @@ body {
       }
     }
     &.primary {
-      background: var(--primary-btn-bg);
+      background: var(--green);
       color: var(--font-color-inverted-hover);
       svg.icon {
         color: var(--font-color-inverted-hover);
@@ -1973,3 +1980,8 @@ body {
     }
   }
 }
+/*
+.container .wrapper footer.site-footer {
+  background: var(--gradient-smooth);
+}
+*/
