@@ -3,6 +3,7 @@ layout: default
 ---
 
 {% assign page_content = content | strip %}
+{% assign phone_number = page.phone | replace: ' ', '' %}
 
 {% if page_content == "" %}
 
@@ -35,7 +36,7 @@ Sa présentation détaillée sera bientôt disponible.
   <div class="col m--u-1/2 phone">
     <div class="row">
       <div class="col u-1/4 text-center">
-        <a href="javascript:document.getElementById('phone-contact').showModal()" title="Par téléphone" class="button-icon">
+        <a href="tel:{{ phone_number }}" data-phone="{{ phone_number }}" title="Par téléphone" class="button-icon">
           <svg class="icon">
             <use xlink:href="#call_24dp"></use>
           </svg>
@@ -44,7 +45,7 @@ Sa présentation détaillée sera bientôt disponible.
       <div class="col u-3/4">
         <p>Par téléphone:</p>
         <p>
-          <a href="javascript:document.getElementById('phone-contact').showModal()" title="Par téléphone" class="contact_tel"><strong>{{ page.phone }}</strong></a>
+          <a href="tel:{{ phone_number }}" data-phone="{{ phone_number }}" title="Par téléphone" class="contact_tel"><strong>{{ page.phone }}</strong></a>
         </p>
       </div>
     </div>

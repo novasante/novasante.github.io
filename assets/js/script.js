@@ -531,12 +531,55 @@ const initSections = ({
   container.appendChild(fragment);
 };
 
+const openPhoneContactModal = (phone) => {
+  if (!phone) return;
+
+  const smsLink = document.getElementById("phone-contact-sms");
+  const whatsappLink = document.getElementById("phone-contact-whatsapp");
+  const modal = document.getElementById("phone-contact");
+
+  if (!smsLink || !whatsappLink || !modal) return;
+
+  const normalizedPhone = phone.replace(/\s+/g, "").replace(/[^\d+]/g, "");
+  const whatsappPhone = normalizedPhone.replace("+", "");
+
+  smsLink.href = `sms:${normalizedPhone}`;
+  smsLink.title = `Envoyer un SMS au ${phone}`;
+
+  whatsappLink.href = `https://wa.me/${whatsappPhone}`;
+  whatsappLink.title = `Contact WhatsApp: https://wa.me/${whatsappPhone}`;
+
+  modal.showModal();
+};
+
+const initPhoneContactTriggers = () => {
+  document
+    .querySelectorAll(
+      ".js-phone-contact-trigger, .contact_tel[data-phone], a[href^='tel:']"
+    )
+    .forEach((el) => {
+      el.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        let phone = el.dataset.phone;
+
+        // fallback for tel links
+        if (!phone && el.getAttribute("href")) {
+          phone = el.getAttribute("href").replace(/^tel:/, "");
+        }
+
+        openPhoneContactModal(phone, el);
+      });
+    });
+};
+
 const init = () => {
   initSections();
   initFirstScrollListener();
   initObserveElements();
   initTogglerListener();
   initColorSchemeToggler();
+  initPhoneContactTriggers();
   initLinksCloseNav();
   initLinksClicked();
   initAppInstallation();

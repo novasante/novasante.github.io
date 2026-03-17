@@ -3,28 +3,30 @@
 {% include head.html %}
 <body>
 {% include icons.html %}
-<dialog id="phone-contact" onClick="this.close()">
-  <form method="dialog" onClick="event.stopPropagation()">
+
+<dialog id="phone-contact" onclick="this.close()">
+  <form method="dialog" onclick="event.stopPropagation()">
     <p>Prendre contact:</p>
     <ul class="buttons_list">
       <li>
-        <a class="button" href="sms:{{ page.phone | remove: ' ' }}" title="sms:{{ page.phone | remove: ' ' }}">
+        <a class="button" id="phone-contact-sms" href="#" title="SMS">
           <svg class="icon">
             <use xlink:href="#forum_24dp"></use>
           </svg> SMS</a>
       </li>
       <li>
-        <a class="button" href="//wa.me/{{ page.phone | remove: ' ' | remove: '+' }}" title="Whatsapp">
+        <a class="button" id="phone-contact-whatsapp" href="#" title="WhatsApp">
           <svg class="icon">
             <use xlink:href="#whatsapp_24dp"></use>
           </svg> WhatsApp</a>
       </li>
     </ul>
     <div>
-      <button class="button hidden" id="cancel" type="reset" onClick="document.getElementById('phone-contact').close()">Annuler</button>
+      <button class="button hidden" type="reset" onclick="document.getElementById('phone-contact').close()">Annuler</button>
     </div>
   </form>
 </dialog>
+
 <div class="container banner-intersecting inverted-top">
   <input id="toggler" type="checkbox" />
   {% include navigation.html %}
