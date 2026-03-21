@@ -172,6 +172,10 @@ $slide-images: (
     color-mix(in srgb, var(--light), var(--dark) 25%),
     color-mix(in srgb, var(--dark), var(--light) 25%)
   );
+  
+  --nav__submenu-bg: light-dark(
+    var(--light-85), var(--dark-85)
+  );
 
   --borders: light-dark(var(--borders-light), var(--borders-dark));
   --shadow: light-dark(var(--dark-25), rgba(0, 0, 0, 0.5));
@@ -309,19 +313,28 @@ $slide-images: (
   }
 }
 
-@include device-type();
+.display-none {
+  display: none;
+}
+.display-inline {
+  display: inline;
+}
+.display-block {
+  display: block;
+}
+
 @each $breakpoint, $declaration in $breakpoints {
   @include grid-media-query($breakpoint) {
     @include device-type("#{$breakpoint}--");
 
-    .inline-#{$breakpoint} {
-      display: inline !important;
+    .#{$breakpoint}--display-none {
+      display: none;
     }
-    .block-#{$breakpoint} {
-      display: block !important;
+    .#{$breakpoint}--display-inline {
+      display: inline;
     }
-    .hidden-#{$breakpoint} {
-      display: none !important;
+    .#{$breakpoint}--display-block {
+      display: block;
     }
   }
 }
@@ -1294,8 +1307,10 @@ body {
   }
 }
 
+$mobile-menu-breakpoint: m;
+
 /* Mobile menu and header */
-@include grid-media-query(l, down) {
+@include grid-media-query($mobile-menu-breakpoint, down) {
   .container {
     /* Mobile top header */
     // on top of page stays not fixed
@@ -1536,7 +1551,7 @@ body {
 }
 
 /* Desktop menu */
-@include grid-media-query(l) {
+@include grid-media-query($mobile-menu-breakpoint) {
   .container {
     // ON TOP OF PAGE Stays not fixed
     &.banner-intersecting {
@@ -1710,7 +1725,9 @@ body {
             position: absolute;
             z-index: 100;
             right: -24px;
-            background-color: var(--background);
+            left: -24px;
+            background-color: var(--nav__submenu-bg);
+            backdrop-filter: blur(15px);
             margin: 12px 0 0 0;
             padding: 16px 0;
             border: 1px solid var(--borders);
@@ -1728,7 +1745,7 @@ body {
                 45deg,
                 transparent 0%,
                 transparent 50%,
-                var(--background) 50%
+                var(--nav__submenu-bg) 50%
               );
               transform-origin: top left;
               transform: rotate(-45deg);
@@ -1751,12 +1768,12 @@ body {
                 border-top: 0px;
               }
               a {
-                padding: 10px 36px;
+                padding: 10px 36px 10px 24px;
                 width: 100%;
                 height: auto;
-                max-width: 200px;
+                //max-width: 200px;
                 font-size: 0.95em;
-                border-top: 1px solid var(--background);
+                border-top: 1px solid var(--borders);
                 outline: none;
                 &:hover {
                   outline: none;
