@@ -37,7 +37,7 @@ $containers: (
 $slide-images: (
   "content/slider/flying-dandelion-seed.png",
   "content/slider/pebbles-by-the-lake.png",
-  "content/slider/lake-view-reflection-in-green-eye.png",
+  "content/slider/lake-view-reflection-in-green-eye.png?v2",
   "content/slider/zen-garden-stone.png"
 );
 
@@ -172,10 +172,8 @@ $slide-images: (
     color-mix(in srgb, var(--light), var(--dark) 25%),
     color-mix(in srgb, var(--dark), var(--light) 25%)
   );
-  
-  --nav__submenu-bg: light-dark(
-    var(--light-85), var(--dark-85)
-  );
+
+  --nav__submenu-bg: light-dark(var(--light-85), var(--dark-85));
 
   --borders: light-dark(var(--borders-light), var(--borders-dark));
   --shadow: light-dark(var(--dark-25), rgba(0, 0, 0, 0.5));
@@ -312,6 +310,9 @@ $slide-images: (
     }
   }
 }
+
+// default (mobile)
+@include device-type();
 
 .display-none {
   display: none;
