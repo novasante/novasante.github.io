@@ -18,6 +18,8 @@ collections:
 sass:
   sass_dir: _sass
   style: compressed
+plugins:
+  - jekyll-sitemap
 defaults:
   - scope:
       path: ""
