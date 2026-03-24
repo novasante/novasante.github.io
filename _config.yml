@@ -1,3 +1,4 @@
+url: https://novasante.ch
 title: NOVA
 baseline: Santé Intégrée
 address: Rte du Simplon 16, 1094 Paudex
@@ -20,6 +21,7 @@ sass:
   style: compressed
 plugins:
   - jekyll-sitemap
+  - jekyll-seo-tag
 defaults:
   - scope:
       path: ""
