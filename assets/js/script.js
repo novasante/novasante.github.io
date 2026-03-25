@@ -589,7 +589,7 @@ const openBookingWidgetModal = (url) => {
 
 const initBookingWidgetTriggers = () => {
   document
-    .querySelectorAll(".js-booking-widget-trigger")
+    .querySelectorAll(".js-modal-trigger")
     .forEach((el) => {
       el.addEventListener("click", (event) => {
         event.preventDefault();

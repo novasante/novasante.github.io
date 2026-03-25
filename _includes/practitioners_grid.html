@@ -31,6 +31,16 @@
                   display_trigger=p.urls.booking
                 %}
 
+                {% capture action_title %}Prendre rendez-vous avec {{ p.title }}{% endcapture %}
+                {% include card_action.html
+                  href=p.urls.widget
+                  title=action_title
+                  icon="calendar_clock_24dp"
+                  is_list_item=true
+                  is_modal=true
+                  display_trigger=p.urls.widget
+                %}
+
                 {% capture action_title %}Contacter {{ p.title }} par email à {{ p.email }}{% endcapture %}
                 {% capture action_link %}mailto:{{ p.email }}{% endcapture %}
                 {% include card_action.html

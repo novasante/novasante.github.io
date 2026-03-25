@@ -1,7 +1,7 @@
 {% if include.display_trigger %}
 {% if include.is_list_item %}<li>{% endif %}
 <a
-  class="button circular"
+  class="button circular{% if include.is_modal %} js-modal-trigger{% endif %}"
   href="{{ include.href }}"
   title="{{ include.title }}"
   aria-label="{{ include.title }}"
