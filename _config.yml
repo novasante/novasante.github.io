@@ -5,6 +5,7 @@ baseline: Santé Intégrée
 address: Rte du Simplon 16, 1094 Paudex
 practitioners_url: "#practitioners"
 headline: La santé se construit ensemble.
+locale: fr-CH
 cta:
   text: Trouver le bon thérapeute
   url: "#contact"
