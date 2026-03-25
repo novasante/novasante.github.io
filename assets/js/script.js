@@ -573,6 +573,44 @@ const initPhoneContactTriggers = () => {
     });
 };
 
+const openBookingWidgetModal = (url) => {
+  const modal = document.getElementById("booking-modal");
+  if (!modal) return;
+
+  const iframe = modal.querySelector("iframe");
+  if (!iframe) return;
+
+  iframe.src = url;
+
+  if (!modal.open) {
+    modal.showModal();
+  }
+};
+
+const initBookingWidgetTriggers = () => {
+  document
+    .querySelectorAll(".js-booking-widget-trigger")
+    .forEach((el) => {
+      el.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        const url = el.href;
+        openBookingWidgetModal(url);
+      });
+    });
+
+  const modal = document.getElementById("booking-modal");
+  if (!modal) return;
+
+  // 🔥 reset iframe when modal closes
+  modal.addEventListener("close", () => {
+    const iframe = modal.querySelector("iframe");
+    if (iframe) {
+      iframe.src = "";
+    }
+  });
+};
+
 const init = () => {
   initSections();
   initFirstScrollListener();
@@ -580,6 +618,7 @@ const init = () => {
   initTogglerListener();
   initColorSchemeToggler();
   initPhoneContactTriggers();
+  initBookingWidgetTriggers();
   initLinksCloseNav();
   initLinksClicked();
   initAppInstallation();

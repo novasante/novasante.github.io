@@ -4,7 +4,7 @@
 <body>
 {% include icons.html %}
 
-<dialog id="phone-contact" onclick="this.close()">
+<dialog id="phone-contact" class="phone-contact" onclick="this.close()">
   <form method="dialog" onclick="event.stopPropagation()">
     <p>Prendre contact:</p>
     <ul class="buttons_list">
@@ -22,7 +22,15 @@
       </li>
     </ul>
     <div>
-      <button class="button hidden" type="reset" onclick="document.getElementById('phone-contact').close()">Annuler</button>
+      <button class="button hidden" id="cancel" type="reset" onclick="document.getElementById('phone-contact').close()">Annuler</button>
+    </div>
+  </form>
+</dialog>
+<dialog id="booking-modal" class="booking-modal" onclick="this.close()">
+  <form method="dialog" onclick="event.stopPropagation()">
+    <div class="booking-modal__content">
+      <button type="button" class="booking-modal__close" aria-label="Fermer" onclick="document.getElementById('booking-modal').close()">X</button>
+      <iframe src="" title="Prendre rendez-vous" loading="lazy"></iframe>
     </div>
   </form>
 </dialog>

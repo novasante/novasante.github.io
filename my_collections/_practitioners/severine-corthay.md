@@ -5,6 +5,7 @@ email: severine.corthay@novasante.ch
 phone: +41 78 302 31 56
 urls:
   image: //ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/nova/practitioners/severine-corthay.jpg
+  widget: //book.timify.com/services?accountId=69bd389056e7883180f6ce7a&hideCloseButton=true
 ---
 
 ## Présentation {#presentation}

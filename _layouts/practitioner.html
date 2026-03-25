@@ -91,6 +91,17 @@ Sa présentation détaillée sera bientôt disponible.
   </div>
 </div>
 {% endif %}
+{% if page.urls.widget %}
+<div class="row">
+  <div class="col text-center">
+    <a href="{{ page.urls.widget }}" class="button secondary js-booking-widget-trigger">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#calendar_clock_24dp"></use>
+      </svg> Prendre rendez-vous
+    </a>
+  </div>
+</div>
+{% endif %}
 
 
 {% comment %}
