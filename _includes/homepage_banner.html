@@ -4,13 +4,13 @@
 {% assign slider_class = "slider full-height" %}
 
 {% if page.collection == "practitioners" or page.url == "/contact/" or page.url == "/404" %}
-  {% assign title = false %}
+  {% assign headline = page.title %}
   {% assign cta_url = "#contact" %}
   {% assign cta_text = "Prendre rendez-vous" %}
   {% assign slider_class = "slider" %}
 {% endif %}
 
-<div id="banner" class="slider full-height">
+<div id="banner" class="{{ slider_class }}">
     <div class="inner no-filter">
         <header class="non-bordered">
             <p class="headline">{{ headline }}</p>
