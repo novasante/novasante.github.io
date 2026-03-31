@@ -3,7 +3,7 @@
 {% assign cta_text = site.cta.text %}
 {% assign slider_class = "slider full-height" %}
 
-{% if page.collection == "practitioners" or page.url == "/contact/" or page.url == "/404" %}
+{% if page.collection == "practitioners" or page.url == "/contact/" or page.permalink == "/404.html" %}
   {% assign headline = page.title %}
   {% assign cta_url = "#contact" %}
   {% assign cta_text = "Prendre rendez-vous" %}
