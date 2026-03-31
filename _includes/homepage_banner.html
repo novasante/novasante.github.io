@@ -1,23 +1,22 @@
-{% if page.collection == "practitioners" or page.url == "/contact/" %}
-<div id="banner" class="slider">
-    <div class="inner no-filter">
-        <header class="non-bordered">
-            <p class="headline">{{ page.title }}</p>
-            <p>
-                <a href="#contact" class="button primary">Prendre rendez-vous</a>
-            </p>
-        </header>
-    </div>
-</div>
-{% else %}
+{% assign headline = site.headline %}
+{% assign cta_url = site.cta.url %}
+{% assign cta_text = site.cta.text %}
+{% assign slider_class = "slider full-height" %}
+
+{% if page.collection == "practitioners" or page.url == "/contact/" or page.url == "/404" %}
+  {% assign title = false %}
+  {% assign cta_url = "#contact" %}
+  {% assign cta_text = "Prendre rendez-vous" %}
+  {% assign slider_class = "slider" %}
+{% endif %}
+
 <div id="banner" class="slider full-height">
     <div class="inner no-filter">
         <header class="non-bordered">
-            <p class="headline">{{ site.headline }}</p>
+            <p class="headline">{{ headline }}</p>
             <p>
-                <a href="{{ site.cta.url }}" class="button primary">{{ site.cta.text }}</a>
+                <a href="{{ cta_url }}" class="button primary">{{ cta_text }}</a>
             </p>
         </header>
     </div>
 </div>
-{% endif %}
