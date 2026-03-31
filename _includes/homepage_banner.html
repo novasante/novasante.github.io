@@ -6,7 +6,11 @@
 {% if page.collection == "practitioners" or page.url == "/contact/" or page.permalink == "/404.html" %}
   {% assign headline = page.title %}
   {% assign cta_url = "#contact" %}
-  {% assign cta_text = "Prendre rendez-vous" %}
+  {% if page.permalink == "/404.html" %}
+    {% assign cta_text = "Prendre rendez-vous" %}
+  {% else %}
+    {% assign cta_text = "Prendre rendez-vous quand même" %}
+  {% endif %}
   {% assign slider_class = "slider" %}
 {% endif %}
 
