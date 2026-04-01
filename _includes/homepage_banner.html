@@ -7,9 +7,9 @@
   {% assign headline = page.title %}
   {% assign cta_url = "#contact" %}
   {% if page.permalink == "/404.html" %}
-    {% assign cta_text = "Prendre rendez-vous" %}
-  {% else %}
     {% assign cta_text = "Prendre rendez-vous quand même" %}
+  {% else %}
+    {% assign cta_text = "Prendre rendez-vous" %}
   {% endif %}
   {% assign slider_class = "slider" %}
 {% endif %}
