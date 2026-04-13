@@ -5,9 +5,9 @@ View it live under [novasante.ch](https://novasante.ch)
 ![Preview](https://ik.imagekit.io/sarahdionne/website/devices.png)
 
 ## Key features:
+- Dark mode compatible with switcher
 - Mobile first responsive design
 - Progressive Web App installable
-- Dark mode compatible
 - One page website with navigation and auto scroll
 - Lazy loading for images and maps
 - Home banner with parallax or slider
