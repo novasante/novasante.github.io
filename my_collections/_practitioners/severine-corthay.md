@@ -3,12 +3,12 @@ title: Séverine Corthay
 function: Dramathérapie
 email: severine.corthay@novasante.ch
 phone: +41 78 302 31 56
+image: //ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/nova/practitioners/severine-corthay.jpg
 urls:
-  image: //ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/nova/practitioners/severine-corthay.jpg
   widget: //book.timify.com/services?accountId=69bd389056e7883180f6ce7a&hideCloseButton=true
 ---
 
-## Présentation {#presentation}
+## {{ page.function }} {#presentation}
 
 ![{{ page.title }}]({{ page.urls.image }})
 
@@ -18,7 +18,7 @@ Au sein de **NOVA Santé Intégrée**, elle propose un espace sécurisant où ch
 
 ---
 
-## La dramathérapie
+## Approche
 
 La **dramathérapie** est une forme d’art-thérapie qui utilise les outils du **théâtre et de la création artistique** pour accompagner un processus de transformation.
 

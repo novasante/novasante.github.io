@@ -4,15 +4,13 @@ title: Sarah Dionne
 function: Fondatrice du centre - Coordination des soins - Thérapie et accompagnement
 email: sarah.dionne@novasante.ch
 phone: +41 76 839 30 08
+image: //ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/nova/practitioners/sarah-dionne.jpg
 urls:
   booking: //www.onedoc.ch/fr/acupunctrice/paudex/pcsix/sarah-dionne
-  image: //ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/nova/practitioners/sarah-dionne.jpg
   vcf: //sarah.dionne.ch/sarah_dionne.vcf
 ---
 
-## Présentation {#presentation}
-
-**Fondatrice du centre - Coordination des soins - Thérapie et accompagnement**
+## {{ page.function }} {#presentation}
 
 ![Sarah Dionne](//ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/profile/sarah_dionne_profile_bis.jpg)
 

@@ -7,9 +7,7 @@ urls:
   booking: //www.onedoc.ch/fr/physiotherapeute/paudex/pcyce/alexandre-kaspar
 ---
 
-## Présentation {#presentation}
-
-**Physiothérapie pédiatrique**
+## {{ page.function }} {#presentation}
 
 J’accompagne les enfants dans leur développement avec une approche attentive, globale et respectueuse de leur rythme.
 

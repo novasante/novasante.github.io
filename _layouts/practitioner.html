@@ -7,13 +7,12 @@ layout: default
 
 {% if page_content == "" %}
 
-<h2 id="presentation">Présentation</h2>
-{% if page.urls.image %}
-<p><img src="{{ page.urls.image }}" alt="{{ page.title }}"></p>
+<h2 id="presentation">{{ page.function }}</h2>
+{% if page.image %}
+<p><img src="{{ page.image }}" alt="{{ page.title }}"></p>
 {% endif %}
-<p><strong>{{ page.function }}</strong></p>
 <p>
-{{ page.title }} reçoit au sein de <strong>NOVA Santé Intégrée</strong> à Paudex.
+<strong>{{ page.title }}</strong> reçoit au sein de NOVA Santé Intégrée à Paudex.
 </p>
 <p>
 Sa présentation détaillée sera bientôt disponible.
@@ -69,21 +68,11 @@ Sa présentation détaillée sera bientôt disponible.
     </div>
   </div>
 </div>
-{% if page.urls.vcf %}
-<div class="row">
-  <div class="col text-center">
-    <a href="{{ page.urls.vcf }}" class="button primary contact_download_vCard">
-      <svg class="icon" aria-hidden="true">
-        <use xlink:href="#download_24dp"></use>
-      </svg> Enregistrer le contact
-    </a>
-  </div>
-</div>
-{% endif %}
+
 {% if page.urls.booking %}
 <div class="row">
   <div class="col text-center">
-    <a href="{{ page.urls.booking }}" class="button secondary">
+    <a href="{{ page.urls.booking }}" class="button primary">
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#calendar_clock_24dp"></use>
       </svg> Prendre rendez-vous
@@ -94,7 +83,7 @@ Sa présentation détaillée sera bientôt disponible.
 {% if page.urls.widget %}
 <div class="row">
   <div class="col text-center">
-    <a href="{{ page.urls.widget }}" class="button secondary js-modal-trigger">
+    <a href="{{ page.urls.widget }}" class="button primary js-modal-trigger">
       <svg class="icon" aria-hidden="true">
         <use xlink:href="#calendar_clock_24dp"></use>
       </svg> Prendre rendez-vous
@@ -102,7 +91,17 @@ Sa présentation détaillée sera bientôt disponible.
   </div>
 </div>
 {% endif %}
-
+{% if page.urls.vcf %}
+<div class="row">
+  <div class="col text-center">
+    <a href="{{ page.urls.vcf }}" class="button secondary contact_download_vCard">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#download_24dp"></use>
+      </svg> Enregistrer le contact
+    </a>
+  </div>
+</div>
+{% endif %}
 
 {% comment %}
 <hr />
