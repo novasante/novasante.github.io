@@ -6,7 +6,7 @@
 {% for p in practitioners %}
   {% assign index_mod = forloop.index0 | modulo: 2 %}
   {% if index_mod == 0 %}<div class="row">{% endif %}
-    <div class="col m--u-1/2">
+    <div class="col xxxl--u-1/5 xxl--u-1/4 xl--u-1/3 s--u-1/2">
       <article class="card">
           <a class="card__link" href="{{ p.url }}" aria-label="Voir le profil de {{ p.title }}"></a>
           <div class="card__media">

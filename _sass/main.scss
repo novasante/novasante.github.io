@@ -5,7 +5,8 @@ $breakpoints: (
   "m": 748,
   "l": 992,
   "xl": 1200,
-  "xxl": 1440
+  "xxl": 1440,
+  "xxxl": 1600
 );
 
 $containers: (
@@ -16,7 +17,8 @@ $containers: (
   "l": 864px,
   // calc(960px - 96px),
   "xl": 1024px,
-  "xxl": 1200px
+  "xxl": 1200px,
+  "xxxl": 1440px
 );
 
 @mixin grid-media-query($breakpoint, $direction: up, $dimension: width) {
@@ -35,10 +37,10 @@ $containers: (
 
 /* BANNER SLIDER */
 $slide-images: (
+  //"content/slider/zen-garden-stone.png",
   "content/slider/flying-dandelion-seed.png",
   "content/slider/pebbles-by-the-lake.png",
-  "content/slider/lake-view-reflection-in-green-eye.png?v2",
-  "content/slider/zen-garden-stone.png"
+  "content/slider/lake-view-reflection-in-green-eye.png?v2"
 );
 
 :root {
@@ -98,6 +100,8 @@ $slide-images: (
      COLORS AND SIZES
      ================ */
 :root {
+  color-scheme: dark light;
+
   --dark-rgb: 28, 32, 33;
   --dark: rgb(var(--dark-rgb));
   --dark-85: rgba(var(--dark-rgb), 0.85);
@@ -186,6 +190,74 @@ $slide-images: (
     rgba(105, 200, 217, 1) 100%
   );
 
+  --gradient-bg: radial-gradient(
+      42% 30% at 50% 8%,
+      #e24b81 0%,
+      rgba(226, 75, 129, 0.88) 18%,
+      rgba(226, 75, 129, 0) 58%
+    ),
+    radial-gradient(
+      38% 34% at 50% 22%,
+      #de4563 0%,
+      rgba(222, 69, 99, 0.82) 22%,
+      rgba(222, 69, 99, 0) 60%
+    ),
+    radial-gradient(
+      34% 28% at 50% 48%,
+      #fb8d6c 0%,
+      rgba(251, 141, 108, 0.92) 18%,
+      rgba(246, 122, 123, 0.58) 42%,
+      rgba(246, 122, 123, 0) 68%
+    ),
+    radial-gradient(
+      28% 34% at 34% 58%,
+      rgba(207, 138, 163, 0.9) 0%,
+      rgba(207, 138, 163, 0) 72%
+    ),
+    radial-gradient(
+      28% 34% at 66% 58%,
+      rgba(207, 138, 163, 0.9) 0%,
+      rgba(207, 138, 163, 0) 72%
+    ),
+    radial-gradient(
+      34% 36% at 20% 50%,
+      #497399 0%,
+      rgba(73, 115, 153, 0.78) 35%,
+      rgba(73, 115, 153, 0) 76%
+    ),
+    radial-gradient(
+      34% 36% at 80% 50%,
+      #497399 0%,
+      rgba(73, 115, 153, 0.78) 35%,
+      rgba(73, 115, 153, 0) 76%
+    ),
+    radial-gradient(
+      26% 28% at 18% 88%,
+      #4ca596 0%,
+      rgba(76, 165, 150, 0.88) 30%,
+      rgba(76, 165, 150, 0) 72%
+    ),
+    radial-gradient(
+      26% 28% at 82% 88%,
+      #4ca596 0%,
+      rgba(76, 165, 150, 0.88) 30%,
+      rgba(76, 165, 150, 0) 72%
+    ),
+    radial-gradient(
+      30% 24% at 50% 82%,
+      #813b94 0%,
+      rgba(129, 59, 148, 0.78) 34%,
+      rgba(129, 59, 148, 0) 72%
+    ),
+    linear-gradient(
+      180deg,
+      #501a56 0%,
+      #611869 16%,
+      #604a8f 38%,
+      #497399 66%,
+      #3f7891 82%,
+      #4ca596 100%
+    );
   --icon-color: light-dark(var(--purple), var(--green));
   --icon-color-hover: light-dark(var(--purple-darker), var(--green-darker));
   --primary-btn-bg: var(--green);
@@ -221,8 +293,22 @@ $slide-images: (
   @include grid-media-query(s) {
     --font-size: var(--font-size-desktop);
   }
-}
 
+  --h1-font-size: 2em;
+  @include grid-media-query(s, up, height) {
+    --h1-font-size: 2.5em;
+
+    @include grid-media-query(l) {
+      --h1-font-size: 4.5em;
+    }
+  }
+}
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  row-gap: var(--gutter);
+}
 .col .row {
   margin-left: calc(-1 * var(--gutter) / 2);
   margin-right: calc(-1 * var(--gutter) / 2);
@@ -246,11 +332,11 @@ $slide-images: (
     }
   }
   .col {
-    float: left;
+    //float: left;
     box-sizing: border-box;
     padding: 0 calc(var(--gutter) / 2);
     min-height: 1px;
-    margin-left: auto;
+    //margin-left: auto;
     left: auto;
     right: auto;
     width: 100%;
@@ -977,6 +1063,9 @@ body {
         cursor: default;
         padding: 0;
         height: 400px;
+        @include grid-media-query(m) {
+          min-height: 50vh;
+        }
         @include grid-media-query(l) {
           min-height: 70vh;
         }
@@ -1027,23 +1116,9 @@ body {
               }
             }
             .headline {
-              font-size: 2em;
-              @include grid-media-query(s, up, height) {
-                font-size: 2.5em;
-                @include grid-media-query(xs) {
-                  font-size: 3em;
-                }
-                @include grid-media-query(s) {
-                  font-size: 3.5em;
-                }
-                @include grid-media-query(m) {
-                  font-size: 4em;
-                }
-                @include grid-media-query(l) {
-                  font-size: 4.5em;
-                }
-              }
+              font-size: var(--h1-font-size);
               font-weight: 500;
+
               color: var(--light-85);
               text-align: left;
             }
@@ -1053,8 +1128,6 @@ body {
             }
             h1 {
               font-size: var(--h1-font-size);
-              font-weight: 900;
-              letter-spacing: 0.2em;
               margin: 0;
               padding-left: 0.05em;
               position: relative;
@@ -1209,6 +1282,12 @@ body {
             &.containered,
             & > *:not(.full_width) {
               max-width: map-get($containers, xxl);
+            }
+          }
+          @include grid-media-query(xxxl) {
+            &.containered,
+            & > *:not(.full_width) {
+              max-width: map-get($containers, xxxl);
             }
           }
 
@@ -1982,7 +2061,7 @@ $mobile-menu-breakpoint: m;
       display: inline;
     }
     margin-top: auto;
-    padding: calc(var(--gutter) / 4) calc(var(--gutter));
+    padding: calc(var(--gutter) / 4) 0 calc(var(--gutter)) 0;
     text-align: center;
     a.button {
       position: relative;
@@ -2016,7 +2095,7 @@ $mobile-menu-breakpoint: m;
 }
 /*
 .container .wrapper footer.site-footer {
-  background: var(--gradient-smooth);
+  background: var(--gradient-bg);
 }
 */
 .booking-modal {
