@@ -2,7 +2,8 @@
 This open source website is a Jekyll website based on the [PWA website](https://github.com/ElManouche/Personal-PWA) that can be used for presentation website.
 
 View it live under [novasante.ch](https://novasante.ch)
-![Preview](https://ik.imagekit.io/sarahdionne/website/devices.png)
+
+![Preview](https://ik.imagekit.io/sarahdionne/website/novasante.png)
 
 ## Key features:
 - Dark mode compatible with switcher
