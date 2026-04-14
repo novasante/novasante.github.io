@@ -32,11 +32,11 @@ defaults:
       layout: default
       phone: +41 76 839 30 08
       title: "Espace Thérapeutique & Coordination de Soins à Paudex"
+      image: "//ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/nova_business_card.png"
       description: "Découvrez NOVA Santé Intégrée, un espace thérapeutique à Paudex. Nous coordonnons vos parcours de soins en favorisant la collaboration entre approches contemporaines, traditionnelles et complémentaires pour des accompagnements personnalisés et efficaces."
   - scope:
       path: ""
       type: practitioners
     values:
       layout: practitioner
-      urls:
-        image: "//ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/nova/practitioners/empty_profile.png"
+      image: "//ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/nova/practitioners/empty_profile.png"
