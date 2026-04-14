@@ -10,7 +10,7 @@ urls:
 
 ## {{ page.function }} {#presentation}
 
-![{{ page.title }}]({{ page.urls.image }})
+![{{ page.title }}]({{ page.image }})
 
 Séverine Corthay accompagne enfants, adolescents et adultes à travers la **dramathérapie**, une approche thérapeutique créative qui utilise le jeu, le corps et l’imaginaire.
 
