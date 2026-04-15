@@ -1,3 +1,5 @@
+{% assign phone_number = site.contact.phone | replace: ' ', '' %}
+
 <h2 id="contact">Parlons ensemble</h2>
 <div class="row">
   <div class="col">
@@ -9,7 +11,7 @@
   <div class="col m--u-1/2 phone">
     <div class="row">
       <div class="col u-1/4 text-center" aria-hidden="true">
-        <a tabindex="-1" href="javascript:document.getElementById('phone-contact').showModal()" title="Par téléphone" class="button-icon">
+        <a tabindex="-1" href="tel:{{ phone_number }}" data-phone="{{ phone_number }}" title="Par téléphone" class="button-icon">
           <svg class="icon" aria-hidden="true">
             <title>Téléphone, SMS ou Whatsapp</title>
             <use xlink:href="#call_24dp"></use>
@@ -19,7 +21,7 @@
       <div class="col u-3/4">
         <p>Par téléphone:</p>
         <p>
-          <a href="javascript:document.getElementById('phone-contact').showModal()" title="Par téléphone" class="contact_tel"><strong>{{ site.contact.phone }}</strong></a><br>
+          <a href="tel:{{ phone_number }}" data-phone="{{ phone_number }}" title="Par téléphone" class="contact_tel"><strong>{{ phone_number }}</strong></a><br>
           <small>WhatsApp ou SMS</small>
         </p>
       </div>
