@@ -2,7 +2,7 @@
 <html lang="fr" >
 {% include head.html %}
 <body>
-<a href="#content" class="skip">Skip to main content</a>
+<a href="#sections" class="skip">Skip to main content</a>
 {% include icons.html %}
 
 <dialog id="phone-contact" class="phone-contact" onclick="this.close()">
@@ -51,7 +51,7 @@
       </label>
       <span class="title hide-on-top"><a href="#home">{{ site.short_title }} <span class="display-none xs--display-inline">{{ site.baseline }}</span></a></span>
     </div>
-    <div id="content" class="content">
+    <div class="content">
       {% include homepage_banner.html %}
       <div id="sections" class="sections">
         {{ content }}
