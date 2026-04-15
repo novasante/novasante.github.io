@@ -42,60 +42,60 @@ $slide-images: (
   "content/slider/pebbles-by-the-lake.png",
   "content/slider/lake-view-reflection-in-green-eye.png?v2"
 );
-
-:root {
-  $img-path: "//ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/";
-  @for $i from 1 through length($slide-images) {
-    $slide-image: nth($slide-images, $i);
-    --slide-#{$i}: url("#{$img-path}#{$slide-image}");
-  }
-}
-
-@for $i from 1 through length($breakpoints) {
-  $name: nth(map_keys($breakpoints), $i);
-  $slide-width: 1600;
-  @if $i + 1 <= length($breakpoints) {
-    $slide-width: nth(map_values($breakpoints), $i + 1);
+@if length($slide-images) != 0 {
+  :root {
+    $img-path: "//ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/";
+    @for $i from 1 through length($slide-images) {
+      $slide-image: nth($slide-images, $i);
+      --slide-#{$i}: url("#{$img-path}#{$slide-image}");
+    }
   }
 
-  @include grid-media-query($name) {
-    :root {
-      $img-path: "//ik.imagekit.io/sarahdionne/tr:w-#{$slide-width},h-600,c-at_least,f-webp/nova/";
-      @for $i from 1 through length($slide-images) {
-        $slide-image: nth($slide-images, $i);
-        --slide-#{$i}: url("#{$img-path}#{$slide-image}");
+  @for $i from 1 through length($breakpoints) {
+    $name: nth(map_keys($breakpoints), $i);
+    $slide-width: 1600;
+    @if $i + 1 <= length($breakpoints) {
+      $slide-width: nth(map_values($breakpoints), $i + 1);
+    }
+
+    @include grid-media-query($name) {
+      :root {
+        $img-path: "//ik.imagekit.io/sarahdionne/tr:w-#{$slide-width},h-600,c-at_least,f-webp/nova/";
+        @for $i from 1 through length($slide-images) {
+          $slide-image: nth($slide-images, $i);
+          --slide-#{$i}: url("#{$img-path}#{$slide-image}");
+        }
       }
     }
   }
-}
 
-@keyframes imageSlider {
-  $slide-start: 1;
-  @for $i from 1 through length($slide-images) {
-    $slide-num: $slide-start + ($i - 1);
-    @if $slide-num > length($slide-images) {
-      $slide-num: $slide-num - length($slide-images);
-    }
-    $next-num: $slide-num + 1;
-    @if $next-num > length($slide-images) {
-      $next-num: $next-num - length($slide-images);
-    }
-    $duration: 100% / length($slide-images);
-    $from: ($i - 1) * $duration;
-    $to: $i * $duration - 5%;
+  @keyframes imageSlider {
+    $slide-start: 1;
+    @for $i from 1 through length($slide-images) {
+      $slide-num: $slide-start + ($i - 1);
+      @if $slide-num > length($slide-images) {
+        $slide-num: $slide-num - length($slide-images);
+      }
+      $next-num: $slide-num + 1;
+      @if $next-num > length($slide-images) {
+        $next-num: $next-num - length($slide-images);
+      }
+      $duration: 100% / length($slide-images);
+      $from: ($i - 1) * $duration;
+      $to: $i * $duration - 5%;
 
-    #{$from} {
-      background-image: var(--slide-#{$slide-num});
+      #{$from} {
+        background-image: var(--slide-#{$slide-num});
+      }
+      #{$to} {
+        background-image: var(--slide-#{$slide-num}), var(--slide-#{$next-num});
+      }
     }
-    #{$to} {
-      background-image: var(--slide-#{$slide-num}), var(--slide-#{$next-num});
+    100% {
+      background-image: var(--slide-#{$slide-start});
     }
   }
-  100% {
-    background-image: var(--slide-#{$slide-start});
-  }
 }
-
 /* ================
      COLORS AND SIZES
      ================ */
@@ -423,6 +423,25 @@ $slide-images: (
     .#{$breakpoint}--display-block {
       display: block;
     }
+  }
+}
+.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  &:focus {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: auto;
+    height: auto;
+    border: 1px solid red;
+    overflow: visible;
+    z-index: 101;
+    background: var(--background);
   }
 }
 
