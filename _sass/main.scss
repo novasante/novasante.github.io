@@ -1778,6 +1778,7 @@ $mobile-menu-breakpoint: m;
           margin: 10px;
           a,
           span {
+            border: 1px solid transparent;
             &:hover {
               user-select: none;
               color: var(--font-color-hover);
@@ -1790,7 +1791,7 @@ $mobile-menu-breakpoint: m;
             line-height: 1em;
             color: var(--font-color);
             text-decoration: none;
-            outline: 0px;
+            //outline: 0px;
             &.toggle {
               padding: 0;
             }
@@ -1798,9 +1799,9 @@ $mobile-menu-breakpoint: m;
               background: var(--primary-btn-bg);
               color: var(--font-color-inverted-hover);
               font-weight: 900;
-              &:hover {
+              &:hover, &:focus-within {
                 background: var(--green-lighter);
-                outline: none;
+                //outline: none;
                 color: var(--font-color-inverted-hover);
               }
             }
@@ -1873,19 +1874,19 @@ $mobile-menu-breakpoint: m;
                 //max-width: 200px;
                 font-size: 0.95em;
                 border-top: 1px solid var(--borders);
-                outline: none;
-                &:hover {
-                  outline: none;
+                //outline: none;
+                &:hover, &:focus-within {
+                  //outline: none;
                   background-color: var(--green-lighter);
                   color: var(--light);
                 }
               }
             }
           }
-          &:hover {
+          &:hover, &:focus-within {
             & > a,
             & > span {
-              outline: 1px solid var(--borders);
+              border: 1px solid var(--borders);
             }
 
             &:not(.closed) {
