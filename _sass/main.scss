@@ -438,7 +438,8 @@ $slide-images: (
     top: 0;
     width: auto;
     height: auto;
-    border: 1px solid red;
+    border: none;
+    padding: 0 var(--gutter);
     overflow: visible;
     z-index: 101;
     background: var(--background);
@@ -1616,13 +1617,12 @@ $mobile-menu-breakpoint: m;
     }
 
     /* mobile menu visible */
-    input#toggler:checked {
-      ~ nav {
+    input#toggler:checked ~ nav, nav:focus-within {
         transform: translateX(0);
         display: block;
         left: 0px;
       }
-      ~ .wrapper {
+    input#toggler:checked ~ .wrapper, nav:focus-within ~ .wrapper {
         margin-left: 275px;
         overflow: hidden;
 
@@ -1645,7 +1645,7 @@ $mobile-menu-breakpoint: m;
           }
         }
       }
-    }
+    
   }
 }
 
@@ -1799,7 +1799,8 @@ $mobile-menu-breakpoint: m;
               background: var(--primary-btn-bg);
               color: var(--font-color-inverted-hover);
               font-weight: 900;
-              &:hover, &:focus-within {
+              &:hover,
+              &:focus-within {
                 background: var(--green-lighter);
                 //outline: none;
                 color: var(--font-color-inverted-hover);
@@ -1875,7 +1876,8 @@ $mobile-menu-breakpoint: m;
                 font-size: 0.95em;
                 border-top: 1px solid var(--borders);
                 //outline: none;
-                &:hover, &:focus-within {
+                &:hover,
+                &:focus-within {
                   //outline: none;
                   background-color: var(--green-lighter);
                   color: var(--light);
@@ -1883,7 +1885,8 @@ $mobile-menu-breakpoint: m;
               }
             }
           }
-          &:hover, &:focus-within {
+          &:hover,
+          &:focus-within {
             & > a,
             & > span {
               border: 1px solid var(--borders);
