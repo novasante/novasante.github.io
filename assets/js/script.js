@@ -580,35 +580,95 @@ const openBookingWidgetModal = (url) => {
   const iframe = modal.querySelector("iframe");
   if (!iframe) return;
 
-  iframe.src = url;
+  // reset visuel immédiat
+  iframe.removeAttribute("src");
 
   if (!modal.open) {
     modal.showModal();
   }
+
+  // injecte l'URL juste après l'ouverture
+  requestAnimationFrame(() => {
+    iframe.src = url;
+  });
 };
 
 const initBookingWidgetTriggers = () => {
-  document
-    .querySelectorAll(".js-modal-trigger")
-    .forEach((el) => {
-      el.addEventListener("click", (event) => {
-        event.preventDefault();
-
-        const url = el.href;
-        openBookingWidgetModal(url);
-      });
+  document.querySelectorAll(".js-modal-trigger").forEach((el) => {
+    el.addEventListener("click", (event) => {
+      event.preventDefault();
+      openBookingWidgetModal(el.href);
     });
+  });
 
   const modal = document.getElementById("booking-modal");
   if (!modal) return;
 
-  // 🔥 reset iframe when modal closes
   modal.addEventListener("close", () => {
     const iframe = modal.querySelector("iframe");
     if (iframe) {
-      iframe.src = "";
+      iframe.removeAttribute("src");
     }
   });
+};
+
+const initBannerVideo = () => {
+  const videoUrl =
+    "https://ik.imagekit.io/sarahdionne/nova/content/slider/PixVerse_V5_Transition_720P_cinematic_slow_mot.mp4";
+
+  const heroSection = document.querySelector(".slider");
+  if (!heroSection) return;
+
+  heroSection.classList.add("nova-video-hero");
+
+  // Prevent duplicate video on reload
+  if (heroSection.querySelector("#nova-bg-video")) return;
+
+  // Create video
+  const video = document.createElement("video");
+  video.id = "nova-bg-video";
+  video.autoplay = true;
+  video.muted = true;
+  video.loop = true;
+  video.playsInline = true;
+  video.defaultMuted = true;
+  video.setAttribute("muted", "");
+  video.setAttribute("playsinline", "");
+  video.setAttribute("webkit-playsinline", "");
+
+  const source = document.createElement("source");
+  source.src = videoUrl;
+  source.type = "video/mp4";
+  video.appendChild(source);
+
+  // Overlay
+  const overlay = document.createElement("div");
+  overlay.id = "nova-bg-overlay";
+
+  // Insert as background
+  heroSection.prepend(overlay);
+  heroSection.prepend(video);
+
+  // Keep all slider content above video
+  [...heroSection.children].forEach((child) => {
+    if (child.id !== "nova-bg-video" && child.id !== "nova-bg-overlay") {
+      child.classList.add("nova-video-hero-content");
+    }
+  });
+
+  // Optional: try half speed (desktop mostly)
+  const applySpeed = () => {
+    try {
+      video.playbackRate = 0.5;
+    } catch (e) {}
+  };
+
+  video.addEventListener("loadedmetadata", applySpeed);
+  video.addEventListener("play", applySpeed);
+  video
+    .play()
+    .then(applySpeed)
+    .catch(() => {});
 };
 
 const init = () => {
@@ -624,6 +684,7 @@ const init = () => {
   initAppInstallation();
   initNavPosition();
   initCloseSubNav();
+  initBannerVideo();
   initParallax();
   initForm();
   initRouting();
