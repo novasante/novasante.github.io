@@ -10,6 +10,7 @@ urls:
   booking: https://www.onedoc.ch/fr/acupunctrice/paudex/pcsix/sarah-dionne
   linkedin: https://www.linkedin.com/in/sarah-dionne/
   vcf: https://sarah.dionne.ch/sarah_dionne.vcf
+redirect_from: /sd
 ---
 
 ## {{ page.function }} {#presentation}

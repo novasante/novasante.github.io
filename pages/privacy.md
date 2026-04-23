@@ -2,6 +2,13 @@
 layout: default
 title: Politique de confidentialité
 permalink: /politique-de-confidentialite/
+redirect_from:
+  - /pp
+  - /pp/
+  - /privacy
+  - /privacy/
+  - /privacy-policy
+  - /privacy-policy/
 ---
 
 ## 1. Qui sommes-nous
