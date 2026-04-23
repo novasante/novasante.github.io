@@ -1,16 +1,29 @@
-{% assign headline = site.headline %}
-{% assign cta_url = site.cta.url %}
-{% assign cta_text = site.cta.text %}
-{% assign slider_class = "slider partial-height" %}
+{% assign is_homepage = page.url == "/" or page.url == "" %}
+{% assign inline_contact = false %}
+{% if page.collection == "practitioners" or page.url == "/contact/" or page.url == "/404.html" %}
+  {% assign inline_contact = true %}
+{% endif %}
 
-{% if page.collection == "practitioners" or page.url == "/contact/" or page.permalink == "/404.html" %}
+{% if is_homepage == true %}
+  {% assign headline = site.headline %}
+  {% assign cta_url = site.cta.url %}
+  {% assign cta_text = site.cta.text %}
+  {% assign slider_class = "slider partial-height" %}
+{% else %}
   {% assign headline = page.title %}
-  {% assign cta_url = "#contact" %}
-  {% if page.permalink == "/404.html" %}
+  
+  {% if inline_contact == true %}
+    {% assign cta_url = "#contact" %}
+  {% else %}
+    {% assign cta_url = "/contact" %}
+  {% endif %}
+
+  {% if page.url == "/404.html" %}
     {% assign cta_text = "Prendre rendez-vous quand même" %}
   {% else %}
     {% assign cta_text = "Prendre rendez-vous" %}
   {% endif %}
+
   {% assign slider_class = "slider" %}
 {% endif %}
 
