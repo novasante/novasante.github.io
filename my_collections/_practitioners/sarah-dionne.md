@@ -6,8 +6,10 @@ email: sarah.dionne@novasante.ch
 phone: +41 76 839 30 08
 image: https://ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/nova/practitioners/sarah-dionne.jpg
 urls:
-  booking: //www.onedoc.ch/fr/acupunctrice/paudex/pcsix/sarah-dionne
-  vcf: //sarah.dionne.ch/sarah_dionne.vcf
+  website: https://sarah.dionne.ch
+  booking: https://www.onedoc.ch/fr/acupunctrice/paudex/pcsix/sarah-dionne
+  linkedin: https://www.linkedin.com/in/sarah-dionne/
+  vcf: https://sarah.dionne.ch/sarah_dionne.vcf
 ---
 
 ## {{ page.function }} {#presentation}
@@ -36,7 +38,7 @@ Cette double expérience — hospitalière et clinique — l’a amenée à cons
 
 ## Une approche intégrative de la santé
 
-![Sarah Dionne](//ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/profile/sarah_dionne_profile.jpg)
+![Sarah Dionne](https://ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/profile/sarah_dionne_profile.jpg)
 
 Sa pratique repose sur une **vision intégrative de la santé**.
 

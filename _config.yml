@@ -1,8 +1,19 @@
 url: https://novasante.ch
 title: NOVA Santé Intégrée
+logo: "https://ik.imagekit.io/sarahdionne/nova/logo.png"
 short_title: NOVA
 baseline: Santé Intégrée
-address: Rte du Simplon 16, 1094 Paudex
+address: 
+  full: Rte du Simplon 16, 1094 Paudex
+  streetAddress: Route du Simplon 16
+  addressLocality: Paudex
+  postalCode: 1094
+  addressRegion: Vaud
+  addressCountry: CH
+  geo:
+    latitude: 46.5001
+    longitude: 6.6558
+  map: "https://maps.google.com/?q=Route+du+Simplon+16,+1094+Paudex"
 practitioners_url: "#practitioners"
 headline: La santé se construit ensemble.
 locale: fr-CH
@@ -12,6 +23,12 @@ cta:
 contact:
   email: contact@novasante.ch
   phone: +41 76 839 30 08
+urls:
+  linkedin: "https://www.linkedin.com/company/nova-sant%C3%A9-int%C3%A9gr%C3%A9e/"
+schema:
+  "@type": "Organization" # used by jekyll-seo-tag for the publisher node
+seo:
+  type: Organization
 collections_dir: my_collections
 collections:
   practitioners:

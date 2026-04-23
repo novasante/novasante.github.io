@@ -1,93 +1,8 @@
 @charset "UTF-8";
-/* BANNER SLIDER */
-:root {
-  --slide-1: url("//ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
-  --slide-2: url("//ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
-  --slide-3: url("//ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
-}
 
-@media only screen and (min-width: 300px) {
-  :root {
-    --slide-1: url("//ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
-    --slide-2: url("//ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
-    --slide-3: url("//ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
-  }
-}
-@media only screen and (min-width: 360px) {
-  :root {
-    --slide-1: url("//ik.imagekit.io/sarahdionne/tr:w-480,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
-    --slide-2: url("//ik.imagekit.io/sarahdionne/tr:w-480,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
-    --slide-3: url("//ik.imagekit.io/sarahdionne/tr:w-480,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
-  }
-}
-@media only screen and (min-width: 480px) {
-  :root {
-    --slide-1: url("//ik.imagekit.io/sarahdionne/tr:w-748,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
-    --slide-2: url("//ik.imagekit.io/sarahdionne/tr:w-748,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
-    --slide-3: url("//ik.imagekit.io/sarahdionne/tr:w-748,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
-  }
-}
-@media only screen and (min-width: 748px) {
-  :root {
-    --slide-1: url("//ik.imagekit.io/sarahdionne/tr:w-992,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
-    --slide-2: url("//ik.imagekit.io/sarahdionne/tr:w-992,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
-    --slide-3: url("//ik.imagekit.io/sarahdionne/tr:w-992,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
-  }
-}
-@media only screen and (min-width: 992px) {
-  :root {
-    --slide-1: url("//ik.imagekit.io/sarahdionne/tr:w-1200,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
-    --slide-2: url("//ik.imagekit.io/sarahdionne/tr:w-1200,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
-    --slide-3: url("//ik.imagekit.io/sarahdionne/tr:w-1200,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
-  }
-}
-@media only screen and (min-width: 1200px) {
-  :root {
-    --slide-1: url("//ik.imagekit.io/sarahdionne/tr:w-1440,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
-    --slide-2: url("//ik.imagekit.io/sarahdionne/tr:w-1440,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
-    --slide-3: url("//ik.imagekit.io/sarahdionne/tr:w-1440,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
-  }
-}
-@media only screen and (min-width: 1440px) {
-  :root {
-    --slide-1: url("//ik.imagekit.io/sarahdionne/tr:w-1600,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
-    --slide-2: url("//ik.imagekit.io/sarahdionne/tr:w-1600,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
-    --slide-3: url("//ik.imagekit.io/sarahdionne/tr:w-1600,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
-  }
-}
-@media only screen and (min-width: 1600px) {
-  :root {
-    --slide-1: url("//ik.imagekit.io/sarahdionne/tr:w-1600,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
-    --slide-2: url("//ik.imagekit.io/sarahdionne/tr:w-1600,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
-    --slide-3: url("//ik.imagekit.io/sarahdionne/tr:w-1600,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
-  }
-}
-@keyframes imageSlider {
-  0% {
-    background-image: var(--slide-1);
-  }
-  28.3333333333% {
-    background-image: var(--slide-1), var(--slide-2);
-  }
-  33.3333333333% {
-    background-image: var(--slide-2);
-  }
-  61.6666666667% {
-    background-image: var(--slide-2), var(--slide-3);
-  }
-  66.6666666667% {
-    background-image: var(--slide-3);
-  }
-  95% {
-    background-image: var(--slide-3), var(--slide-1);
-  }
-  100% {
-    background-image: var(--slide-1);
-  }
-}
 /* ================
-     COLORS AND SIZES
-     ================ */
+   COLORS AND SIZES
+   ================ */
 :root {
   color-scheme: dark light;
   --dark-rgb: 28, 32, 33;
@@ -240,11 +155,96 @@
   --header-border-width: 2px;
   --h1-font-size: 3em;
   --gutter: 24px;
+  --half-gutter: calc(var(--gutter) / 2);
+  --double-gutter: calc(var(--gutter) * 2);
 }
 
-/* =====================
-     GRID & RESPONSIVENESS
-     ===================== */
+/* BANNER SLIDER */
+:root {
+  --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
+  --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
+  --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
+}
+
+@media only screen and (min-width: 300px) {
+  :root {
+    --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
+    --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
+    --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
+  }
+}
+@media only screen and (min-width: 360px) {
+  :root {
+    --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-480,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
+    --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-480,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
+    --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-480,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
+  }
+}
+@media only screen and (min-width: 480px) {
+  :root {
+    --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-748,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
+    --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-748,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
+    --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-748,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
+  }
+}
+@media only screen and (min-width: 748px) {
+  :root {
+    --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-992,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
+    --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-992,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
+    --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-992,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
+  }
+}
+@media only screen and (min-width: 992px) {
+  :root {
+    --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-1200,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
+    --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-1200,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
+    --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-1200,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
+  }
+}
+@media only screen and (min-width: 1200px) {
+  :root {
+    --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-1440,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
+    --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-1440,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
+    --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-1440,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
+  }
+}
+@media only screen and (min-width: 1440px) {
+  :root {
+    --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-1600,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
+    --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-1600,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
+    --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-1600,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
+  }
+}
+@media only screen and (min-width: 1600px) {
+  :root {
+    --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-1600,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
+    --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-1600,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
+    --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-1600,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
+  }
+}
+@keyframes imageSlider {
+  0% {
+    background-image: var(--slide-1);
+  }
+  28.3333333333% {
+    background-image: var(--slide-1), var(--slide-2);
+  }
+  33.3333333333% {
+    background-image: var(--slide-2);
+  }
+  61.6666666667% {
+    background-image: var(--slide-2), var(--slide-3);
+  }
+  66.6666666667% {
+    background-image: var(--slide-3);
+  }
+  95% {
+    background-image: var(--slide-3), var(--slide-1);
+  }
+  100% {
+    background-image: var(--slide-1);
+  }
+}
 :root {
   --font-size: var(--font-size-mobile);
   --h1-font-size: 2em;
@@ -273,8 +273,8 @@
 }
 
 .col .row {
-  margin-left: calc(-1 * var(--gutter) / 2);
-  margin-right: calc(-1 * var(--gutter) / 2);
+  margin-left: calc(-1 * var(--half-gutter));
+  margin-right: calc(-1 * var(--half-gutter));
 }
 
 .row {
@@ -296,7 +296,7 @@
 }
 .row .col {
   box-sizing: border-box;
-  padding: 0 calc(var(--gutter) / 2);
+  padding: 0 var(--half-gutter);
   min-height: 1px;
   left: auto;
   right: auto;
@@ -307,52 +307,10 @@
 }
 .row .col p + p:has(img) {
   clear: both;
-  padding-top: calc(var(--gutter) * 2);
+  padding-top: var(--half-gutter);
 }
 .row .col ul {
   overflow: auto;
-}
-.row .col img {
-  width: 100%;
-  max-width: calc(100vw - var(--gutter));
-  height: auto;
-  border-radius: 10px;
-  margin: 0 0 calc(var(--gutter) / 2) 0;
-}
-.row .col img.observable {
-  filter: blur(5px);
-}
-.row .col img.visible {
-  filter: none;
-  transition: transform 0.2s;
-}
-.row .col img.visible:hover {
-  transform: scale(1.05);
-}
-@media only screen and (min-width: 360px) {
-  .row .col img {
-    margin: 0 var(--gutter) calc(var(--gutter) / 2) 0;
-    float: left;
-  }
-  .row .col img.right {
-    float: right;
-    margin: 0 0 calc(var(--gutter) / 2) var(--gutter);
-  }
-}
-@media only screen and (min-width: 360px) {
-  .row .col img {
-    max-width: calc((100vw / 2) - var(--gutter));
-  }
-}
-@media only screen and (min-width: 480px) {
-  .row .col img:not(.large) {
-    max-width: calc((100vw / 3) - var(--gutter));
-  }
-}
-@media only screen and (min-width: 992px) {
-  .row .col img:not(.large) {
-    max-width: 432px;
-  }
 }
 
 .col.u-1\/2 {
@@ -831,12 +789,33 @@
     display: block;
   }
 }
+.skip {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.skip:focus {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+  border: none;
+  padding: 0 var(--gutter);
+  overflow: visible;
+  z-index: 101;
+  background: var(--background);
+}
+
 /* ============
-     PAGE STYLING
-     ============ */
+   PAGE STYLING
+   ============ */
 html {
   box-sizing: border-box;
-  color-scheme: light dark;
+  color-scheme: dark light;
 }
 html body.black-banner:before {
   content: "";
@@ -911,7 +890,7 @@ body h4,
 body h5,
 body h6 {
   font-weight: 300;
-  margin: calc(var(--gutter) / 2) 0 var(--gutter) 0;
+  margin: var(--half-gutter) 0 var(--gutter) 0;
 }
 body h1 span,
 body h2 span,
@@ -929,7 +908,7 @@ body h3,
 body h4,
 body h5,
 body h6 {
-  margin: calc(var(--gutter) / 2) 0;
+  margin: var(--half-gutter) 0;
 }
 body .content h1 {
   font-weight: 600;
@@ -1028,7 +1007,7 @@ body ul.images_list {
 body ul.images_list > li {
   list-style-type: none;
   margin: 0;
-  padding: 0 12px 24px 12px;
+  padding: 0 var(--half-gutter) var(--gutter) var(--half-gutter);
   height: auto;
   display: flex;
   justify-content: center;
@@ -1042,8 +1021,8 @@ body ul.images_list > li > a {
   display: grid;
   place-items: center;
   background: var(--background-light);
-  padding: 24px;
-  border-radius: 24px;
+  padding: var(--gutter);
+  border-radius: var(--gutter);
   max-width: 35vw;
   aspect-ratio: 1;
 }
@@ -1067,7 +1046,7 @@ body a.button {
   text-transform: uppercase;
   border: 0px;
   border-radius: 0.25em;
-  padding: 12px;
+  padding: var(--half-gutter);
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
@@ -1154,7 +1133,42 @@ body .news .archived {
   display: none;
 }
 body img {
-  max-width: 100vw;
+  width: auto;
+  max-width: min(100%, calc(100vw - var(--gutter)));
+  height: auto;
+  border-radius: 10px;
+  margin: 0 0 var(--half-gutter) 0;
+}
+body img.observable {
+  filter: blur(5px);
+}
+body img.visible {
+  filter: none;
+  transition: transform 0.2s;
+}
+body img.visible:hover {
+  transform: scale(1.05);
+}
+@media only screen and (min-width: 360px) {
+  body img {
+    margin: 0 var(--gutter) var(--half-gutter) 0;
+    float: left;
+    max-width: calc((100vw / 2) - var(--gutter));
+  }
+  body img.right {
+    float: right;
+    margin: 0 0 var(--half-gutter) var(--gutter);
+  }
+}
+@media only screen and (min-width: 480px) {
+  body img:not(.large) {
+    max-width: calc((100vw / 3) - var(--gutter));
+  }
+}
+@media only screen and (min-width: 992px) {
+  body img:not(.large) {
+    max-width: 432px;
+  }
 }
 body svg title {
   display: none;
@@ -1249,8 +1263,8 @@ body dialog:after {
   display: inline-block;
   content: "×";
   position: absolute;
-  top: 12px;
-  right: 24px;
+  top: var(--half-gutter);
+  right: var(--gutter);
   cursor: pointer;
 }
 body dialog .button {
@@ -1263,6 +1277,7 @@ body div.map-iframe {
   margin: auto;
   background: var(--background-dark);
   background-position: center;
+  background-size: cover;
   cursor: pointer;
 }
 body div.map-iframe.map--paudex {
@@ -1718,8 +1733,8 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   margin-top: calc(2 * var(--gutter));
 }
 .container .wrapper footer p {
-  height: 24px;
-  line-height: 24px;
+  height: var(--gutter);
+  line-height: var(--gutter);
 }
 .container .wrapper footer p small,
 .container .wrapper footer p svg.icon {
@@ -1727,10 +1742,10 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   display: inline-block;
 }
 .container .wrapper footer svg.icon {
-  height: 24px;
-  width: 24px;
+  height: var(--gutter);
+  width: var(--gutter);
   color: var(--font-color);
-  margin-right: 12px;
+  margin-right: var(--half-gutter);
 }
 .container .wrapper footer svg.icon.logo {
   width: 120px;
@@ -1905,7 +1920,7 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
     top: 16px;
     left: 6px;
     transition: visibility 0.5s ease-in-out;
-    width: 24px;
+    width: var(--gutter);
   }
   .container .wrapper .mobile-navbar label.toggler .navicon:before, .container .wrapper .mobile-navbar label.toggler .navicon:after {
     background: var(--font-color);
@@ -1929,30 +1944,36 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
     margin: 0px 12px 10px 0px;
     color: var(--font-color);
   }
-  .container input#toggler:checked ~ nav {
+  .container input#toggler:checked ~ nav,
+.container nav:focus-within {
     transform: translateX(0);
     display: block;
     left: 0px;
   }
-  .container input#toggler:checked ~ .wrapper {
+  .container input#toggler:checked ~ .wrapper,
+.container nav:focus-within ~ .wrapper {
     margin-left: 275px;
     overflow: hidden;
   }
-  .container input#toggler:checked ~ .wrapper .toggler-wrapper {
+  .container input#toggler:checked ~ .wrapper .toggler-wrapper,
+.container nav:focus-within ~ .wrapper .toggler-wrapper {
     position: fixed;
     width: 100%;
     height: 100vh;
     z-index: 110;
     cursor: pointer;
   }
-  .container input#toggler:checked ~ .wrapper .toggler .navicon {
+  .container input#toggler:checked ~ .wrapper .toggler .navicon,
+.container nav:focus-within ~ .wrapper .toggler .navicon {
     background: transparent;
   }
-  .container input#toggler:checked ~ .wrapper .toggler .navicon:before {
+  .container input#toggler:checked ~ .wrapper .toggler .navicon:before,
+.container nav:focus-within ~ .wrapper .toggler .navicon:before {
     transform: rotate(-45deg);
     top: 0;
   }
-  .container input#toggler:checked ~ .wrapper .toggler .navicon:after {
+  .container input#toggler:checked ~ .wrapper .toggler .navicon:after,
+.container nav:focus-within ~ .wrapper .toggler .navicon:after {
     transform: rotate(45deg);
     top: 0;
   }
@@ -2065,6 +2086,7 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   }
   .container nav > ul > li a,
 .container nav > ul > li span {
+    border: 1px solid transparent;
     text-transform: uppercase;
     display: inline-block;
     padding: 10px 16px;
@@ -2073,7 +2095,6 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
     line-height: 1em;
     color: var(--font-color);
     text-decoration: none;
-    outline: 0px;
   }
   .container nav > ul > li a:hover,
 .container nav > ul > li span:hover {
@@ -2090,10 +2111,10 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
     color: var(--font-color-inverted-hover);
     font-weight: 900;
   }
-  .container nav > ul > li a.primary:hover,
-.container nav > ul > li span.primary:hover {
+  .container nav > ul > li a.primary:hover, .container nav > ul > li a.primary:focus-within,
+.container nav > ul > li span.primary:hover,
+.container nav > ul > li span.primary:focus-within {
     background: var(--green-lighter);
-    outline: none;
     color: var(--font-color-inverted-hover);
   }
   .container nav > ul > li a:hover,
@@ -2110,8 +2131,8 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
     display: block;
     position: absolute;
     z-index: 100;
-    right: -24px;
-    left: -24px;
+    right: calc(-1 * var(--gutter));
+    left: calc(-1 * var(--gutter));
     background-color: var(--nav__submenu-bg);
     backdrop-filter: blur(15px);
     margin: 12px 0 0 0;
@@ -2150,27 +2171,25 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
     border-top: 0px;
   }
   .container nav > ul > li > ul li a {
-    padding: 10px 36px 10px 24px;
+    padding: 10px 36px 10px var(--gutter);
     width: 100%;
     height: auto;
     font-size: 0.95em;
     border-top: 1px solid var(--borders);
-    outline: none;
   }
-  .container nav > ul > li > ul li a:hover {
-    outline: none;
+  .container nav > ul > li > ul li a:hover, .container nav > ul > li > ul li a:focus-within {
     background-color: var(--green-lighter);
     color: var(--light);
   }
-  .container nav > ul > li:hover > a, .container nav > ul > li:hover > span {
-    outline: 1px solid var(--borders);
+  .container nav > ul > li:hover > a, .container nav > ul > li:hover > span, .container nav > ul > li:focus-within > a, .container nav > ul > li:focus-within > span {
+    border: 1px solid var(--borders);
   }
-  .container nav > ul > li:hover:not(.closed) ul {
+  .container nav > ul > li:hover:not(.closed) ul, .container nav > ul > li:focus-within:not(.closed) ul {
     display: block;
     opacity: 1;
     transform: scale(1);
   }
-  .container nav > ul > li:hover:not(.closed).submenu a:after, .container nav > ul > li:hover:not(.closed).submenu span:after {
+  .container nav > ul > li:hover:not(.closed).submenu a:after, .container nav > ul > li:hover:not(.closed).submenu span:after, .container nav > ul > li:focus-within:not(.closed).submenu a:after, .container nav > ul > li:focus-within:not(.closed).submenu span:after {
     transform: rotate(225deg);
     margin: 0 0 0px 8px;
   }
@@ -2250,11 +2269,11 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   aspect-ratio: 1/1;
 }
 .row .col .card__body {
-  padding: var(--gutter) var(--gutter) calc(var(--gutter) / 2);
+  padding: var(--gutter) var(--gutter) var(--half-gutter);
   transition: background-color 0.2s ease;
 }
 .row .col .card__title {
-  margin: 0 0 calc(var(--gutter) / 4);
+  margin: 0 0 var(--quarter-gutter);
   font-size: 1.1em;
   line-height: 1.2;
 }
@@ -2266,7 +2285,7 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   text-decoration: none;
 }
 .row .col .card__role {
-  margin: 0 0 calc(var(--gutter) / 2);
+  margin: 0 0 var(--half-gutter);
   line-height: 1.5;
   opacity: 0.8;
   font-size: 0.9em;
@@ -2277,7 +2296,7 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   padding: 0;
 }
 .row .col .card__meta li {
-  margin: calc(var(--gutter) / 4) 0;
+  margin: var(--quarter-gutter) 0;
   line-height: 1.4;
   display: flex;
   align-items: center;
@@ -2307,7 +2326,7 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
 }
 .row .col .card__actions {
   margin-top: auto;
-  padding: calc(var(--gutter) / 4) 0 calc(var(--gutter)) 0;
+  padding: calc(var(--gutter) / 4) 0 var(--gutter) 0;
   text-align: center;
 }
 .row .col .card__actions ul,
@@ -2346,11 +2365,11 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   outline: none;
 }
 
-/**/
+/*
 .container .wrapper footer.site-footer {
   background: var(--gradient-bg);
 }
-
+*/
 .booking-modal {
   width: min(550px, 96vw);
   max-width: 96vw;
@@ -2399,4 +2418,110 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   height: 100%;
   border: 0;
   background: white;
+}
+
+#nova-bg-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+#nova-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  pointer-events: none;
+}
+
+#cc-main {
+  --cc-font-family: Raleway;
+  --cc-bg: light-dark(#ffffff, #161a1c);
+  --cc-primary-color: light-dark(#2c2f31, #ebf3f6);
+  --cc-secondary-color: light-dark(#5e6266, #aebbc5);
+  --cc-btn-primary-bg: light-dark(#30363c, #c2d0e0);
+  --cc-btn-primary-color: light-dark(#ffffff, var(--cc-bg));
+  --cc-btn-primary-border-color: var(--cc-btn-primary-bg);
+  /* Common value */
+  --cc-btn-primary-hover-bg: light-dark(#000000, #98a7b6);
+  --cc-btn-primary-hover-color: light-dark(#ffffff, #000000);
+  --cc-btn-primary-hover-border-color: var(
+    --cc-btn-primary-hover-bg
+  );
+  /* Common value */
+  --cc-btn-secondary-bg: light-dark(#eaeff2, #242c31);
+  --cc-btn-secondary-color: var(--cc-primary-color);
+  /* Common value */
+  --cc-btn-secondary-border-color: var(
+    --cc-btn-secondary-bg
+  );
+  /* Common value */
+  --cc-btn-secondary-hover-bg: light-dark(#d4dae0, #353d43);
+  --cc-btn-secondary-hover-color: light-dark(#000000, #ffffff);
+  --cc-btn-secondary-hover-border-color: var(
+    --cc-btn-secondary-hover-bg
+  );
+  /* Common value */
+  --cc-separator-border-color: light-dark(#f0f4f7, #222a30);
+  --cc-toggle-on-bg: var(--cc-btn-primary-bg);
+  /* Common value */
+  --cc-toggle-off-bg: light-dark(#667481, #525f6b);
+  --cc-toggle-on-knob-bg: light-dark(#ffffff, var(--cc-btn-primary-color));
+  --cc-toggle-off-knob-bg: light-dark(
+    var(--cc-toggle-on-knob-bg),
+    var(--cc-btn-primary-color)
+  );
+  --cc-toggle-enabled-icon-color: light-dark(
+    var(--cc-bg),
+    var(--cc-btn-primary-color)
+  );
+  --cc-toggle-disabled-icon-color: light-dark(
+    var(--cc-bg),
+    var(--cc-btn-primary-color)
+  );
+  --cc-toggle-readonly-bg: light-dark(#d5dee2, #343e45);
+  --cc-toggle-readonly-knob-bg: light-dark(#fff, #5f6b72);
+  --cc-toggle-readonly-knob-icon-color: var(
+    --cc-toggle-readonly-bg
+  );
+  /* Common value */
+  /* Define these in an order that respects dependencies */
+  --cc-cookie-category-block-bg: light-dark(#f0f4f7, #1e2428);
+  --cc-section-category-border: light-dark(
+    var(--cc-cookie-category-block-bg),
+    #1e2428
+  );
+  --cc-cookie-category-block-border: light-dark(
+    #f0f4f7,
+    var(--cc-section-category-border)
+  );
+  --cc-cookie-category-block-hover-bg: light-dark(#e9eff4, #242c31);
+  --cc-cookie-category-block-hover-border: light-dark(#e9eff4, #232a2f);
+  --cc-cookie-category-expanded-block-bg: transparent;
+  /* Common value */
+  --cc-cookie-category-expanded-block-hover-bg: light-dark(
+    #dee4e9,
+    var(--cc-toggle-readonly-bg)
+  );
+  --cc-overlay-bg: rgba(0, 0, 0, 0.65);
+  /* Common value */
+  --cc-webkit-scrollbar-bg: var(
+    --cc-section-category-border
+  );
+  /* Common value, but depends on a changing variable */
+  --cc-webkit-scrollbar-hover-bg: var(
+    --cc-btn-primary-hover-bg
+  );
+  /* Common value */
+  --cc-footer-bg: light-dark(var(--cc-btn-secondary-bg), #0c0e0f);
+  --cc-footer-color: var(--cc-secondary-color);
+  /* Common value */
+  --cc-footer-border-color: light-dark(#e4eaed, #060809);
+}
+#cc-main button {
+  color-scheme: inherit;
 }

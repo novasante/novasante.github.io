@@ -5,7 +5,7 @@ email: severine.corthay@novasante.ch
 phone: +41 78 302 31 56
 image: https://ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/nova/practitioners/severine-corthay.jpg
 urls:
-  widget: //book.timify.com/services?accountId=69bd389056e7883180f6ce7a&hideCloseButton=true
+  widget: https://book.timify.com/services?accountId=69bd389056e7883180f6ce7a&hideCloseButton=true
 ---
 
 ## {{ page.function }} {#presentation}
@@ -38,7 +38,7 @@ Ces outils ouvrent un **espace d’exploration créatif et symbolique** où chac
 Aucune expérience théâtrale n’est nécessaire.
 
 <p class="small">
-En savoir plus : <a href="//dramatherapie.ch/fr/">Institut suisse de dramathérapie</a>
+En savoir plus : <a href="https://dramatherapie.ch/fr/">Institut suisse de dramathérapie</a>
 </p>
 
 ---
@@ -75,7 +75,7 @@ Elle peut accompagner :
 
 ## Le Voyage de Timi
 
-![Le Voyage de Timi](//ik.imagekit.io/sarahdionne/nova/content/le-voyage-de-timi.jpg)
+![Le Voyage de Timi](https://ik.imagekit.io/sarahdionne/nova/content/le-voyage-de-timi.jpg)
 
 **Le Voyage de TIMI** est un accompagnement en dramathérapie destiné aux enfants de **6 à 10 ans**.
 

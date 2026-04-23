@@ -2,8 +2,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="dark light">
-  
   {% seo %}
+  {% if page.layout == "practitioner" %}
+    {% include schema_practitioner.html %}
+  {% elsif page.url == "/" %}
+    {% include schema_local_business.html %}
+  {% endif %}
   <link rel="icon" type="image/svg+xml" href="{{ '/assets/icons/favicon.svg' | relative_url }}">
 
   <link rel="manifest" href="{{ '/manifest.json' | relative_url }}">
@@ -13,11 +17,11 @@
   <link rel="preconnect" media="screen" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" 
-        href="//fonts.googleapis.com/css2?family=Raleway:wght@100..900&amp;display=swap" 
+        href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&amp;display=swap" 
         as="style" 
         onload="this.onload=null; this.media='all'; this.rel='stylesheet'; if (document.readyState === 'complete') { document.body.classList.add('fontLoaded'); } else { window.addEventListener('load', () => document.body.classList.add('fontLoaded')); }">
   <noscript>
-    <link media="all" rel="stylesheet" href="//fonts.googleapis.com/css2?family=Raleway:wght@100..900&amp;display=swap">
+    <link media="all" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&amp;display=swap">
   </noscript>
   
   <script type="text/javascript">
