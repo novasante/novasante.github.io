@@ -99,7 +99,10 @@ Nous restons bien entendu disponibles pour vous orienter si besoin :
 
 Le site utilise des cookies nécessaires à son fonctionnement et, avec votre accord, des outils d’analyse.
 
-Vous pouvez modifier vos préférences à tout moment via le bandeau prévu à cet effet.
+Vous pouvez ajuster vos préférences à tout moment via
+<a href="#" onclick="CookieConsent.showPreferences(); return false;">
+la gestion des cookies
+</a>.
 
 ---
 
