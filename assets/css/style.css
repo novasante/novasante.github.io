@@ -1642,6 +1642,9 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   .container .wrapper .content .sections section:first-of-type {
     margin-top: var(--gutter);
   }
+  .container .wrapper .content .sections section:last-of-type {
+    margin-bottom: var(--gutter);
+  }
   .container .wrapper .content .sections section.containered {
     margin-left: var(--gutter);
     margin-right: var(--gutter);
@@ -2253,6 +2256,26 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   justify-content: center;
   align-items: center;
 }
+.row .col .card__media.full {
+  height: 380px;
+}
+.row .col .card__media.full img {
+        width: auto;
+      height: auto;
+      max-width: 100%;
+
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      object-fit: cover;
+      object-position: center bottom;
+      display: block;
+      margin: 20px 0 0 0;
+      float: none;
+      pointer-events: none;
+      border-radius: 0;
+      aspect-ratio: 1 / 1;
+      }
 .row .col .card__media img {
   width: auto;
   height: 180px;

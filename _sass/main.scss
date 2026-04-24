@@ -1291,6 +1291,9 @@ body {
             &:first-of-type {
               margin-top: var(--gutter);
             }
+            &:last-of-type {
+              margin-bottom: var(--gutter);
+            }
             padding: calc(var(--gutter) * 2.5) var(--gutter)
               calc(var(--gutter) * 2) var(--gutter);
             &.containered {
@@ -2007,6 +2010,25 @@ $mobile-menu-breakpoint: m;
 
     .card__icon {
       font-size: 5em;
+    }
+
+    &.full {
+      height: 380px;
+      img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        object-fit: cover;
+        object-position: center bottom;
+        display: block;
+        margin: 20px 0 0 0;
+        float: none;
+        pointer-events: none;
+        border-radius: 0;
+        aspect-ratio: 1 / 1;
+      }
     }
 
     img {
