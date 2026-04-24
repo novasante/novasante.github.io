@@ -69,7 +69,7 @@ const trackEvent = (event, ...options) => {
   if (typeof mixpanel === "object") {
     mixpanel.track(event, ...options);
   } else {
-    console.log(`Cannot track event: ${event}`, ...options, "Mixpanel tracking is not enabled.");
+    // console.log(`Cannot track event: ${event}`, ...options, "Mixpanel tracking is not enabled.");
   }
 };
 
@@ -367,7 +367,7 @@ const locationHandler = () => {
   if (location.length == 0) {
     location = "/";
   }
-  //console.log(location);
+  // console.log(location);
   // get the route object from the routes object
   if (location === "form") {
     if (document.getElementById("banner")) {
@@ -393,9 +393,9 @@ const locationHandler = () => {
       document.getElementById("banner").style.display = "block";
     }
     const sections = document.querySelectorAll(".sections section");
-    //console.log(sections);
+    // console.log(sections);
     sections.forEach((section) => {
-      //console.log(section.id);
+      // console.log(section.id);
       if (section.id !== "form") {
         section.style.display = "block";
       } else {
@@ -673,6 +673,7 @@ const initBannerVideo = () => {
 };
 
 const init = () => {
+  // console.log('init');
   initSections();
   initFirstScrollListener();
   initObserveElements();

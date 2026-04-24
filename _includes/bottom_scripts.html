@@ -6,7 +6,9 @@
 <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.umd.js"></script>
 <script>
+  console.log('run CookieConsent');
   CookieConsent.run({
+    mode: "opt-out",
     categories: {
       necessary: {
         enabled: true,
@@ -14,7 +16,37 @@
       },
       analytics: {
         enabled: true,
-        readonly: false
+        readOnly: false,
+        autoClear: {
+          cookies: [{
+            name: /^mp_/
+          }]
+        },
+        services: {
+          mixpanel: {
+            label: "Mixpanel",
+            onAccept: () => {
+              window.enableMixpanel();
+            },
+            onReject: () => {
+              window.disableMixpanel();
+            }
+          }
+        }
+      }
+    },
+    onConsent: () => {
+      if (CookieConsent.acceptedCategory("analytics")) {
+        enableMixpanel();
+      } else {
+        disableMixpanel();
+      }
+    },
+    onChange: () => {
+      if (CookieConsent.acceptedCategory("analytics")) {
+        enableMixpanel();
+      } else {
+        disableMixpanel();
       }
     },
     guiOptions: {
