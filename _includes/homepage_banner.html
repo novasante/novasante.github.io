@@ -1,4 +1,8 @@
-{% assign is_homepage = page.url == "/" or page.url == "" %}
+{% assign is_homepage = false %}
+{% if page.url == "/" or page.url == "" %}
+  {% assign is_homepage = true %}
+{% endif %}
+
 {% assign inline_contact = false %}
 {% if page.collection == "practitioners" or page.url == "/contact/" or page.url == "/404.html" %}
   {% assign inline_contact = true %}
@@ -11,7 +15,7 @@
   {% assign slider_class = "slider partial-height" %}
 {% else %}
   {% assign headline = page.title %}
-  
+
   {% if inline_contact == true %}
     {% assign cta_url = "#contact" %}
   {% else %}
