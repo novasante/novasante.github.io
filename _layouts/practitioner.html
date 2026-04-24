@@ -7,7 +7,7 @@ layout: default
 
 {% if page_content == "" %}
 
-<h2 id="presentation">{{ page.function }}</h2>
+<h2 id="presentation">{{ page.function | join: " - " }}</h2>
 {% if page.image %}
 <p><img src="{{ page.image }}" alt="{{ page.title }}"></p>
 {% endif %}

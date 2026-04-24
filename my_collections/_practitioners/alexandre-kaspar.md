@@ -1,6 +1,6 @@
 ---
 title: Alexandre Kaspar
-function: Physiothérapie - Spécialisation pédiatrique
+function: Physiothérapie, Spécialisation pédiatrique
 email: alexandre.kaspar@novasante.ch
 phone: +41 78 677 77 14
 urls:

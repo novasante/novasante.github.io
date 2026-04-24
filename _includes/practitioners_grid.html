@@ -16,7 +16,7 @@
               <a href="{{ p.url }}" tabindex="-1">{{ p.title }}</a>
             </h3>
             {% if p.function %}
-            <p class="card__role">{{ p.function }}</p>
+            <p class="card__role">{{ p.function | join: " - " }}</p>
             {% endif %}
           </div>
           <div class="card__actions">
