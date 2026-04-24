@@ -2268,6 +2268,9 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   border-radius: 100%;
   aspect-ratio: 1/1;
 }
+.row .col .card__media .card__icon {
+      font-size: 5em;
+    }
 .row .col .card__body {
   padding: var(--gutter) var(--gutter) var(--half-gutter);
   transition: background-color 0.2s ease;

@@ -2005,6 +2005,10 @@ $mobile-menu-breakpoint: m;
     justify-content: center;
     align-items: center;
 
+    .card__icon {
+      font-size: 5em;
+    }
+
     img {
       width: auto;
       height: 180px;
