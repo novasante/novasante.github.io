@@ -66,9 +66,10 @@ const convertDate = (event) => {
 };
 
 const trackEvent = (event, ...options) => {
-  // console.log(`Track event: ${event}`, ...options);
   if (typeof mixpanel === "object") {
     mixpanel.track(event, ...options);
+  } else {
+    console.log(`Cannot track event: ${event}`, ...options, "Mixpanel tracking is not enabled.");
   }
 };
 
