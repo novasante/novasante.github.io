@@ -1,4 +1,4 @@
-## Les thérapeutes actuellement au centre {#practitioners}
+## Les thérapeutes du centre {#practitioners}
 
 {% assign practitioners = site.practitioners | sort: "order", "last" %}
 {% assign others = practitioners | where_exp: "p", "p.url != page.url" %}
