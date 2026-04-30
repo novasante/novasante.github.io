@@ -16,7 +16,7 @@ redirect_from: /sd
 
 ## {{ page.function }} {#presentation}
 
-![{{ page.title }}]({{ page.image }})
+![{{ page.title }}]({{ page.image }}){:.float}
 
 Depuis plus de 15 ans, Sarah accompagne nourrissons, enfants, familles et adultes avec une approche de soin qui relie les connaissances cliniques de la médecine occidentale aux visions globales issues des médecines traditionnelles.
 
@@ -40,7 +40,7 @@ Cette double expérience — hospitalière et clinique — l’a amenée à cons
 
 ## Une approche intégrative de la santé
 
-![Sarah Dionne](https://ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/profile/sarah_dionne_profile.jpg)
+![Sarah Dionne](https://ik.imagekit.io/sarahdionne/tr:w-576,fo-auto,f-webp/profile/sarah_dionne_profile.jpg){:.float}
 
 Sa pratique repose sur une **vision intégrative de la santé**.
 

@@ -62,7 +62,7 @@ title: Contacter le centre
   <div class="col m--u-1/2">
     <figure class="card">
       <div class="card__media full">
-        <img 
+        <img data-action="zoom"
           src="https://ik.imagekit.io/sarahdionne/nova/content/access/place-de-park_orig.jpg" 
           alt="Places de parking visiteurs à proximité du centre NOVA Santé"
           loading="lazy"
@@ -77,7 +77,7 @@ title: Contacter le centre
   <div class="col m--u-1/2">
     <figure class="card">
       <div class="card__media full">
-        <img 
+        <img data-action="zoom"
           src="https://ik.imagekit.io/sarahdionne/nova/content/access/nova_map_legend.png" 
           alt="Plan d’accès avec parkings et localisation du centre NOVA Santé"
           loading="lazy"

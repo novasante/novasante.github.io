@@ -2,7 +2,7 @@
 permalink: /avis/
 redirect_from:
   - /avis
-  - /reviews
-  - /reviews/
+  - /review
+  - /review/
 redirect_to: "https://g.page/r/CQcH6YQFq4UCEAE/review"
 ---

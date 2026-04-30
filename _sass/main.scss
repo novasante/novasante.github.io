@@ -200,6 +200,8 @@ $containers: (
   "xxxl": 1440px
 );
 
+$mobile-menu-breakpoint: m;
+
 /// @mixin grid-media-query($breakpoint, $direction: up, $dimension: width)
 /// @brief Generates responsive media queries based on predefined breakpoints.
 ///
@@ -764,29 +766,31 @@ body {
         transform: scale(1.05);
       }
     }
-    width: auto;
-    max-width: min(100%, calc(100vw - var(--gutter)));
-    height: auto;
-    border-radius: 10px;
+    &.float {
+      width: auto;
+      max-width: min(100%, calc(100vw - var(--gutter)));
+      height: auto;
+      border-radius: 10px;
 
-    margin: 0 0 var(--half-gutter) 0;
-    @include grid-media-query(xs) {
-      margin: 0 var(--gutter) var(--half-gutter) 0;
-      float: left;
-      &.right {
-        float: right;
-        margin: 0 0 var(--half-gutter) var(--gutter);
+      margin: 0 0 var(--half-gutter) 0;
+      @include grid-media-query(xs) {
+        margin: 0 var(--gutter) var(--half-gutter) 0;
+        float: left;
+        &.right {
+          float: right;
+          margin: 0 0 var(--half-gutter) var(--gutter);
+        }
+        max-width: calc((100vw / 2) - var(--gutter));
       }
-      max-width: calc((100vw / 2) - var(--gutter));
-    }
-    @include grid-media-query(s) {
-      &:not(.large) {
-        max-width: calc((100vw / 3) - var(--gutter));
+      @include grid-media-query(s) {
+        &:not(.large) {
+          max-width: calc((100vw / 3) - var(--gutter));
+        }
       }
-    }
-    @include grid-media-query(l) {
-      &:not(.large) {
-        max-width: map-get($containers, "l") / 2;
+      @include grid-media-query(l) {
+        &:not(.large) {
+          max-width: map-get($containers, "l") / 2;
+        }
       }
     }
   }
@@ -811,13 +815,16 @@ body {
   }
 
   // Color Scheme Toggler
-  .toggle {
+  .color-scheme-toggle {
+    @include grid-media-query($mobile-menu-breakpoint) {
+      display: none !important;
+    }
     *,
     *:before,
     *:after {
       font-size: 0.9em;
     }
-
+    padding: none;
     position: relative;
     box-sizing: border-box;
 
@@ -1429,8 +1436,6 @@ body {
   }
 }
 
-$mobile-menu-breakpoint: m;
-
 /* Mobile menu and header */
 @include grid-media-query($mobile-menu-breakpoint, down) {
   .container {
@@ -1808,7 +1813,9 @@ $mobile-menu-breakpoint: m;
             }
             text-transform: uppercase;
             display: inline-block;
-            padding: 10px 16px;
+            &:not(:has(input)) {
+              padding: 10px 16px;
+            }
             height: 36px;
             font-size: 1em;
             line-height: 1em;
@@ -1957,7 +1964,7 @@ $mobile-menu-breakpoint: m;
 /** START CARDS **/
 .row .col .card {
   position: relative;
-  text-align: center;
+  // text-align: center;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -1967,7 +1974,7 @@ $mobile-menu-breakpoint: m;
   transition: background-color 0.2s ease;
   margin-bottom: var(--gutter);
 
-  &:before {
+  &:has(.card__media):before {
     content: "";
     position: absolute;
     bottom: 0;
@@ -1979,7 +1986,7 @@ $mobile-menu-breakpoint: m;
   }
   &:hover,
   &:focus-within {
-    &:before {
+    &:has(.card__link):before {
       background-color: var(--background-card__content-hover);
     }
   }
@@ -1992,12 +1999,19 @@ $mobile-menu-breakpoint: m;
     overflow: hidden;
     display: block;
   }
-
-  &__media,
-  &__body,
-  &__actions {
+  .card__media,
+  .card__body,
+  .card__actions {
     position: relative;
-    pointer-events: none;
+  }
+
+  &:has(.card__link) {
+    .card__media,
+    .card__body,
+    .card__actions {
+      position: relative;
+      pointer-events: none;
+    }
   }
 
   &__media {
@@ -2049,7 +2063,71 @@ $mobile-menu-breakpoint: m;
       aspect-ratio: 1 / 1;
     }
   }
+  &__header {
+    padding: var(--half-gutter) var(--gutter);
+    .card__profile {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
 
+    .card__avatar {
+      position: relative;
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        display: block;
+      }
+    }
+
+    .card__badge {
+      position: absolute;
+      bottom: -2px;
+      right: -2px;
+
+      width: 18px;
+      height: 18px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: var(--orange);
+      color: white;
+
+      font-size: 0.65rem;
+      border-radius: 50%;
+      border: 2px solid var(--background);
+    }
+
+    .card__identity {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 0; // 🔥 CRITICAL for flexbox
+    }
+
+    .card__name {
+      font-weight: 600;
+      line-height: 1.2;
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .card__meta {
+      margin: 0;
+      font-size: 0.85em;
+      opacity: 0.65;
+    }
+  }
   &__body {
     padding: var(--gutter) var(--gutter) var(--half-gutter);
     transition: background-color 0.2s ease;
@@ -2322,4 +2400,81 @@ $mobile-menu-breakpoint: m;
   --cc-footer-bg: light-dark(var(--cc-btn-secondary-bg), #0c0e0f);
   --cc-footer-color: var(--cc-secondary-color); /* Common value */
   --cc-footer-border-color: light-dark(#e4eaed, #060809);
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &__stars {
+    position: relative;
+    display: inline-block;
+    font-size: 1.2rem;
+    line-height: 1;
+
+    &::before {
+      content: "★★★★★";
+      color: var(--borders);
+    }
+
+    &--filled {
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      white-space: nowrap;
+      color: var(--orange);
+
+      &::before {
+        content: "★★★★★";
+      }
+    }
+  }
+
+  &__value {
+    font-weight: 700;
+  }
+
+  small {
+    opacity: 0.6;
+    font-size: 0.85em;
+  }
+
+  &--small {
+    .rating__stars {
+      font-size: 1rem;
+    }
+  }
+}
+
+.lightbox {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  max-width: 92vw;
+  max-height: 92vh;
+  outline: none;
+
+  &::backdrop {
+    background: var(--overlay);
+    backdrop-filter: blur(3px);
+  }
+
+  img {
+    max-width: 92vw;
+    max-height: 92vh;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 1rem 3rem var(--shadow);
+    cursor: zoom-out;
+
+    opacity: 0;
+    transition: transform 300ms ease, opacity 150ms ease;
+  }
+}
+.card:has([data-action="zoom"]) {
+  display: block;
+  cursor: zoom-in;
 }

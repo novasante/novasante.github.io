@@ -1132,7 +1132,7 @@ body .display-inline {
 body .news .archived {
   display: none;
 }
-body img {
+body img.float {
   width: auto;
   max-width: min(100%, calc(100vw - var(--gutter)));
   height: auto;
@@ -1150,23 +1150,23 @@ body img.visible:hover {
   transform: scale(1.05);
 }
 @media only screen and (min-width: 360px) {
-  body img {
+  body img.float {
     margin: 0 var(--gutter) var(--half-gutter) 0;
     float: left;
     max-width: calc((100vw / 2) - var(--gutter));
   }
-  body img.right {
+  body img.float.right {
     float: right;
     margin: 0 0 var(--half-gutter) var(--gutter);
   }
 }
 @media only screen and (min-width: 480px) {
-  body img:not(.large) {
+  body img.float:not(.large) {
     max-width: calc((100vw / 3) - var(--gutter));
   }
 }
 @media only screen and (min-width: 992px) {
-  body img:not(.large) {
+  body img.float:not(.large) {
     max-width: 432px;
   }
 }
@@ -1187,16 +1187,22 @@ body svg.icon.sncl_logo {
   height: 36px;
   width: 84px;
 }
-body .toggle {
+body .color-scheme-toggle {
+  padding: none;
   position: relative;
   box-sizing: border-box;
 }
-body .toggle *,
-body .toggle *:before,
-body .toggle *:after {
+@media only screen and (min-width: 748px) {
+  body .color-scheme-toggle {
+    display: none !important;
+  }
+}
+body .color-scheme-toggle *,
+body .color-scheme-toggle *:before,
+body .color-scheme-toggle *:after {
   font-size: 0.9em;
 }
-body .toggle input[type=checkbox] {
+body .color-scheme-toggle input[type=checkbox] {
   margin: 0;
   position: absolute;
   left: 0;
@@ -1207,13 +1213,13 @@ body .toggle input[type=checkbox] {
   cursor: pointer;
   opacity: 0;
 }
-body .toggle input[type=checkbox] + label {
+body .color-scheme-toggle input[type=checkbox] + label {
   position: relative;
   display: flex;
   align-items: center;
   box-sizing: border-box;
 }
-body .toggle input[type=checkbox] + label:before {
+body .color-scheme-toggle input[type=checkbox] + label:before {
   content: "";
   width: 4.375em;
   height: 2.5em;
@@ -1226,7 +1232,7 @@ body .toggle input[type=checkbox] + label:before {
   box-sizing: border-box;
   transition: 0.25s ease-in;
 }
-body .toggle input[type=checkbox] + label:after {
+body .color-scheme-toggle input[type=checkbox] + label:after {
   content: "";
   width: 1.25em;
   height: 1.25em;
@@ -1238,10 +1244,10 @@ body .toggle input[type=checkbox] + label:after {
   box-shadow: inset -0.5em -0.35em #333;
   transition: 0.2s ease-in-out;
 }
-body .toggle input[type=checkbox]:checked + label:before {
+body .color-scheme-toggle input[type=checkbox]:checked + label:before {
   box-shadow: inset 1.875em 0 0 #ffeb00;
 }
-body .toggle input[type=checkbox]:checked + label:after {
+body .color-scheme-toggle input[type=checkbox]:checked + label:after {
   box-shadow: inset 0 0 0 2px #fff;
   background: #ffbc00;
   left: 2.475em;
@@ -2092,7 +2098,6 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
     border: 1px solid transparent;
     text-transform: uppercase;
     display: inline-block;
-    padding: 10px 16px;
     height: 36px;
     font-size: 1em;
     line-height: 1em;
@@ -2103,6 +2108,10 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
 .container nav > ul > li span:hover {
     user-select: none;
     color: var(--font-color-hover);
+  }
+  .container nav > ul > li a:not(:has(input)),
+.container nav > ul > li span:not(:has(input)) {
+    padding: 10px 16px;
   }
   .container nav > ul > li a.toggle,
 .container nav > ul > li span.toggle {
@@ -2213,7 +2222,6 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
 /** START CARDS **/
 .row .col .card {
   position: relative;
-  text-align: center;
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -2223,7 +2231,7 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   transition: background-color 0.2s ease;
   margin-bottom: var(--gutter);
 }
-.row .col .card:before {
+.row .col .card:has(.card__media):before {
   content: "";
   position: absolute;
   bottom: 0;
@@ -2233,7 +2241,7 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   background-color: var(--background-card__content);
   transition: background-color 0.2s ease;
 }
-.row .col .card:hover:before, .row .col .card:focus-within:before {
+.row .col .card:hover:has(.card__link):before, .row .col .card:focus-within:has(.card__link):before {
   background-color: var(--background-card__content-hover);
 }
 .row .col .card__link {
@@ -2244,7 +2252,14 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   overflow: hidden;
   display: block;
 }
-.row .col .card__media, .row .col .card__body, .row .col .card__actions {
+.row .col .card .card__media,
+.row .col .card .card__body,
+.row .col .card .card__actions {
+  position: relative;
+}
+.row .col .card:has(.card__link) .card__media,
+.row .col .card:has(.card__link) .card__body,
+.row .col .card:has(.card__link) .card__actions {
   position: relative;
   pointer-events: none;
 }
@@ -2256,26 +2271,27 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   justify-content: center;
   align-items: center;
 }
+.row .col .card__media .card__icon {
+  font-size: 5em;
+}
 .row .col .card__media.full {
   height: 380px;
 }
 .row .col .card__media.full img {
-        width: auto;
-      height: auto;
-      max-width: 100%;
-
-      background-size: cover;
-      background-repeat: no-repeat;
-
-      object-fit: cover;
-      object-position: center bottom;
-      display: block;
-      margin: 20px 0 0 0;
-      float: none;
-      pointer-events: none;
-      border-radius: 0;
-      aspect-ratio: 1 / 1;
-      }
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  object-fit: cover;
+  object-position: center bottom;
+  display: block;
+  margin: 20px 0 0 0;
+  float: none;
+  pointer-events: none;
+  border-radius: 0;
+  aspect-ratio: 1/1;
+}
 .row .col .card__media img {
   width: auto;
   height: 180px;
@@ -2291,9 +2307,60 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   border-radius: 100%;
   aspect-ratio: 1/1;
 }
-.row .col .card__media .card__icon {
-      font-size: 5em;
-    }
+.row .col .card__header {
+  padding: var(--half-gutter) var(--gutter);
+}
+.row .col .card__header .card__profile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.row .col .card__header .card__avatar {
+  position: relative;
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+}
+.row .col .card__header .card__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+.row .col .card__header .card__badge {
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--orange);
+  color: white;
+  font-size: 0.65rem;
+  border-radius: 50%;
+  border: 2px solid var(--background);
+}
+.row .col .card__header .card__identity {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+}
+.row .col .card__header .card__name {
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.row .col .card__header .card__meta {
+  margin: 0;
+  font-size: 0.85em;
+  opacity: 0.65;
+}
 .row .col .card__body {
   padding: var(--gutter) var(--gutter) var(--half-gutter);
   transition: background-color 0.2s ease;
@@ -2550,4 +2617,87 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
 }
 #cc-main button {
   color-scheme: inherit;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.rating__stars {
+  position: relative;
+  display: inline-block;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.rating__stars::before {
+  content: "★★★★★";
+  color: var(--borders);
+}
+.rating__stars--filled {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: var(--orange);
+}
+.rating__stars--filled::before {
+  content: "★★★★★";
+}
+.rating__value {
+  font-weight: 700;
+}
+.rating small {
+  opacity: 0.6;
+  font-size: 0.85em;
+}
+.rating--small .rating__stars {
+  font-size: 1rem;
+}
+
+.lightbox {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  max-width: 92vw;
+  max-height: 92vh;
+  outline: none;
+}
+.lightbox::backdrop {
+    background: var(--overlay);
+    backdrop-filter: blur(3px);
+  }
+
+.lightbox img {
+  max-width: 92vw;
+  max-height: 92vh;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 1rem 3rem var(--shadow);
+  cursor: zoom-out;
+  opacity: 0;
+  transition: transform 300ms ease, opacity 150ms ease;
+}
+
+.card:has([data-action="zoom"]) {
+  display: block;
+  cursor: zoom-in;
+}
+
+.card:has([data-action="zoom"]) {
+  overflow: hidden;
+}
+ .card:has([data-action="zoom"]) img {
+    transition: transform 300ms ease, filter 300ms ease;
+}
+
+  .card:has([data-action="zoom"]):hover img {
+    transform: scale(1.06);
+    filter: brightness(1.05) contrast(1.05);
+  
+}
+.card:has([data-action="zoom"]):active img {
+  transform: scale(1.02);
 }

@@ -10,7 +10,7 @@ urls:
 
 ## {{ page.function }} {#presentation}
 
-![{{ page.title }}]({{ page.image }})
+![{{ page.title }}]({{ page.image }}){:.float}
 
 Séverine Corthay accompagne enfants, adolescents et adultes à travers la **dramathérapie**, une approche thérapeutique créative qui utilise le jeu, le corps et l’imaginaire.
 
@@ -75,7 +75,7 @@ Elle peut accompagner :
 
 ## Le Voyage de Timi
 
-![Le Voyage de Timi](https://ik.imagekit.io/sarahdionne/nova/content/le-voyage-de-timi.jpg)
+![Le Voyage de Timi](https://ik.imagekit.io/sarahdionne/nova/content/le-voyage-de-timi.jpg){:.float}
 
 **Le Voyage de TIMI** est un accompagnement en dramathérapie destiné aux enfants de **6 à 10 ans**.
 

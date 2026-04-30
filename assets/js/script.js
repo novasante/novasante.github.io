@@ -478,7 +478,7 @@ const initSections = ({
   };
 
   const decorateImages = (parentEl) => {
-    const images = parentEl.querySelectorAll("img");
+    const images = parentEl.querySelectorAll("img.float");
 
     images.forEach((img, index) => {
       // remove first so reruns stay clean
@@ -672,9 +672,74 @@ const initBannerVideo = () => {
     .catch(() => {});
 };
 
+const initLightbox = () => {
+  const lightbox = document.getElementById("lightbox");
+  if (!lightbox) return;
+
+  const lightboxImage = lightbox.querySelector("img");
+
+  document.querySelectorAll("[data-action='zoom']").forEach((img) => {
+    const card = img.closest(".card");
+    if (!card) return;
+
+    card.addEventListener("click", (event) => {
+      event.preventDefault();
+
+      const rect = img.getBoundingClientRect();
+
+      lightboxImage.src = img.src;
+      lightboxImage.alt = img.alt || "";
+
+      lightbox.showModal();
+
+      // 🔥 wait for render + image load
+      const runAnimation = () => {
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            const finalRect = lightboxImage.getBoundingClientRect();
+
+            const deltaX = rect.left - finalRect.left;
+            const deltaY = rect.top - finalRect.top;
+            const deltaW = rect.width / finalRect.width;
+            const deltaH = rect.height / finalRect.height;
+
+            lightboxImage.style.opacity = "1";
+            lightboxImage.style.transformOrigin = "top left";
+            lightboxImage.style.transform = `
+              translate(${deltaX}px, ${deltaY}px)
+              scale(${deltaW}, ${deltaH})
+            `;
+
+            requestAnimationFrame(() => {
+              lightboxImage.style.transition = "transform 300ms ease";
+              lightboxImage.style.transform = "translate(0,0) scale(1,1)";
+            });
+          });
+        });
+      };
+
+      // if already cached → instant
+      if (lightboxImage.complete) {
+        runAnimation();
+      } else {
+        lightboxImage.onload = runAnimation;
+      }
+    });
+  });
+
+  lightbox.addEventListener("close", () => {
+    lightboxImage.style.transition = "none";
+    lightboxImage.style.transform = "none";
+    lightboxImage.style.opacity = "0";
+    lightboxImage.src = "";
+    lightboxImage.alt = "";
+  });
+};
+
 const init = () => {
   // console.log('init');
   initSections();
+  initLightbox();
   initFirstScrollListener();
   initObserveElements();
   initTogglerListener();

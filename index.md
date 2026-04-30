@@ -7,13 +7,13 @@ Un espace thérapeutique où différentes approches se rencontrent pour vous acc
 
 Nous croyons qu’un parcours de soin gagne en qualité lorsque les professionnels collaborent et prennent en compte la personne dans son ensemble.
 
-[Les thérapeutes]({{ site.practitioners_url }}){: .button.primary}
+[Les thérapeutes]({{ site.practitioners_url }}){:.button.primary}
 
 ---
 
 ## Une vision globale de la santé
 
-![Illustration douce autour du lien entre corps, équilibre et accompagnement](https://placehold.co/600x400?text=Accompagnement)
+![Illustration douce autour du lien entre corps, équilibre et accompagnement](https://placehold.co/600x400?text=Accompagnement){:.float}
 
 La santé ne se limite pas à un symptôme.
 
@@ -28,13 +28,13 @@ Notre démarche repose sur l’écoute, la collaboration et la complémentarité
 Chaque personne vit une situation différente.  
 C’est pourquoi nous proposons des accompagnements ajustés, selon les besoins, les étapes de vie et les objectifs de chacun.
 
-![Illustration consultation individuelle](https://placehold.co/600x400?text=Consultations)
+![Illustration consultation individuelle](https://placehold.co/600x400?text=Consultations){:.float}
 
 ### Consultations individuelles
 
 Chaque thérapeute propose un accompagnement dans son domaine de compétence, avec une attention particulière portée à la personne, à son rythme et à son histoire.
 
-![Illustration collaboration entre thérapeutes](https://placehold.co/600x400?text=Coordination)
+![Illustration collaboration entre thérapeutes](https://placehold.co/600x400?text=Coordination){:.float}
 
 ### Coordination de soins
 
@@ -42,7 +42,7 @@ Lorsque cela fait sens, les échanges entre thérapeutes permettent de construir
 
 Cette coordination peut soutenir des parcours qui demandent plusieurs regards ou plusieurs approches.
 
-![Illustration atelier en petit groupe](https://placehold.co/600x400?text=Ateliers)
+![Illustration atelier en petit groupe](https://placehold.co/600x400?text=Ateliers){:.float}
 
 ### Ateliers et temps de partage
 
@@ -52,7 +52,7 @@ Le centre a aussi vocation à accueillir des ateliers, des séminaires et des es
 
 ## Pour qui ?
 
-![Illustration famille, enfant, adulte, accompagnement intergénérationnel](https://placehold.co/600x400?text=Famille)
+![Illustration famille, enfant, adulte, accompagnement intergénérationnel](https://placehold.co/600x400?text=Famille){:.float}
 
 Le centre accueille des personnes à différents moments de leur parcours.
 
@@ -69,7 +69,7 @@ Chaque accompagnement est pensé de manière individualisée, avec une attention
 
 ## Une équipe aux approches complémentaires
 
-![Portraits de l’équipe](https://placehold.co/600x400?text=Equipe)
+![Portraits de l’équipe](https://placehold.co/600x400?text=Equipe){:.float}
 
 Les thérapeutes du centre ont chacun leur spécialité, leur sensibilité et leur manière d’accompagner.
 
