@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /* ================
    COLORS AND SIZES
    ================ */
@@ -1132,13 +1131,6 @@ body .display-inline {
 body .news .archived {
   display: none;
 }
-body img.float {
-  width: auto;
-  max-width: min(100%, calc(100vw - var(--gutter)));
-  height: auto;
-  border-radius: 10px;
-  margin: 0 0 var(--half-gutter) 0;
-}
 body img.observable {
   filter: blur(5px);
 }
@@ -1148,6 +1140,13 @@ body img.visible {
 }
 body img.visible:hover {
   transform: scale(1.05);
+}
+body img.float {
+  width: auto;
+  max-width: min(100%, calc(100vw - var(--gutter)));
+  height: auto;
+  border-radius: 10px;
+  margin: 0 0 var(--half-gutter) 0;
 }
 @media only screen and (min-width: 360px) {
   body img.float {
@@ -2278,19 +2277,9 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   height: 380px;
 }
 .row .col .card__media.full img {
-  width: auto;
-  height: auto;
-  max-width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  object-fit: cover;
-  object-position: center bottom;
-  display: block;
-  margin: 20px 0 0 0;
-  float: none;
-  pointer-events: none;
+  width: 100%;
+  height: 100%;
   border-radius: 0;
-  aspect-ratio: 1/1;
 }
 .row .col .card__media img {
   width: auto;
@@ -2665,10 +2654,9 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   outline: none;
 }
 .lightbox::backdrop {
-    background: var(--overlay);
-    backdrop-filter: blur(3px);
-  }
-
+  background: var(--overlay);
+  backdrop-filter: blur(3px);
+}
 .lightbox img {
   max-width: 92vw;
   max-height: 92vh;
@@ -2681,23 +2669,18 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   transition: transform 300ms ease, opacity 150ms ease;
 }
 
-.card:has([data-action="zoom"]) {
+.card:has([data-action=zoom]) {
   display: block;
   cursor: zoom-in;
-}
-
-.card:has([data-action="zoom"]) {
   overflow: hidden;
 }
- .card:has([data-action="zoom"]) img {
-    transition: transform 300ms ease, filter 300ms ease;
+.card:has([data-action=zoom]) img {
+  transition: transform 300ms ease, filter 300ms ease;
 }
-
-  .card:has([data-action="zoom"]):hover img {
-    transform: scale(1.06);
-    filter: brightness(1.05) contrast(1.05);
-  
+.card:has([data-action=zoom]):hover img {
+  transform: scale(1.06);
+  filter: brightness(1.05) contrast(1.05);
 }
-.card:has([data-action="zoom"]):active img {
+.card:has([data-action=zoom]):active img {
   transform: scale(1.02);
 }
