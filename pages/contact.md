@@ -22,8 +22,8 @@ title: Contacter le centre
     </div>
     <div class="card__body">
       <h3 class="card__title">En voiture</h3>
-      <p>4 places visiteurs et zones bleues (6h)</p>
-      <p>À 5 minutes de Lausanne ou de l’autoroute (sortie Lutry–Belmont)</p>
+      <p class="small">4 places visiteurs et zones bleues (6h)</p>
+      <p class="small">À 5 minutes de Lausanne ou de l’autoroute (sortie Lutry–Belmont)</p>
     </div>
   </article>
 </div>
@@ -35,9 +35,9 @@ title: Contacter le centre
     </div>
     <div class="card__body">
       <h3 class="card__title">En transports publics</h3>
-      <p>Train CFF jusqu’à <strong>Lutry</strong> ou <strong>Pully Nord</strong></p>
-      <p>À 10 minutes de la place St-François</p>
-      <p>Bus TL ligne 9, arrêt <strong>Paudex Village</strong> (100 m)</p>
+      <p class="small">Train CFF jusqu’à <strong>Lutry</strong> ou <strong>Pully Nord</strong></p>
+      <p class="small">À 10 minutes de la place St-François</p>
+      <p class="small">Bus TL ligne 9, arrêt <strong>Paudex Village</strong> (100 m)</p>
     </div>
   </article>
 </div>
@@ -49,9 +49,9 @@ title: Contacter le centre
     </div>
     <div class="card__body">
       <h3 class="card__title">Temps d’accès</h3>
-      <p><strong>Lausanne</strong> : ~8 minutes</p>
-      <p><strong>Vevey</strong> : ~15 minutes</p>
-      <p><strong>Lutry</strong> : ~3 minutes</p>
+      <p class="small"><strong>Lausanne</strong> : ~8 minutes</p>
+      <p class="small"><strong>Vevey</strong> : ~15 minutes</p>
+      <p class="small"><strong>Lutry</strong> : ~2 minutes</p>
     </div>
   </article>
 </div>
