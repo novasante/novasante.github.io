@@ -7,47 +7,6 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.umd.js"></script>
 <script>
 
-
-
-  const policies_xhr = () => {
-    const link = document.querySelector("a[data-privacy-link]");
-    if (!link) return;
-
-      link.addEventListener("click", async (event) => {
-
-      event.preventDefault();
-
-      const url = link.getAttribute("href");
-
-      try {
-        const response = await fetch(url);
-        const html = await response.text();
-
-        const parser = new DOMParser();
-        const doc = parser.parseFromString(html, "text/html");
-
-        const content =
-          doc.querySelector(".content")?.innerHTML ||
-          doc.body.innerHTML;
-
-        document.querySelector(".content").innerHTML = content;
-
-        document.querySelector(".sections").dataset.sectionsBuilt = "false";
-
-        smoothScroll('2-notre-approche');
-        init();
-
-        //CookieConsent.showPreferences();
-      } catch (error) {
-        console.error(error);
-      }
-    });
-
-  }
-  document.addEventListener("DOMContentLoaded", policies_xhr);
-
-
-
   // console.log('run CookieConsent');
   CookieConsent.run({
     mode: "opt-out",

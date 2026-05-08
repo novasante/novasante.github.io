@@ -747,8 +747,77 @@ const initLightbox = () => {
   });
 };
 
+const initPoliciesXHR = () => {
+  const links = document.querySelectorAll("a[data-privacy-link]");
+
+  if (!links.length) return;
+
+  links.forEach((link) => {
+    if (link.dataset.xhrBound === "true") return;
+
+    link.dataset.xhrBound = "true";
+
+    link.addEventListener("click", async (event) => {
+      event.preventDefault();
+
+      const url = link.getAttribute("href");
+      if (!url) return;
+
+      const currentContent = document.querySelector(".content");
+
+      if (!currentContent) {
+        window.location.href = url;
+        return;
+      }
+
+      try {
+        const response = await fetch(url, {
+          headers: {
+            "X-Requested-With": "XMLHttpRequest"
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        const html = await response.text();
+
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, "text/html");
+
+        const newContent = doc.querySelector(".content");
+
+        if (!newContent || !newContent.innerHTML.trim()) {
+          throw new Error("Missing .content");
+        }
+
+        currentContent.innerHTML = newContent.innerHTML;
+
+        const sections = document.querySelector(".sections");
+
+        if (sections) {
+          sections.dataset.sectionsBuilt = "false";
+        }
+
+        if (typeof init === "function") init();
+        if (typeof smoothScroll === "function") smoothScroll("2-notre-approche");
+
+      } catch (error) {
+        console.error(
+          "Could not load privacy page via XHR:",
+          error
+        );
+
+        window.location.href = url;
+      }
+    });
+  });
+};
+
 const init = () => {
   // console.log('init');
+  initPoliciesXHR();
   initSections();
   initLightbox();
   initFirstScrollListener();
