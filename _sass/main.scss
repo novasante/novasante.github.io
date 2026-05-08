@@ -256,9 +256,9 @@ $mobile-menu-breakpoint: m;
 /* BANNER SLIDER */
 $slide-images: (
   //"content/slider/zen-garden-stone.png",
-  "content/slider/flying-dandelion-seed.png",
-  "content/slider/pebbles-by-the-lake.png",
-  "content/slider/lake-view-reflection-in-green-eye.png?v2"
+  "content/slider/flying-dandelion-seed.png"
+  //"content/slider/pebbles-by-the-lake.png",
+  //"content/slider/lake-view-reflection-in-green-eye.png?v2"
 );
 @if length($slide-images) != 0 {
   :root {

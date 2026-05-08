@@ -6,9 +6,55 @@
 <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/orestbida/cookieconsent@3.1.0/dist/cookieconsent.umd.js"></script>
 <script>
+
+
+
+  const policies_xhr = () => {
+    const link = document.querySelector("a[data-privacy-link]");
+    if (!link) return;
+
+      link.addEventListener("click", async (event) => {
+
+      event.preventDefault();
+
+      const url = link.getAttribute("href");
+
+      try {
+        const response = await fetch(url);
+        const html = await response.text();
+
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, "text/html");
+
+        const content =
+          doc.querySelector(".content")?.innerHTML ||
+          doc.body.innerHTML;
+
+        document.querySelector(".content").innerHTML = content;
+
+        document.querySelector(".sections").dataset.sectionsBuilt = "false";
+
+        smoothScroll('2-notre-approche');
+        init();
+
+        //CookieConsent.showPreferences();
+      } catch (error) {
+        console.error(error);
+      }
+    });
+
+  }
+  document.addEventListener("DOMContentLoaded", policies_xhr);
+
+
+
   // console.log('run CookieConsent');
   CookieConsent.run({
     mode: "opt-out",
+    cookie: {
+      useLocalStorage: true,
+      name: "cc_cookie"
+    },
     categories: {
       necessary: {
         enabled: true,
@@ -65,61 +111,82 @@
     },
     language: {
       default: "fr",
+
       translations: {
         fr: {
           consentModal: {
             title: "Respect de votre vie privée",
+
             description: `
-            Nous utilisons uniquement des cookies nécessaires au bon fonctionnement du site,
-            ainsi que, avec votre accord, des outils de mesure d'audience (Mixpanel).
-            <br><br>
-            Vous pouvez choisir d'accepter ou de refuser ces outils.
-          `,
-            acceptAllBtn: "Tout accepter",
-            acceptNecessaryBtn: "Refuser",
-            showPreferencesBtn: "Personnaliser",
-            footer: `
-                <a href="/politique-de-confidentialite/">politique de confidentialité</a>
-            `
+              Le site utilise uniquement les technologies nécessaires à son bon fonctionnement,
+              ainsi qu’à la mesure de son audience.
+              <a data-privacy-link href="/politique-de-confidentialite/">
+                En savoir plus
+              </a>
+            `,
+
+            acceptAllBtn: "OK",
+            // acceptNecessaryBtn: "Refuser",
+            showPreferencesBtn: "Paramètres",
+            // footer: `<a href="/politique-de-confidentialite/">politique de confidentialité</a>`
           },
+
           preferencesModal: {
             title: "Préférences de confidentialité",
+
             acceptAllBtn: "Tout accepter",
             acceptNecessaryBtn: "Refuser",
             savePreferencesBtn: "Enregistrer",
-            sections: [{
-                title: "Notre approche",
-                description: `
-                Nous limitons au strict nécessaire l'utilisation de cookies.
-                Aucun suivi n'est effectué sans votre consentement.
-              `
-              },
+
+            sections: [
               {
-                title: "Cookies nécessaires",
+                title: "Notre approche",
+
                 description: `
-                Ces cookies sont indispensables au fonctionnement du site
-                et ne peuvent pas être désactivés.
-              `,
+                  Nous limitons au strict nécessaire les technologies utilisées
+                  afin d’assurer le bon fonctionnement du site et de mieux comprendre
+                  son utilisation.
+                `
+              },
+
+              {
+                title: "Fonctionnement essentiel",
+
+                description: `
+                  Certains éléments techniques sont nécessaires au bon fonctionnement,
+                  à la sécurité et à l’accessibilité du site.
+                `,
+
                 linkedCategory: "necessary"
               },
+
               {
-                title: "Mesure d'audience",
+                title: "Mesure d’audience",
+
                 description: `
-                Ces outils (Mixpanel) nous permettent de comprendre
-                l'utilisation du site afin de l'améliorer.
-                <br><br>
-                Les données collectées sont utilisées uniquement à des fins internes
-                et ne servent pas à vous identifier personnellement.
-              `,
+                  Les statistiques de fréquentation nous aident à améliorer le contenu
+                  et l’expérience proposée.
+                  <br><br>
+                  Les données collectées sont utilisées uniquement à des fins internes
+                  et ne servent pas à des fins publicitaires.
+                `,
+
                 linkedCategory: "analytics"
               },
+
               {
                 title: "En savoir plus",
+
                 description: `
-                Pour plus d'informations, vous pouvez consulter notre
-                <a href="/politique-de-confidentialite/">politique de confidentialité</a>
-                ou nous contacter via la page <a href="/contact/">contact</a>.
-              `
+                  Pour plus d’informations, vous pouvez consulter notre
+                  <a href="/politique-de-confidentialite/">
+                    politique de confidentialité
+                  </a>
+                  ou nous contacter via la page
+                  <a href="/contact/">
+                    contact
+                  </a>.
+                `
               }
             ]
           }

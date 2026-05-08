@@ -73,6 +73,23 @@ const trackEvent = (event, ...options) => {
   }
 };
 
+const smoothScroll = (anchor, delay = 10) => {
+  const toggler = document.getElementById("toggler");
+  // Close the mobile menu
+  if (!!toggler.checked) {
+    setTimeout(() => toggler.click(), 10);
+  }
+
+  // Scroll to the anchor
+  setTimeout(
+    () => {
+      location.hash = "";
+      location.hash = anchor;
+    },
+    delay
+  );
+};
+
 // JS TO USE THE MENU AS A SINGLE PAGE WITH SCROLL
 const linkToAnchorClickedHandler = (evt) => {
   evt.preventDefault();
@@ -91,14 +108,8 @@ const linkToAnchorClickedHandler = (evt) => {
 
   link = target.getAttribute("href");
 
-  // Scroll to the anchor
-  setTimeout(
-    () => {
-      location.hash = "";
-      location.hash = link;
-    },
-    !!toggler.checked ? 400 : 10
-  );
+  const delay = !!toggler.checked ? 400 : 10;
+  smoothScroll(link, delay);
 
   const submenu = target.closest("li.submenu");
   if (!!submenu) {
@@ -138,7 +149,7 @@ const parallax = () => {
   }
 };
 
-const initLinksCloseNav = () => {
+const initLinksSmoothScrolling = () => {
   document
     .querySelectorAll("a[href*='#']:not([href='#'])")
     .forEach((link) =>
@@ -323,7 +334,7 @@ const initAppInstallation = () => {
   window.addEventListener("appinstalled", trackAppInstallation);
 };
 
-const initLinksClicked = () => {
+const initContactLinksClicked = () => {
   document
     .querySelectorAll("a[class*='contact_']")
     .forEach((link) =>
@@ -692,7 +703,7 @@ const initLightbox = () => {
 
       lightbox.showModal();
 
-      // 🔥 wait for render + image load
+      // wait for render + image load
       const runAnimation = () => {
         requestAnimationFrame(() => {
           requestAnimationFrame(() => {
@@ -746,8 +757,8 @@ const init = () => {
   initColorSchemeToggler();
   initPhoneContactTriggers();
   initBookingWidgetTriggers();
-  initLinksCloseNav();
-  initLinksClicked();
+  initLinksSmoothScrolling();
+  initContactLinksClicked();
   initAppInstallation();
   initNavPosition();
   initCloseSubNav();

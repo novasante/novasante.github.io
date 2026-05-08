@@ -161,84 +161,54 @@
 /* BANNER SLIDER */
 :root {
   --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
-  --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
-  --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
 }
 
 @media only screen and (min-width: 300px) {
   :root {
     --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
-    --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
-    --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
   }
 }
 @media only screen and (min-width: 360px) {
   :root {
     --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-480,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
-    --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-480,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
-    --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-480,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
   }
 }
 @media only screen and (min-width: 480px) {
   :root {
     --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-748,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
-    --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-748,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
-    --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-748,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
   }
 }
 @media only screen and (min-width: 748px) {
   :root {
     --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-992,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
-    --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-992,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
-    --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-992,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
   }
 }
 @media only screen and (min-width: 992px) {
   :root {
     --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-1200,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
-    --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-1200,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
-    --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-1200,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
   }
 }
 @media only screen and (min-width: 1200px) {
   :root {
     --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-1440,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
-    --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-1440,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
-    --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-1440,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
   }
 }
 @media only screen and (min-width: 1440px) {
   :root {
     --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-1600,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
-    --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-1600,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
-    --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-1600,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
   }
 }
 @media only screen and (min-width: 1600px) {
   :root {
     --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-1600,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
-    --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-1600,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
-    --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-1600,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
   }
 }
 @keyframes imageSlider {
   0% {
     background-image: var(--slide-1);
   }
-  28.3333333333% {
-    background-image: var(--slide-1), var(--slide-2);
-  }
-  33.3333333333% {
-    background-image: var(--slide-2);
-  }
-  61.6666666667% {
-    background-image: var(--slide-2), var(--slide-3);
-  }
-  66.6666666667% {
-    background-image: var(--slide-3);
-  }
   95% {
-    background-image: var(--slide-3), var(--slide-1);
+    background-image: var(--slide-1), var(--slide-1);
   }
   100% {
     background-image: var(--slide-1);
