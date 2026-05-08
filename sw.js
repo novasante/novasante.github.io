@@ -1,4 +1,4 @@
-const cacheName = "NOVA-v0.2.06",
+const cacheName = "NOVA-v0.2.07",
       assets = [
         '/',
         '/index.html',
@@ -10,7 +10,7 @@ const cacheName = "NOVA-v0.2.06",
         // CDN images
         // 'https://ik.imagekit.io/sarahdionne/tr:w-30,fo-auto,f-webp/hero/full.jpg',
         // Externals
-        'https://cdn.polyfill.io/v3/polyfill.min.js',
+        // 'https://cdn.polyfill.io/v3/polyfill.min.js',
         'https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&amp;display=swap'
       ];
 
