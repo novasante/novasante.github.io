@@ -528,7 +528,8 @@ body {
   h3,
   h4,
   h5,
-  h6 {
+  h6,
+  .mrg {
     margin: var(--half-gutter) 0;
   }
 
@@ -991,6 +992,56 @@ body {
     display: none;
   }
 
+  section {
+    padding: calc(var(--gutter) * 2) calc(var(--gutter) / 2);
+    @include grid-media-query(s) {
+      padding: calc(var(--gutter) * 2.5) calc(var(--gutter) / 2);
+      & > *:not(.full_width) {
+        max-width: map-get($containers, s);
+      }
+    }
+    @include grid-media-query(m) {
+      padding: calc(var(--gutter) * 2.5) var(--gutter) calc(var(--gutter) * 2)
+        var(--gutter);
+      &.containered,
+      & > *:not(.full_width) {
+        max-width: map-get($containers, m);
+      }
+      &.containered {
+        margin-left: var(--gutter);
+        margin-right: var(--gutter);
+      }
+    }
+    @include grid-media-query(l) {
+      &.containered,
+      & > *:not(.full_width) {
+        max-width: map-get($containers, l);
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    @include grid-media-query(xl) {
+      padding: calc(var(--gutter) * 2.5) calc(var(--gutter) * 3)
+        calc(var(--gutter) * 2) calc(var(--gutter) * 3);
+      &.containered,
+      & > *:not(.full_width) {
+        max-width: map-get($containers, xl);
+      }
+    }
+    @include grid-media-query(xxl) {
+      &.containered,
+      & > *:not(.full_width) {
+        max-width: map-get($containers, xxl);
+      }
+    }
+    @include grid-media-query(xxxl) {
+      &.containered,
+      & > *:not(.full_width) {
+        max-width: map-get($containers, xxxl);
+      }
+    }
+  }
+
   .wrapper {
     transition: margin 0.3s ease-in-out;
     width: 100%;
@@ -1295,18 +1346,19 @@ body {
             }
           }
           @include grid-media-query(m) {
-            &:first-of-type {
+            &.containered:first-of-type {
               margin-top: var(--gutter);
             }
-            &:last-of-type {
+            &.containered:last-of-type {
               margin-bottom: var(--gutter);
             }
             padding: calc(var(--gutter) * 2.5) var(--gutter)
               calc(var(--gutter) * 2) var(--gutter);
+            &.containered,
+            & > *:not(.full_width) {
+              max-width: map-get($containers, m);
+            }
             &.containered {
-              & > *:not(.full_width) {
-                max-width: map-get($containers, m);
-              }
               margin-left: var(--gutter);
               margin-right: var(--gutter);
             }
@@ -1416,11 +1468,16 @@ body {
           display: inline-block;
         }
       }
+      .text-right svg.icon {
+        margin-left: var(--quarter-gutter);
+        margin-right: 0;
+      }
       svg.icon {
         height: var(--gutter);
         width: var(--gutter);
         color: var(--font-color);
-        margin-right: var(--half-gutter);
+
+        margin-right: var(--quarter-gutter);
         &.logo {
           width: 120px;
           height: 120px;
@@ -2031,7 +2088,7 @@ body {
       img {
         width: 100%;
         height: 100%;
- 
+
         border-radius: 0;
       }
     }

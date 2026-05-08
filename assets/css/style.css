@@ -161,54 +161,84 @@
 /* BANNER SLIDER */
 :root {
   --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
+  --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
+  --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
 }
 
 @media only screen and (min-width: 300px) {
   :root {
     --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
+    --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
+    --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-360,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
   }
 }
 @media only screen and (min-width: 360px) {
   :root {
     --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-480,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
+    --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-480,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
+    --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-480,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
   }
 }
 @media only screen and (min-width: 480px) {
   :root {
     --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-748,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
+    --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-748,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
+    --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-748,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
   }
 }
 @media only screen and (min-width: 748px) {
   :root {
     --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-992,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
+    --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-992,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
+    --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-992,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
   }
 }
 @media only screen and (min-width: 992px) {
   :root {
     --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-1200,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
+    --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-1200,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
+    --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-1200,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
   }
 }
 @media only screen and (min-width: 1200px) {
   :root {
     --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-1440,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
+    --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-1440,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
+    --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-1440,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
   }
 }
 @media only screen and (min-width: 1440px) {
   :root {
     --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-1600,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
+    --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-1600,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
+    --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-1600,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
   }
 }
 @media only screen and (min-width: 1600px) {
   :root {
     --slide-1: url("https://ik.imagekit.io/sarahdionne/tr:w-1600,h-600,c-at_least,f-webp/nova/content/slider/flying-dandelion-seed.png");
+    --slide-2: url("https://ik.imagekit.io/sarahdionne/tr:w-1600,h-600,c-at_least,f-webp/nova/content/slider/pebbles-by-the-lake.png");
+    --slide-3: url("https://ik.imagekit.io/sarahdionne/tr:w-1600,h-600,c-at_least,f-webp/nova/content/slider/lake-view-reflection-in-green-eye.png?v2");
   }
 }
 @keyframes imageSlider {
   0% {
     background-image: var(--slide-1);
   }
+  28.3333333333% {
+    background-image: var(--slide-1), var(--slide-2);
+  }
+  33.3333333333% {
+    background-image: var(--slide-2);
+  }
+  61.6666666667% {
+    background-image: var(--slide-2), var(--slide-3);
+  }
+  66.6666666667% {
+    background-image: var(--slide-3);
+  }
   95% {
-    background-image: var(--slide-1), var(--slide-1);
+    background-image: var(--slide-3), var(--slide-1);
   }
   100% {
     background-image: var(--slide-1);
@@ -876,7 +906,8 @@ body p,
 body h3,
 body h4,
 body h5,
-body h6 {
+body h6,
+body .mrg {
   margin: var(--half-gutter) 0;
 }
 body .content h1 {
@@ -1324,6 +1355,54 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
 .container input#toggler {
   display: none;
 }
+.container section {
+  padding: calc(var(--gutter) * 2) calc(var(--gutter) / 2);
+}
+@media only screen and (min-width: 480px) {
+  .container section {
+    padding: calc(var(--gutter) * 2.5) calc(var(--gutter) / 2);
+  }
+  .container section > *:not(.full_width) {
+    max-width: auto;
+  }
+}
+@media only screen and (min-width: 748px) {
+  .container section {
+    padding: calc(var(--gutter) * 2.5) var(--gutter) calc(var(--gutter) * 2) var(--gutter);
+  }
+  .container section.containered, .container section > *:not(.full_width) {
+    max-width: auto;
+  }
+  .container section.containered {
+    margin-left: var(--gutter);
+    margin-right: var(--gutter);
+  }
+}
+@media only screen and (min-width: 992px) {
+  .container section.containered, .container section > *:not(.full_width) {
+    max-width: 864px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .container section {
+    padding: calc(var(--gutter) * 2.5) calc(var(--gutter) * 3) calc(var(--gutter) * 2) calc(var(--gutter) * 3);
+  }
+  .container section.containered, .container section > *:not(.full_width) {
+    max-width: 1024px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .container section.containered, .container section > *:not(.full_width) {
+    max-width: 1200px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .container section.containered, .container section > *:not(.full_width) {
+    max-width: 1440px;
+  }
+}
 .container .wrapper {
   transition: margin 0.3s ease-in-out;
   width: 100%;
@@ -1614,18 +1693,18 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   .container .wrapper .content .sections section {
     padding: calc(var(--gutter) * 2.5) var(--gutter) calc(var(--gutter) * 2) var(--gutter);
   }
-  .container .wrapper .content .sections section:first-of-type {
+  .container .wrapper .content .sections section.containered:first-of-type {
     margin-top: var(--gutter);
   }
-  .container .wrapper .content .sections section:last-of-type {
+  .container .wrapper .content .sections section.containered:last-of-type {
     margin-bottom: var(--gutter);
+  }
+  .container .wrapper .content .sections section.containered, .container .wrapper .content .sections section > *:not(.full_width) {
+    max-width: auto;
   }
   .container .wrapper .content .sections section.containered {
     margin-left: var(--gutter);
     margin-right: var(--gutter);
-  }
-  .container .wrapper .content .sections section.containered > *:not(.full_width) {
-    max-width: auto;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -1719,11 +1798,15 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   vertical-align: middle;
   display: inline-block;
 }
+.container .wrapper footer .text-right svg.icon {
+  margin-left: var(--quarter-gutter);
+  margin-right: 0;
+}
 .container .wrapper footer svg.icon {
   height: var(--gutter);
   width: var(--gutter);
   color: var(--font-color);
-  margin-right: var(--half-gutter);
+  margin-right: var(--quarter-gutter);
 }
 .container .wrapper footer svg.icon.logo {
   width: 120px;
