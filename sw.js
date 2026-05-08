@@ -1,4 +1,4 @@
-const cacheName = "NOVA-v0.2.09",
+const cacheName = "NOVA-v0.2.10",
       assets = [
         '/',
         '/index.html',
@@ -14,33 +14,51 @@ const cacheName = "NOVA-v0.2.09",
         'https://fonts.googleapis.com/css2?family=Raleway:wght@100..900&amp;display=swap'
       ];
 
-self.addEventListener('install', evt => {
+self.addEventListener("install", (evt) => {
   evt.waitUntil(
-    caches.open(cacheName).then(cache => {
-      cache.addAll(assets);
-    })
+    caches.open(cacheName).then((cache) => cache.addAll(assets))
   );
 });
 
-self.addEventListener('activate', evt => {
+self.addEventListener("activate", (evt) => {
   evt.waitUntil(
-    caches.keys().then(keys => {
-      return Promise.all(keys
-        .filter(key => key !== cacheName)
-        .map(key => caches.delete(key))
+    caches.keys().then((keys) => {
+      return Promise.all(
+        keys
+          .filter((key) => key !== cacheName)
+          .map((key) => caches.delete(key))
       );
     })
   );
 });
 
-self.addEventListener('fetch', evt => {
-  if (evt.request.url.includes("?cc")) {
+self.addEventListener("fetch", (evt) => {
+  const url = new URL(evt.request.url);
+
+  if (url.searchParams.has("cc")) {
     caches.delete(cacheName);
   }
-  // if (evt.request.url.match(/\.(?:webp|png|jpg|jpeg|svg)$/)) {}
+
+  // Only handle local GET requests
+  if (
+    evt.request.method !== "GET" ||
+    url.origin !== self.location.origin
+  ) {
+    return;
+  }
+
   evt.respondWith(
-    caches.match(evt.request).then(cacheRes => {
-      return cacheRes || fetch(evt.request)
+    caches.match(evt.request).then((cacheRes) => {
+      return (
+        cacheRes ||
+        fetch(evt.request).catch(() => {
+          if (evt.request.mode === "navigate") {
+            return caches.match("/");
+          }
+
+          return Response.error();
+        })
+      );
     })
   );
 });
