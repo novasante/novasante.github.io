@@ -1356,11 +1356,11 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
   display: none;
 }
 .container section {
-  padding: calc(var(--gutter) * 2) calc(var(--gutter) / 2);
+  padding: 0 calc(var(--gutter) / 2);
 }
 @media only screen and (min-width: 480px) {
   .container section {
-    padding: calc(var(--gutter) * 2.5) calc(var(--gutter) / 2);
+    padding: 0 calc(var(--gutter) / 2);
   }
   .container section > *:not(.full_width) {
     max-width: auto;
@@ -1368,7 +1368,7 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
 }
 @media only screen and (min-width: 748px) {
   .container section {
-    padding: calc(var(--gutter) * 2.5) var(--gutter) calc(var(--gutter) * 2) var(--gutter);
+    padding: 0 var(--gutter);
   }
   .container section.containered, .container section > *:not(.full_width) {
     max-width: auto;
@@ -1387,7 +1387,7 @@ body div.map-iframe.interact:before, body div.map-iframe.interact:after {
 }
 @media only screen and (min-width: 1200px) {
   .container section {
-    padding: calc(var(--gutter) * 2.5) calc(var(--gutter) * 3) calc(var(--gutter) * 2) calc(var(--gutter) * 3);
+    padding: 0 calc(var(--gutter) * 3);
   }
   .container section.containered, .container section > *:not(.full_width) {
     max-width: 1024px;
