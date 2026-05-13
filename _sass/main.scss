@@ -165,7 +165,7 @@
   --primary-btn-bg: var(--green);
   --nav-bg: transparent;
 
-  --font-size-desktop: 18px;
+  --font-size-desktop: 16px;
   --font-size-mobile: calc(var(--font-size-desktop) * 0.9);
   --header-border-width: 2px;
   --h1-font-size: 3em;
@@ -539,10 +539,10 @@ body {
     }
     h2 {
       // font-size: 2.5em;
-      font-weight: 700;
+      font-weight: 600;
     }
     h3 {
-      font-weight: 600;
+      font-weight: 500;
     }
     strong {
       font-weight: 500;
@@ -678,7 +678,7 @@ body {
   a.button {
     background: transparent;
     color: var(--font-color);
-    font-weight: 900;
+    font-weight: 700;
     text-transform: uppercase;
     border: 0px;
     border-radius: 0.25em;
@@ -1513,15 +1513,15 @@ body {
         .wrapper .mobile-navbar {
           label.toggler {
             .navicon {
-              background: var(--font-color-inverted-hover);
+              background: var(--font-color-inverted);
               &,
               &:before,
               &:after {
-                background: var(--font-color-inverted-hover);
+                background: var(--font-color-inverted);
               }
             }
             svg.icon {
-              color: var(--font-color-inverted-hover);
+              color: var(--font-color-inverted);
             }
           }
           .title a {
@@ -1571,7 +1571,7 @@ body {
               calc(var(--gutter) / 2) var(--gutter);
             text-decoration: none;
             display: block;
-            font-weight: 900;
+            font-weight: 700;
 
             &:before {
               content: "";
@@ -1640,7 +1640,7 @@ body {
         z-index: 0;
         text-transform: uppercase;
         padding-left: 0px;
-        font-weight: 900;
+        font-weight: 700;
         height: 56px;
         //vertical-align: middle;
         overflow: hidden;
@@ -1825,7 +1825,7 @@ body {
         display: block;
         text-transform: uppercase;
         padding-left: 0px;
-        font-weight: 900;
+        font-weight: 700;
         height: 56px;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -1886,7 +1886,7 @@ body {
             &.primary {
               background: var(--primary-btn-bg);
               color: var(--font-color-inverted-hover);
-              font-weight: 900;
+              font-weight: 700;
               &:hover,
               &:focus-within {
                 background: var(--green-lighter);
@@ -1901,7 +1901,7 @@ body {
           }
 
           &.current {
-            font-weight: 900;
+            font-weight: 700;
           }
 
           /* submenu */
