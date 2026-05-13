@@ -617,6 +617,12 @@ body {
           color: var(--icon-color);
           vertical-align: middle;
           margin-bottom: 8px;
+          height: 18px;
+          width: 18px;
+          @include grid-media-query(s) {
+            height: 22px;
+            width: 22px;
+          }
         }
         &:hover {
           svg.icon {
@@ -1471,10 +1477,7 @@ body {
         margin-right: 0;
       }
       svg.icon {
-        height: var(--gutter);
-        width: var(--gutter);
         color: var(--font-color);
-
         margin-right: var(--quarter-gutter);
         &.logo {
           width: 120px;
@@ -1482,7 +1485,7 @@ body {
           &.logo_full {
             max-width: 100%;
             width: 360px;
-            height: 360px;
+            height: 100%;
             margin: 0;
           }
         }
